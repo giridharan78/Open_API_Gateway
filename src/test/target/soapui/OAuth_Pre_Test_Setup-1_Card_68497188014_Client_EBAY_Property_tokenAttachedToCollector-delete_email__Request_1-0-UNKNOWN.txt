@@ -1,7 +1,7 @@
 Status: UNKNOWN
-Time Taken: 25
+Time Taken: 4
 Size: 0
-Timestamp: Wed Jul 08 18:56:29 BST 2015
+Timestamp: Thu Jul 16 12:49:22 BST 2015
 TestStep: delete email - Request 1
 
 ----------------- Messages ------------------------------
@@ -14,13 +14,23 @@ Endpoint: http://192.168.22.37:8380
 URL: http://192.168.22.37:8380/smtp-mock/emails
 
 ---------------- Request ---------------------------
+Host: [192.168.22.37:8380]
+Content-Length: [0]
 Accept-Encoding: [gzip,deflate]
+User-Agent: [Apache-HttpClient/4.1.1 (java 1.5)]
+Connection: [Keep-Alive]
+Content-Type: [application/xml]
 
 DELETE http://192.168.22.37:8380/smtp-mock/emails HTTP/1.1
 Accept-Encoding: gzip,deflate
+Content-Type: application/xml
+Content-Length: 0
+Host: 192.168.22.37:8380
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.1.1 (java 1.5)
 
 
 ---------------- Response --------------------------
-Date: [Wed, 08 Jul 2015 17:56:30 GMT]
+Date: [Thu, 16 Jul 2015 11:49:22 GMT]
 #status#: [HTTP/1.1 204 No Content]
 Server: [Aimia]

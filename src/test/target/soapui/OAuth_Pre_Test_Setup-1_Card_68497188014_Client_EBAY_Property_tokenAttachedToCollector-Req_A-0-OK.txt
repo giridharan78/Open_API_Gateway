@@ -1,7 +1,7 @@
 Status: OK
-Time Taken: 320
+Time Taken: 1778
 Size: 8769
-Timestamp: Wed Jul 08 18:56:29 BST 2015
+Timestamp: Thu Jul 16 12:49:22 BST 2015
 TestStep: Req A
 
 ----------------- Messages ------------------------------
@@ -11,19 +11,25 @@ StatusCode: 200
 Method: GET
 HTTP Version: HTTP/1.1
 Endpoint: https://Api.t6.lmuk.local
-URL: https://Api.t6.lmuk.local/oauth/authorize?redirect_uri=http://192.168.22.221/link/nectar&state=97424a00dcee0e6657f8e064e263c51657d6c035&client_id=3137d8ac-9159-4dc1-a33b-ccea439352fd&scope=collector%20redeem%20reverse%20collectorId%20email%20offers%20collectorsegment&ro_id=68497188014&response_type=code
+URL: https://Api.t6.lmuk.local/oauth/authorize?state=97424a00dcee0e6657f8e064e263c51657d6c035&redirect_uri=http%3A%2F%2F192.168.22.221%2Flink%2Fnectar&scope=collector%20redeem%20reverse%20collectorId%20email%20offers%20collectorsegment&client_id=3137d8ac-9159-4dc1-a33b-ccea439352fd&ro_id=68497188014&response_type=code
 
 ---------------- Request ---------------------------
+Host: [Api.t6.lmuk.local]
 Accept-Encoding: [gzip,deflate]
+User-Agent: [Apache-HttpClient/4.1.1 (java 1.5)]
+Connection: [Keep-Alive]
 
-GET https://Api.t6.lmuk.local/oauth/authorize?redirect_uri=http://192.168.22.221/link/nectar&state=97424a00dcee0e6657f8e064e263c51657d6c035&client_id=3137d8ac-9159-4dc1-a33b-ccea439352fd&scope=collector%20redeem%20reverse%20collectorId%20email%20offers%20collectorsegment&ro_id=68497188014&response_type=code HTTP/1.1
+GET https://Api.t6.lmuk.local/oauth/authorize?state=97424a00dcee0e6657f8e064e263c51657d6c035&redirect_uri=http%3A%2F%2F192.168.22.221%2Flink%2Fnectar&scope=collector%20redeem%20reverse%20collectorId%20email%20offers%20collectorsegment&client_id=3137d8ac-9159-4dc1-a33b-ccea439352fd&ro_id=68497188014&response_type=code HTTP/1.1
 Accept-Encoding: gzip,deflate
+Host: Api.t6.lmuk.local
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.1.1 (java 1.5)
 
 
 ---------------- Response --------------------------
-Date: [Wed, 08 Jul 2015 17:55:06 GMT]
+Date: [Thu, 16 Jul 2015 11:47:41 GMT]
 #status#: [HTTP/1.1 200 OK]
-Content-Length: [2976]
+Content-Length: [2977]
 Content-Encoding: [gzip]
 Content-Type: [text/html;charset=UTF-8]
 Server: [Aimia]
@@ -219,7 +225,7 @@ form {
 
 
 			<form method="POST" action="https://Api.t6.lmuk.local:443/oauth/authorize">
-				<input type="hidden" name="sessionID" value="1656cb16-dc94-4b10-8ab2-b296bb9bdee3"/>
+				<input type="hidden" name="sessionID" value="4a7a6948-6078-4692-8fba-454635cd8e31"/>
 				<input type="hidden" name="page" value="1"/>
 				<input type="hidden" name="client_id" value="3137d8ac-9159-4dc1-a33b-ccea439352fd"/>
 				<input type="hidden" name="state" value="97424a00dcee0e6657f8e064e263c51657d6c035"/>
@@ -262,7 +268,7 @@ form {
 			</div>
 <script type="text/javascript">
 cmCreateConversionEventTag("EASYJET", "1", "Link Accounts");
-cmCreatePageviewTag("API:/oauth/authorize", "API: Nectar Login", "", "", "1656cb16-dc94-4b10-8ab2-b296bb9bdee3-_-97424a00dcee0e6657f8e064e263c51657d6c035-_-http://192.168.22.221/link/nectar-_-68497188014-_-code-_-collector redeem reverse collectorId email offers collectorsegment");
+cmCreatePageviewTag("API:/oauth/authorize", "API: Nectar Login", "", "", "4a7a6948-6078-4692-8fba-454635cd8e31-_-97424a00dcee0e6657f8e064e263c51657d6c035-_-http://192.168.22.221/link/nectar-_-68497188014-_-code-_-collector redeem reverse collectorId email offers collectorsegment");
 </script>
 
 </div>
