@@ -1,0 +1,29 @@
+Status: UNKNOWN
+Time Taken: 242
+Size: 0
+Timestamp: Wed Jul 08 18:56:29 BST 2015
+TestStep: initSMS - Request 1
+
+----------------- Messages ------------------------------
+
+----------------- Properties ------------------------------
+StatusCode: 200
+Method: POST
+HTTP Version: HTTP/1.1
+Endpoint: http://192.168.22.37:8380
+URL: http://192.168.22.37:8380/mock/services/REST/fonix/operations/POST/init
+
+---------------- Request ---------------------------
+Accept-Encoding: [gzip,deflate]
+Content-Type: [application/xml]
+
+POST http://192.168.22.37:8380/mock/services/REST/fonix/operations/POST/init HTTP/1.1
+Accept-Encoding: gzip,deflate
+Content-Type: application/xml
+
+
+---------------- Response --------------------------
+Date: [Wed, 08 Jul 2015 17:56:30 GMT]
+#status#: [HTTP/1.1 200 OK]
+Content-Length: [0]
+Server: [Aimia]

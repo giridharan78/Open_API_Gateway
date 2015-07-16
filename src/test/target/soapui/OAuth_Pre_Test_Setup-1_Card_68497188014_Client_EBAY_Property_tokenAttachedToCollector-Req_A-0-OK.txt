@@ -1,0 +1,357 @@
+Status: OK
+Time Taken: 320
+Size: 8769
+Timestamp: Wed Jul 08 18:56:29 BST 2015
+TestStep: Req A
+
+----------------- Messages ------------------------------
+
+----------------- Properties ------------------------------
+StatusCode: 200
+Method: GET
+HTTP Version: HTTP/1.1
+Endpoint: https://Api.t6.lmuk.local
+URL: https://Api.t6.lmuk.local/oauth/authorize?redirect_uri=http://192.168.22.221/link/nectar&state=97424a00dcee0e6657f8e064e263c51657d6c035&client_id=3137d8ac-9159-4dc1-a33b-ccea439352fd&scope=collector%20redeem%20reverse%20collectorId%20email%20offers%20collectorsegment&ro_id=68497188014&response_type=code
+
+---------------- Request ---------------------------
+Accept-Encoding: [gzip,deflate]
+
+GET https://Api.t6.lmuk.local/oauth/authorize?redirect_uri=http://192.168.22.221/link/nectar&state=97424a00dcee0e6657f8e064e263c51657d6c035&client_id=3137d8ac-9159-4dc1-a33b-ccea439352fd&scope=collector%20redeem%20reverse%20collectorId%20email%20offers%20collectorsegment&ro_id=68497188014&response_type=code HTTP/1.1
+Accept-Encoding: gzip,deflate
+
+
+---------------- Response --------------------------
+Date: [Wed, 08 Jul 2015 17:55:06 GMT]
+#status#: [HTTP/1.1 200 OK]
+Content-Length: [2976]
+Content-Encoding: [gzip]
+Content-Type: [text/html;charset=UTF-8]
+Server: [Aimia]
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html class="js" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" dir="ltr" lang="en">
+<html>
+	<head>
+		<title>Nectar Login</title>
+
+<script type="text/javascript"> 
+  var _gaq = _gaq || []; 
+  _gaq.push(['_setAccount', 'UA-5352042-1']); 
+  _gaq.push(['_setDomainName', 'api.nectar.com']); 
+  _gaq.push(['_setAllowLinker', true]); 
+  _gaq.push(['_trackPageview']); 
+
+  (function() { 
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; 
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })(); 
+</script>
+
+<!-- coremetrics start -->
+<script type="text/javascript" src="//libs.de.coremetrics.com/eluminate.js"></script>
+<script type="text/javascript">
+cmSetClientID("80470000|API", false, "testdata.de.coremetrics.com", "nectar.com");
+</script>
+<!-- coremetrics end -->
+</head>
+
+<style type="text/css">
+* {
+	padding:0;
+	margin:0;
+}
+
+body {
+	background-color:#471e5e;
+	background-image:url(https://online.t6.lmuk.local/contents/images/site/open-api/foot.png);
+	background-repeat:no-repeat;
+	background-position:0 100%;
+	padding-bottom:215px;
+	font-family:arial, helvetica, sans-serif;
+	line-height:1.5;
+	font-size:0.875em;
+}
+
+input,
+button {
+	font-family:arial, sans-serif;
+	font-size:16px;
+}
+
+#page {
+	border:solid 1px #7a4092;
+	border-width:40px 0 20px;
+	background-color:#FFF;
+	padding:40px;
+}
+
+a {
+	color:#b92f92;
+}
+
+a:hover {
+	text-decoration:none;
+}
+
+h1 {
+	color:#7a4092;
+	font-weight:normal;
+	font-size:2.8571em;
+	margin-bottom:0.5em;
+}
+
+h1 * {
+	vertical-align:middle;
+}
+
+form {
+	margin-bottom:20px;
+}
+
+label {
+	
+}
+
+input[type="text"],
+input[type="password"] {
+	padding:3px;
+	border:1px solid rgba(0, 0, 0, 0.1);
+	box-shadow:1px 1px 1px rgba(0, 0, 0, 0.4) inset;
+	width:110px;
+}
+
+input[type="submit"],
+button {
+	border:0;
+	padding:3px 15px;
+	background-color:#6A3082;
+	color:#FFF;
+	border-radius:15px;
+	cursor:pointer;
+	box-shadow:0 11px 9px rgba(255,255,255,0.4) inset;
+}
+
+input[type="submit"]:hover,
+button:hover {
+	opacity:0.8;
+}
+
+ul {
+	margin-left:20px;
+	margin-bottom:20px;
+}
+
+.panel-head {
+	margin-bottom:1em;
+}
+
+.panel-body {
+	margin-bottom:15px;
+}
+
+.form-field-group {
+	margin-bottom:1em;
+}
+
+.form-field-label {
+	margin-bottom:0.5em;
+}
+
+.intro {
+	margin-bottom:1em;
+	font-weight:bold;
+}
+
+.error {
+	margin-bottom:1em;
+	font-weight:bold;
+	color:crimson;
+}
+
+.nectar-logo {
+	display:block;
+	float:left;
+	margin:0 12px 0 0;
+	width:74px;
+	height:65px;
+	background-image:url(https://online.t6.lmuk.local/contents/images/site/open-api/nectar-logo.png);
+	text-indent:-999999px;
+	background-repeat: no-repeat
+}
+
+.icon {
+	border-radius:10px;
+}
+
+form {
+	border:solid 1px #CCC;
+	padding:1.5em;
+}
+
+.cancel {
+	background-color:transparent;
+	color:inherit;
+}
+
+.cancel:hover {
+	text-decoration:underline;
+	opacity:1;
+}
+</style>
+
+	<body>
+	
+		<div id="page">
+		 
+<div class="page-body">
+				
+
+
+
+				<h1><span class="nectar-logo icon">Nectar</span> + <img class="icon" src="https://online.t6.lmuk.local/contents/images/site/open-api/ebay.png" alt="EASYJET" height="65" width="65" /></h1>
+				
+				<div class="error">
+					
+				</div>
+			
+
+
+			<form method="POST" action="https://Api.t6.lmuk.local:443/oauth/authorize">
+				<input type="hidden" name="sessionID" value="1656cb16-dc94-4b10-8ab2-b296bb9bdee3"/>
+				<input type="hidden" name="page" value="1"/>
+				<input type="hidden" name="client_id" value="3137d8ac-9159-4dc1-a33b-ccea439352fd"/>
+				<input type="hidden" name="state" value="97424a00dcee0e6657f8e064e263c51657d6c035"/>
+				<input type="hidden" name="redirect_uri" value="http://192.168.22.221/link/nectar"/>
+				<input type="hidden" name="ro_id" value="68497188014"/>
+				<input type="hidden" name="response_type" value="code"/>
+				<input type="hidden" name="scope" value="collector redeem reverse collectorId email offers collectorsegment"/>
+				<div class="form-field-group">
+						<div class="form-field-label">
+							<label for="CARDNUMBER">For security, please confirm the last 11 digits of your Nectar card</label>
+						</div>
+						<div class="form-field-input">
+							<strong>98263000</strong> <input type="text" name="CARDNUMBER" id="CARDNUMBER" class="cardnumber-input" value="68497188014" maxlength="11"/>
+						</div>
+
+						<div>
+							This card number will be linked for collecting and spending your points with easyJet
+						</div>
+					</div>
+					<div class="form-field-group">
+						<div class="form-field-label">
+							<label for="PASSWORD">Your Nectar password (case sensitive):</label>
+						</div>
+						<div class="form-field-input">
+							<div>
+								<input type="password"  name="PASSWORD" id="PASSWORD" class="password-input" maxlength="16" autocomplete="off"/>
+							</div>
+							<div>
+								<a href="http://online.t6.lmuk.local/login/firstforgotPassword.nectar" target="_blank" onClick="_gaq.push(['_trackEvent', 'OpenApi Login', 'Forgotten password']);">Forgotten your password?</a>&nbsp;&nbsp;&nbsp;
+								<a href="https://help.nectar.com/app/answers/detail/a_id/339/kw/activate" target="_blank" onClick="_gaq.push(['_trackEvent', 'OpenApi Login', 'Not sure']);">Not sure what’s needed?</a>
+							</div>
+						</div>
+					</div>
+					<div class="form-field-submit">
+						<input type="submit" name="action" value="Login" onclick="_gaq.push(['_trackEvent', 'OpenApi Login', 'Login']);"/>
+						&nbsp;&nbsp;&nbsp;
+						<a onclick="return loginCancelConfirm('EASYJET');" class="cancel" target="_parent" href="http://192.168.22.221/accounts/profile/">Cancel</a>
+					</div>
+			</form>
+			</div>
+<script type="text/javascript">
+cmCreateConversionEventTag("EASYJET", "1", "Link Accounts");
+cmCreatePageviewTag("API:/oauth/authorize", "API: Nectar Login", "", "", "1656cb16-dc94-4b10-8ab2-b296bb9bdee3-_-97424a00dcee0e6657f8e064e263c51657d6c035-_-http://192.168.22.221/link/nectar-_-68497188014-_-code-_-collector redeem reverse collectorId email offers collectorsegment");
+</script>
+
+</div>
+	<script src="https://online.t6.lmuk.local/contents/scripts/jquery.js?1.7.2" type="text/javascript"></script>
+		<script>
+			function grantCancelConfirm(friendly) {
+				var rv = confirm('Your card will not be linked and you won’t be able to spend your Nectar points with ' + friendly);
+				if(rv) {
+					_gaq.push(['_trackEvent', 'OpenApi Authorise', 'Cancel']);
+				}
+				return rv;
+			}
+
+			function grantCancelConfirmWhitelabel(friendly) {
+				var rv = confirm('By cancelling you will not be able to complete login');
+				if(rv) {
+					_gaq.push(['_trackEvent', 'OpenApi Authorise', 'Cancel']);
+				}
+				return rv;
+			}
+
+			function loginCancelConfirm(friendly) {
+				var rv = confirm('Your card will not be linked and you won’t be able to spend your Nectar points with ' + friendly);
+				if(rv) {
+					_gaq.push(['_trackEvent', 'OpenApi Login', 'Cancel']);
+				}
+				return rv;
+			}
+		
+			function loginCancelConfirmWhitelabel(friendly) {
+				var rv = confirm('By cancelling you will not be able to complete login');
+				if(rv) {
+					_gaq.push(['_trackEvent', 'OpenApi Login', 'Cancel']);
+				}
+				return rv;
+			}
+			
+			(function() {
+					if($("body").height()<$(window).height()) {
+                                           $("body").css({height:$(window).height() - 215});
+                                        };
+
+                        $('form').submit(function(ev){
+	                   var confirmButton = $('input:submit[value=Confirm]'); 
+	
+	                   if (confirmButton.length != 0){
+		              _gaq.push(['_trackEvent', 'OpenApi Authorise', 'Confirm']);
+		              $('input:submit[value=Confirm]').prop('disabled', true); 
+	                   }
+                        })
+							
+				$(".cardnumber-input").each(function() {
+					
+					var
+					$this = $(this),					
+					oldValue = $this.val();
+					
+					$this.keyup(function(e) {
+					
+						var 
+						newVal = $this.val(),
+						isValid = /^[0-9]+$/.test(newVal);
+						
+						if(newVal) {
+							
+							if(!isValid) {
+							
+								$this.val(oldValue);
+								
+							}
+							else {
+								
+								oldValue = newVal;
+							
+							};
+							
+						}
+						else {
+							
+							oldValue = "";
+							
+						};
+						
+					});
+					
+				});
+				
+			})();
+			
+		</script>
+</body>
+</html>

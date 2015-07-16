@@ -1,0 +1,23 @@
+2015-07-08 18:56:27,206 WARN  [SoapUI] Missing folder [C:\Projects\Automation\OpenAPI\T6_Open_API_Gateway\src\test\.\ext] for external libraries
+2015-07-08 18:56:27,428 INFO  [DefaultSoapUICore] initialized soapui-settings from [C:\Projects\Automation\OpenAPI\T6_Open_API_Gateway\src\test\soapui-settings.xml]
+2015-07-08 18:56:27,452 INFO  [HttpClientSupport$Helper] Initializing KeyStore
+2015-07-08 18:56:27,738 INFO  [SoapUIProGroovyScriptEngineFactory] Setting Script Library to [C:\Program Files\SmartBear\soapUI-Pro-4.5.0\bin\scripts]
+2015-07-08 18:56:28,448 INFO  [WsdlProject] Loaded project from [file:/C:/Projects/Automation/OpenAPI/T6_Open_API_Gateway/src/test/Gateway%20-%20Open%20API%20Project.xml]
+2015-07-08 18:56:28,613 INFO  [SoapUIProGroovyScriptEngineFactory] Setting Script Library to [C:\Program Files\SmartBear\soapUI-Pro-4.5.0\bin\scripts]
+2015-07-08 18:56:29,421 INFO  [SoapUIProTestCaseRunner] Running soapUI tests in project [T6 Gateway Check - Open API Project]
+2015-07-08 18:56:29,455 INFO  [SoapUIProTestCaseRunner] Running Project [T6 Gateway Check - Open API Project], runType = SEQUENTIAL
+2015-07-08 18:56:29,467 INFO  [SoapUIProTestCaseRunner] Running soapUI testcase [1. Card: 68497188014 Client: EBAY Property: tokenAttachedToCollector]
+2015-07-08 18:56:29,488 INFO  [SoapUIProTestCaseRunner] running step [initSMS - Request 1]
+2015-07-08 18:56:29,787 INFO  [SoapUIProTestCaseRunner] running step [delete email - Request 1]
+2015-07-08 18:56:29,818 INFO  [SoapUIProTestCaseRunner] running step [Req A]
+2015-07-08 18:56:31,086 INFO  [log] 
+2015-07-08 18:56:31,087 INFO  [SoapUIProTestCaseRunner] Assertion [Script Assertion] has status UNKNOWN
+2015-07-08 18:56:31,091 INFO  [SoapUIProTestCaseRunner] Assertion [works with 4.5.2] has status VALID
+2015-07-08 18:56:31,129 INFO  [SoapUIProTestCaseRunner] running step [Req B]
+2015-07-08 18:56:31,800 INFO  [SoapUIProTestCaseRunner] Assertion [Valid HTTP Status Codes] has status VALID
+2015-07-08 18:56:31,800 INFO  [SoapUIProTestCaseRunner] Assertion [Script Assertion] has status FAILED
+2015-07-08 18:56:31,800 ERROR [SoapUIProTestCaseRunner] ASSERTION FAILED -> Cannot invoke method getAt() on null object
+2015-07-08 18:56:31,800 ERROR [SoapUIProTestCaseRunner] Req B failed, exporting to [C:\Projects\Automation\OpenAPI\T6_Open_API_Gateway\src\test/target/soapui\OAuth_Pre_Test_Setup-1_Card_68497188014_Client_EBAY_Property_tokenAttachedToCollector-Req_B-0-FAILED.txt]
+2015-07-08 18:56:31,847 INFO  [SoapUIProTestCaseRunner] Finished running soapUI testcase [1. Card: 68497188014 Client: EBAY Property: tokenAttachedToCollector], time taken: 1216ms, status: FAILED
+2015-07-08 18:56:31,854 INFO  [SoapUIProTestCaseRunner] Project [T6 Gateway Check - Open API Project] finished with status [FAILED] in 2395ms
+2015-07-08 18:56:32,309 INFO  [SoapUIProTestCaseRunner] Created report at file:/C:/Projects/Automation/OpenAPI/T6_Open_API_Gateway/src/test/target/soapui/index.html

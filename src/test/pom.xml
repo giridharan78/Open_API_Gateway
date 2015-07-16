@@ -1,0 +1,104 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>co.uk.Aimia</groupId>
+  <artifactId>T6OpenAPI-Gateway</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>T6 Open API - Gateway</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  
+  <pluginRepositories>
+   <pluginRepository>
+      <id>eviwarePluginRepository</id>
+      <url>http://smartbearsoftware.com/repository/maven2/</url>
+       <snapshots>
+	  <enabled>true</enabled>
+	  </snapshots>
+	  <releases>
+	  <enabled>true</enabled>
+	  </releases>
+	</pluginRepository>
+</pluginRepositories>
+
+<build>
+	<plugins>
+		<plugin>
+  
+		<groupId>com.smartbear.soapui</groupId>
+		<artifactId>soapui</artifactId>
+		<version>5.1.2</version>
+ 
+	<configuration>
+			<projectFile>${basedir}/Gateway - Open API Project.xml</projectFile>
+			<printReport>true</printReport>
+			<outputFolder>${basedir}/target/soapui</outputFolder>
+			<junitReport>true</junitReport>
+			<exportAll>true</exportAll>
+			<reportName>soap.html</reportName>
+			<coverage>yes</coverage>
+			<testFailIgnore>true</testFailIgnore>
+				<globalProperties>
+					<globalProperty>Project.Props=testdata.properties</globalProperty>								
+				</globalProperties>
+	
+				<file>../conf/soapui-settings.template.xml</file>
+				<outputFile>${basedir}/soapui-settings.xml</outputFile>
+				<regex>false</regex>
+				
+				<filesets>
+						<fileset>
+								<directory>${basedir}</directory>
+								<includes>
+									<include>**/*.log</include>
+								</includes>
+						</fileset>
+						<fileset>
+								<directory>${basedir}/report</directory>
+								<includes>
+								<include>**/*</include>
+								</includes>
+						</fileset>
+				</filesets>
+				
+	</configuration>
+					
+	<executions>
+	    <execution>      
+			<id>soapUI</id>
+			<phase>install</phase>
+			<goals>       
+	           <goal>test</goal>
+        	 </goals>
+	    </execution>
+	</executions>
+		</plugin>
+	</plugins>
+</build>
+<repositories>
+		<repository>
+			<id>eviwareRepository</id>
+			<url>http://smartbearsoftware.com/repository/maven2/</url>
+		</repository>
+		<repository>
+			<id>maven2-repository.java.net</id>
+			<name>Java.net Repository for Maven</name>
+			<url>http://java.net/projects/maven-repository/</url>
+			<layout>default</layout>
+		</repository>
+	</repositories>
+ <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+</dependencies>
+</project>
