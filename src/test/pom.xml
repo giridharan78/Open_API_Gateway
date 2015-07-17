@@ -66,12 +66,14 @@
 					<include>**/*.log</include>
 					</includes>
 					</fileset>
+				<!--
 				<fileset>
 				<directory>${basedir}/report</directory>
 					<includes>
 					<include>**/*</include>
 					</includes>
 				</fileset>
+				-->
 				</filesets>
 			</configuration>
 		</execution>
