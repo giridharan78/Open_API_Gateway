@@ -1,19 +1,18 @@
-2015-07-16 12:49:19,968 WARN  [SoapUI] Missing folder [C:\Projects\SECURITY_TESTING\Open_API_Gateway\src\test\ext] for external libraries
-2015-07-16 12:49:20,190 INFO  [DefaultSoapUICore] initialized soapui-settings from [C:\Projects\SECURITY_TESTING\Open_API_Gateway\src\test\soapui-settings.xml]
-2015-07-16 12:49:20,241 INFO  [HttpClientSupport$Helper] Initializing KeyStore
-2015-07-16 12:49:22,014 INFO  [WsdlProject] Loaded project from [file:/C:/Projects/SECURITY_TESTING/Open_API_Gateway/src/test/Gateway-OpenAPI-soapui-project.xml]
-2015-07-16 12:49:22,024 INFO  [SoapUITestCaseRunner] Running SoapUI tests in project [T6 Gateway Check - Open API Project]
-2015-07-16 12:49:22,026 INFO  [SoapUITestCaseRunner] Running Project [T6 Gateway Check - Open API Project], runType = SEQUENTIAL
-2015-07-16 12:49:22,167 INFO  [SoapUITestCaseRunner] Running SoapUI testcase [1. Card: 68497188014 Client: EBAY Property: tokenAttachedToCollector]
-2015-07-16 12:49:22,172 INFO  [SoapUITestCaseRunner] running step [initSMS - Request 1]
-2015-07-16 12:49:22,327 INFO  [SoapUITestCaseRunner] running step [delete email - Request 1]
-2015-07-16 12:49:22,343 INFO  [SoapUITestCaseRunner] running step [Req A]
-2015-07-16 12:49:25,053 INFO  [log] 4a7a6948-6078-4692-8fba-454635cd8e31
-2015-07-16 12:49:25,054 INFO  [SoapUITestCaseRunner] Assertion [Script Assertion] has status UNKNOWN
-2015-07-16 12:49:25,054 INFO  [SoapUITestCaseRunner] Assertion [works with 4.5.2] has status VALID
-2015-07-16 12:49:25,074 INFO  [SoapUITestCaseRunner] running step [Req B]
-2015-07-16 12:49:25,863 INFO  [SoapUITestCaseRunner] Assertion [Valid HTTP Status Codes] has status VALID
-2015-07-16 12:49:25,864 INFO  [SoapUITestCaseRunner] Assertion [Script Assertion] has status VALID
-2015-07-16 12:49:25,893 INFO  [SoapUITestCaseRunner] running step [pass to project properties]
-2015-07-16 12:49:25,952 INFO  [SoapUITestCaseRunner] Finished running SoapUI testcase [1. Card: 68497188014 Client: EBAY Property: tokenAttachedToCollector], time taken: 2621ms, status: FINISHED
-2015-07-16 12:49:25,953 INFO  [SoapUITestCaseRunner] Project [T6 Gateway Check - Open API Project] finished with status [FINISHED] in 3923ms
+2015-07-17 11:41:21,696 WARN  [SoapUI] Missing folder [C:\Projects\SECURITY_TESTING\Open_API_Gateway\src\test\ext] for external libraries
+2015-07-17 11:41:21,923 INFO  [DefaultSoapUICore] initialized soapui-settings from [C:\Projects\SECURITY_TESTING\Open_API_Gateway\src\test\soapui-settings.xml]
+2015-07-17 11:41:21,973 INFO  [HttpClientSupport$Helper] Initializing KeyStore
+2015-07-17 11:41:23,754 INFO  [WsdlProject] Loaded project from [file:/C:/Projects/SECURITY_TESTING/Open_API_Gateway/src/test/Gateway-OpenAPI-soapui-project.xml]
+2015-07-17 11:41:23,761 INFO  [SoapUITestCaseRunner] Running SoapUI tests in project [T6 Gateway Check - Open API Project]
+2015-07-17 11:41:23,762 INFO  [SoapUITestCaseRunner] Running Project [T6 Gateway Check - Open API Project], runType = SEQUENTIAL
+2015-07-17 11:41:23,774 INFO  [SoapUITestCaseRunner] Running SoapUI testcase [1. Card: 68497188014 Client: EBAY Property: tokenAttachedToCollector]
+2015-07-17 11:41:23,919 INFO  [SoapUITestCaseRunner] running step [initSMS - Request 1]
+2015-07-17 11:41:24,075 INFO  [SoapUITestCaseRunner] running step [delete email - Request 1]
+2015-07-17 11:41:24,093 INFO  [SoapUITestCaseRunner] running step [Req A]
+2015-07-17 11:41:25,353 INFO  [log] 6b2351ff-d391-457f-a238-9038cbd77685
+2015-07-17 11:41:25,355 INFO  [SoapUITestCaseRunner] Assertion [Script Assertion] has status UNKNOWN
+2015-07-17 11:41:25,356 INFO  [SoapUITestCaseRunner] Assertion [works with 4.5.2] has status VALID
+2015-07-17 11:41:25,356 INFO  [SoapUITestCaseRunner] Assertion [Valid HTTP Status Codes] has status FAILED
+2015-07-17 11:41:25,356 ERROR [SoapUITestCaseRunner] ASSERTION FAILED -> Response status code:200 is not in acceptable list of status codes
+2015-07-17 11:41:25,356 ERROR [SoapUITestCaseRunner] Req A failed, exporting to [C:\Projects\SECURITY_TESTING\Open_API_Gateway\src\test/target/soapui\OAuth_Pre_Test_Setup-1_Card_68497188014_Client_EBAY_Property_tokenAttachedToCollector-Req_A-0-FAILED.txt]
+2015-07-17 11:41:25,379 INFO  [SoapUITestCaseRunner] Finished running SoapUI testcase [1. Card: 68497188014 Client: EBAY Property: tokenAttachedToCollector], time taken: 441ms, status: FAILED
+2015-07-17 11:41:25,386 INFO  [SoapUITestCaseRunner] Project [T6 Gateway Check - Open API Project] finished with status [FAILED] in 1619ms
