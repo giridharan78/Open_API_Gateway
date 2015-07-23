@@ -15,10 +15,6 @@
   </properties>
   
   <pluginRepositories>
-  <pluginRepository>
-        <id>SmartBearPluginRepository</id>
-        <url>http://www.soapui.org/repository/maven2/</url>
-    </pluginRepository>
    <pluginRepository>
       <id>eviwarePluginRepository</id>
       <url>http://www.soapui.org/repository/maven2/</url>
@@ -34,23 +30,21 @@
 <build>
 	<plugins>
 		<plugin>
+		
 		<groupId>com.smartbear.soapui</groupId>
 		<artifactId>soapui-maven-plugin</artifactId>
 		<version>5.1.2</version>
-		<executions>
-			<execution> 
-			<id>soapUI</id>
-			<phase>install</phase>
-			<goals>       
-	         <goal>test</goal>
-        	 </goals>
 			<configuration>
 			<projectFile>${basedir}/Gateway-OpenAPI-soapui-project.xml</projectFile>
-			<outputFolder>${basedir}/target/surefire-reports</outputFolder>
+			<printReport>true</printReport>
+			<outputFolder>${basedir}/target/soapui</outputFolder>
 			<junitReport>true</junitReport>
 			<exportAll>true</exportAll>
-			<printReport>true</printReport>
-           	<testFailIgnore>true</testFailIgnore>
+			<exportwAll>true</exportwAll>
+            <printReport>true</printReport>
+			<reportName>soap.html</reportName>
+			<coverage>yes</coverage>
+			<testFailIgnore>true</testFailIgnore>
 				<globalProperties>
 					<globalProperty>Project.Props=testdata.properties</globalProperty>								
 				</globalProperties>
@@ -60,30 +54,32 @@
 				<regex>false</regex>
 				
 				<filesets>
-					<fileset>
-					<directory>${basedir}</directory>
-					<includes>
-					<include>**/*.log</include>
-					</includes>
-					</fileset>
-				<!--
-				<fileset>
-				<directory>${basedir}/report</directory>
-					<includes>
-					<include>**/*</include>
-					</includes>
-				</fileset>
-				-->
+						<fileset>
+								<directory>${basedir}</directory>
+								<includes>
+									<include>**/*.log</include>
+								</includes>
+						</fileset>
+						<fileset>
+								<directory>${basedir}/report</directory>
+								<includes>
+								<include>**/*</include>
+								</includes>
+						</fileset>
 				</filesets>
-			</configuration>
-		</execution>
+				
+	</configuration>
+					
+	<executions>
+	    <execution>      
+			<id>soapUI</id>
+			<phase>install</phase>
+			<goals>       
+	           <goal>test</goal>
+        	 </goals>
+	    </execution>
 	</executions>
-	</plugin>
-	<plugin>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-site-plugin</artifactId>
-      <version>3.2</version>
-    </plugin>
+		</plugin>
 	</plugins>
 </build>
 <repositories>
@@ -99,20 +95,14 @@
 			<layout>default</layout>
 		</repository>
 	</repositories>
-<reporting>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-report-plugin</artifactId>
-        <version>2.18.1</version>
-      </plugin>
-    </plugins>
-  </reporting>
+
+
+
   <dependencies>
     <dependency>
 		<groupId>junit</groupId>
 		<artifactId>junit</artifactId>
-		<version>3.8.1</version>
+		<version>4.11</version>
 		<scope>test</scope>
     </dependency>
 	<dependency>
@@ -135,7 +125,13 @@
 	<artifactId>spring-context</artifactId>
 	<version>4.1.7.RELEASE</version>
 	</dependency>
-	
-</dependencies>
+	<dependency>
+        <groupId>javafx</groupId>
+        <artifactId>javafx</artifactId>
+        <version>2.1</version>
+        <scope>system</scope>
+        <systemPath>${java.home}/lib/jfxrt.jar</systemPath>
+    </dependency>
+ </dependencies>
  
 </project>
