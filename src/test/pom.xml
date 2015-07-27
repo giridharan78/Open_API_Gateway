@@ -46,7 +46,7 @@
         	 </goals>
 			<configuration>
 			<projectFile>${basedir}/Gateway-OpenAPI-soapui-project.xml</projectFile>
-			<outputFolder>${basedir}/target/surefire-reports</outputFolder>
+			<outputFolder>${basedir}/target/site</outputFolder>
 			<junitReport>true</junitReport>
 			<exportAll>true</exportAll>
 			<printReport>true</printReport>
