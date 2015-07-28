@@ -1,0 +1,33 @@
+2015-07-28 17:35:29,323 INFO  [SoapUI] Adding [C:\Projects\SECURITY_TESTING\Open_API_Gateway\ext\ojdbc14-10.2.0.4.0.jar] to extensions classpath
+2015-07-28 17:35:29,324 INFO  [SoapUI] Adding [C:\Projects\SECURITY_TESTING\Open_API_Gateway\ext\xbean_xpath-2.4.0.jar] to extensions classpath
+2015-07-28 17:35:29,621 INFO  [DefaultSoapUICore] initialized soapui-settings from [C:\Projects\SECURITY_TESTING\Open_API_Gateway\soapui-settings.xml]
+2015-07-28 17:35:29,647 INFO  [HttpClientSupport$Helper] Initializing KeyStore
+2015-07-28 17:35:32,040 INFO  [WsdlProject] Loaded project from [file:/C:/Projects/SECURITY_TESTING/Open_API_Gateway/Gateway-OpenAPI-soapui-project.xml]
+2015-07-28 17:35:32,047 INFO  [SoapUITestCaseRunner] Running SoapUI tests in project [T6 Gateway Check - Open API Project]
+2015-07-28 17:35:32,050 INFO  [SoapUITestCaseRunner] Running Project [T6 Gateway Check - Open API Project], runType = SEQUENTIAL
+2015-07-28 17:35:32,077 INFO  [SoapUITestCaseRunner] Running SoapUI testcase [1. Card: 68497188014 Client: EBAY Property: tokenAttachedToCollector]
+2015-07-28 17:35:32,085 INFO  [SoapUITestCaseRunner] running step [initSMS - Request 1]
+2015-07-28 17:35:32,289 INFO  [SoapUITestCaseRunner] running step [delete email - Request 1]
+2015-07-28 17:35:32,307 INFO  [SoapUITestCaseRunner] running step [Req A]
+2015-07-28 17:35:34,003 INFO  [log] 7e0b7bfc-1b82-4187-84b1-a7a32e8e0728
+2015-07-28 17:35:34,004 INFO  [SoapUITestCaseRunner] Assertion [Script Assertion] has status UNKNOWN
+2015-07-28 17:35:34,005 INFO  [SoapUITestCaseRunner] Assertion [works with 4.5.2] has status VALID
+2015-07-28 17:35:34,019 INFO  [SoapUITestCaseRunner] running step [Req B]
+2015-07-28 17:35:34,735 INFO  [SoapUITestCaseRunner] Assertion [Valid HTTP Status Codes] has status VALID
+2015-07-28 17:35:34,735 INFO  [SoapUITestCaseRunner] Assertion [Script Assertion] has status VALID
+2015-07-28 17:35:34,768 INFO  [SoapUITestCaseRunner] running step [pass to project properties]
+2015-07-28 17:35:34,824 INFO  [SoapUITestCaseRunner] Finished running SoapUI testcase [1. Card: 68497188014 Client: EBAY Property: tokenAttachedToCollector], time taken: 1276ms, status: FINISHED
+2015-07-28 17:35:34,827 INFO  [SoapUITestCaseRunner] Running SoapUI testcase [1. Card: 68497188014 Client: EBAY Property: tokenAttachedToCollector]
+2015-07-28 17:35:34,827 INFO  [SoapUITestCaseRunner] running step [initSMS - Request 1]
+2015-07-28 17:35:34,841 INFO  [SoapUITestCaseRunner] running step [delete email - Request 1]
+2015-07-28 17:35:34,853 INFO  [SoapUITestCaseRunner] running step [Req A]
+2015-07-28 17:35:35,022 INFO  [log] ea519ad1-9c2e-4198-ab0f-198c5f3cb1cd
+2015-07-28 17:35:35,024 INFO  [SoapUITestCaseRunner] Assertion [Script Assertion] has status UNKNOWN
+2015-07-28 17:35:35,024 INFO  [SoapUITestCaseRunner] Assertion [works with 4.5.2] has status VALID
+2015-07-28 17:35:35,039 INFO  [SoapUITestCaseRunner] running step [Req B]
+2015-07-28 17:35:35,167 INFO  [SoapUITestCaseRunner] Assertion [Valid HTTP Status Codes] has status FAILED
+2015-07-28 17:35:35,168 ERROR [SoapUITestCaseRunner] ASSERTION FAILED -> Response status code:200 is not in acceptable list of status codes
+2015-07-28 17:35:35,169 INFO  [SoapUITestCaseRunner] Assertion [Script Assertion] has status VALID
+2015-07-28 17:35:35,169 ERROR [SoapUITestCaseRunner] Req B failed, exporting to [C:\Projects\SECURITY_TESTING\Open_API_Gateway/target/surefire-reports\OAuth_Post_Test_Setup-1_Card_68497188014_Client_EBAY_Property_tokenAttachedToCollector-Req_B-0-FAILED.txt]
+2015-07-28 17:35:35,198 INFO  [SoapUITestCaseRunner] Finished running SoapUI testcase [1. Card: 68497188014 Client: EBAY Property: tokenAttachedToCollector], time taken: 231ms, status: FAILED
+2015-07-28 17:35:35,198 INFO  [SoapUITestCaseRunner] Project [T6 Gateway Check - Open API Project] finished with status [FAILED] in 3142ms
