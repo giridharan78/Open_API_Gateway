@@ -1,9 +1,0 @@
-[OAuth_Collect_Unlinked]
-Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\OpenAPI\OAuth_Collect_Unlinked.wlp
-Weight=85
-[OAuth_Collect_linked]
-Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\OpenAPI\OAuth_Collect_linked.wlp
-Weight=15
-[Content]
-ScriptsNumber=2
-Scripts=OAuth_Collect_Unlinked;OAuth_Collect_linked;
