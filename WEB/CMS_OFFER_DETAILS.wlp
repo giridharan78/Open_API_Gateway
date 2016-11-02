@@ -1,0 +1,522 @@
+<Project><PRODUCT_VERSION><ProjectCreatedProductVersion>WebLOADPro Version 10.1.0.133.00  Supports 128 bit SSL </ProjectCreatedProductVersion><LastProjectSavedProductVersion>WebLOADPro Version 10.1.0.133.00  Supports 128 bit SSL </LastProjectSavedProductVersion></PRODUCT_VERSION><PROJECT_TYPE>Protocol</PROJECT_TYPE><AGENDA_OPTIONS><AgendaName xmlns="Default Project Options"/><Options><DiagnosticOptions><bSyntaxCheck>0</bSyntaxCheck><bTraceCheck>0</bTraceCheck><bAutomaticStateCheck>0</bAutomaticStateCheck><bSaveCSJSCheck>0</bSaveCSJSCheck><bCSJSDiagnosticMessages>0</bCSJSDiagnosticMessages></DiagnosticOptions><FunctionalTestingOptions><bTransFailed>0</bTransFailed><nFailedTime>20</nFailedTime><nSeverity>2</nSeverity><sTextSearch></sTextSearch><bCheckCRC>0</bCheckCRC><bCheckCompareValues>0</bCheckCompareValues><VarificationData><nCompareTitle>2</nCompareTitle><nFramesNumber>0</nFramesNumber><nTextSearch>0</nTextSearch><nVerifyLink>0</nVerifyLink><nCompareLinks>0</nCompareLinks><nCompareForms>0</nCompareForms><nCompareImages>0</nCompareImages><nCompareTables>0</nCompareTables></VarificationData></FunctionalTestingOptions><SleepTimeControlOptions><nSleepControlType>2</nSleepControlType><nBetween>2</nBetween><nAnd>10</nAnd><nDeviationPersent>10</nDeviationPersent></SleepTimeControlOptions><IE_OPTIONS Option_version="19">
+			<IE_DIALOG name="Alert">
+				<readonly>yes</readonly>
+				<Answer>
+					<value>OK</value>
+					<default>OK</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="Confirm">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="Prompt">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+				<field type="string" name="Input"></field>
+			</IE_DIALOG>
+			<IE_DIALOG name="Print">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="Cookie_IE6">
+				<Answer>
+					<value>Allow</value>
+					<value>Block</value>
+					<default>Allow</default>
+				</Answer>
+				<field type="checkbox" name="ApplyToAll">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="Cookie">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+				<field type="checkbox" name="NeverShow">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="FormSubmit">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+				<field type="checkbox" name="NeverShow">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="FormResubmit">
+				<Answer>
+					<value>Retry</value>
+					<value>Cancel</value>
+					<default>Retry</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="SwitchNonSecure">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+				<field type="checkbox" name="NeverShow">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="SwitchSecure">
+				<Answer>
+					<value>OK</value>
+					<default>OK</default>
+				</Answer>
+				<field type="checkbox" name="NeverShow">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="NonSecureOnSecure">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="ClientAuthentication">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+				<field type="string" name="Username"></field>
+				<field type="string" name="Password"></field>
+				<field type="string" name="Domain"></field>
+				<field type="checkbox" name="Save">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="ConnectToMS_WinXP">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+				<field type="string" name="Email"></field>
+				<field type="string" name="Password"></field>
+				<field type="checkbox" name="AutoSignIn">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="ClientAuthentication_WinXP">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+				<field type="string" name="Username"></field>
+				<field type="string" name="Password"></field>
+				<field type="checkbox" name="Save">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="ClientCertificate">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+				<field type="string" name="Certificate">
+					<default>0</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="HostCertificate">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="FileDownload">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+				<field type="checkbox" name="AlwaysAsk">
+					<default>checked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="FileDownload_IE6">
+				<Answer>
+					<value>Open</value>
+					<value>Save</value>
+					<value>Cancel</value>
+					<default>Save</default>
+				</Answer>
+				<field type="checkbox" name="AlwaysAsk">
+					<default>checked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="FileDownload_IE6_XP">
+				<Answer>
+					<value>Open</value>
+					<value>Save</value>
+					<value>Cancel</value>
+					<default>Save</default>
+				</Answer>
+				<field type="checkbox" name="AlwaysAsk">
+					<default>checked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="SaveFile">
+				<Answer>
+					<value>Save</value>
+					<value>Cancel</value>
+					<default>Save</default>
+				</Answer>
+				<field type="string" name="FileName"></field>
+			</IE_DIALOG>
+			<IE_DIALOG name="SaveFileConfirmation">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="ActiveXInstall">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+				<field type="checkbox" name="AlwaysTrust">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="RunActiveX">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="UnsafeActiveX">
+				<readonly>yes</readonly>
+				<Answer>
+					<value>OK</value>
+					<default>OK</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="ScriptAccessingActiveX">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="NavigateSubFrames">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="ActiveScripting">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="JavaScripting">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="Redirection">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+				<field type="checkbox" name="NeverShow">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="AutoComplete">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>No</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="RememberPassword">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>No</default>
+				</Answer>
+				<field type="checkbox" name="DoNotOffer">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="FtpAuthentication">
+				<Answer>
+					<value>Login</value>
+					<value>Cancel</value>
+					<default>Login</default>
+				</Answer>
+				<field type="string" name="Server"></field>
+				<field type="string" name="Username"></field>
+				<field type="string" name="Password"></field>
+				<field type="string" name="Email"></field>
+				<field type="checkbox" name="Anonymous">
+					<default>unchecked</default>
+				</field>
+				<field type="checkbox" name="Save">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="FtpFolderError">
+				<readonly>yes</readonly>
+				<Answer>
+					<value>OK</value>
+					<default>OK</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="DocumentModified">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<value>Cancel</value>
+					<default>No</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="JavascriptError">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>No</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="WindowClosing">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="SuspiciousActiveX">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="Reboot">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>No</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="YesNoCancel">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<value>Cancel</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="YesNo">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="OkCancel">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="Ok">
+				<readonly>yes</readonly>
+				<Answer>
+					<value>OK</value>
+					<default>OK</default>
+				</Answer>
+			</IE_DIALOG>
+		</IE_OPTIONS><PlayBackOptions><nNavigationTimeOut>60</nNavigationTimeOut><nFileDownloadTimeout>0</nFileDownloadTimeout><nStartNavigationTimeOut>3</nStartNavigationTimeOut><bClearCache>0</bClearCache><bClearCookies>0</bClearCookies><nPlaybackMode>1</nPlaybackMode><bUseDOROptimizer>0</bUseDOROptimizer></PlayBackOptions><PassFailDefinition><bCheckErrors>1</bCheckErrors><bCheckSevere>1</bCheckSevere><bCheckWarnings>0</bCheckWarnings><nErrorNum>1</nErrorNum><nRuleCheck>15</nRuleCheck><nWarningNum>15</nWarningNum></PassFailDefinition><ErrorHandling><SubmitButton>1</SubmitButton><NavObject>9</NavObject><Page>4</Page><PageRetryNum>3</PageRetryNum><Object>6</Object></ErrorHandling><EmulationPlaybackOptions><bUseOptimizer>1</bUseOptimizer><bUseHistory>0</bUseHistory><nHistoryLimit>1</nHistoryLimit><bCodeFormatter>0</bCodeFormatter><bCSJSRecovery>1</bCSJSRecovery></EmulationPlaybackOptions><WebServices><sBasicPassword></sBasicPassword><sUserName></sUserName><sProxyHost></sProxyHost><sProxyPassword></sProxyPassword><sProxyUser></sProxyUser><sProxyPort></sProxyPort><nWSClientType>1</nWSClientType></WebServices><BrowserEmulationOptions><bDNSCache>1</bDNSCache><bSSLCache>1</bSSLCache><bKeepAlive>1</bKeepAlive><bRedirectionEnabled>1</bRedirectionEnabled><nRedirectionLimit>10</nRedirectionLimit><strBrowserType>As recorded</strBrowserType><strUserAgent>As Recorded</strUserAgent><strEncodingValue>0</strEncodingValue><bEnforceEncoding>0</bEnforceEncoding></BrowserEmulationOptions><HTTPParametersOptions><bGZipSupport>0</bGZipSupport><bHTTPVersion>1</bHTTPVersion><bMultiIPSupport>0</bMultiIPSupport><bEncodeFormData>1</bEncodeFormData><bAcceptLanguage>0</bAcceptLanguage><strAcceptLanguage></strAcceptLanguage></HTTPParametersOptions><Authentication><sUserName></sUserName><sPassWord></sPassWord><sNTUserName></sNTUserName><sNTUserPassword></sNTUserPassword><sKerberosServer></sKerberosServer><iAuthType>0</iAuthType><sProxyUserName></sProxyUserName><sProxyPassWord></sProxyPassWord><sProxyHost></sProxyHost><sProxyPort></sProxyPort><sSSLClientCertificateFile>C:\PerformanceTesting\Projects\STD_DATA\T0_data\CERTIFICATES\t0rtrclient.pem</sSSLClientCertificateFile><sSSLClientCertificatePassword>Welcome123</sSSLClientCertificatePassword></Authentication><BrowserCacheOptions><bFilterApplets>1</bFilterApplets><bFilterImages>1</bFilterImages><bFilterJSFiles>1</bFilterJSFiles><bFilterStyleSheets>1</bFilterStyleSheets><bFilterXMLFiles>1</bFilterXMLFiles><bFilterDynamic>0</bFilterDynamic><nCacheType>3</nCacheType></BrowserCacheOptions><JavaOptions><strSelectedJVM>Default</strSelectedJVM></JavaOptions></Options></AGENDA_OPTIONS><RECORD_OPTIONS><File_Extensions><IgnoredExtensions>|gif|mov|mpg|txt|mpeg|class|cab|jpeg|jpg|css|csx|png|js|jsx|mp3|mp4|</IgnoredExtensions><RecordedExtensions>|asp|htm|html|xml|aspx|jsp|swf|php|cgi|none|</RecordedExtensions><RecordAllExtensions>0</RecordAllExtensions><RecordUnknownExtensions>0</RecordUnknownExtensions></File_Extensions><Security><EncryptProtocolPasswords>1</EncryptProtocolPasswords><EncryptFormPasswords>0</EncryptFormPasswords><PasswordsFormFields>|password|pass|passwd|</PasswordsFormFields></Security><Content_Types><IgnoredTypes>|image/gif|image/jpeg|</IgnoredTypes><RecordedTypes>|text/html|text/plain|text/xml|application/xml|application/json|application/x-amf|application/x-shockwave-flash|</RecordedTypes><RecordAllTypes>0</RecordAllTypes><RecordUnknownTypes>0</RecordUnknownTypes></Content_Types><Post_Data><Data>|text/xml|application/json; charset=utf-8|application/xml; charset=utf-8|application/json-rpc|text/xml; charset=utf-8|</Data><Datafile>|multipart/form-data|</Datafile><RecordUnknownPostTypesAsFiles>1</RecordUnknownPostTypesAsFiles></Post_Data><Proxy_Options><ProxyPort>9884</ProxyPort><SecondaryProxyName></SecondaryProxyName><SecondaryProxyExceptions></SecondaryProxyExceptions><SecondaryProxyPort>1</SecondaryProxyPort><SecondaryProxySslName></SecondaryProxySslName><SecondaryProxySslPort>1</SecondaryProxySslPort><UseSecondaryProxy>0</UseSecondaryProxy><UseSystemProxy>1</UseSystemProxy><SecondaryProxyUserName></SecondaryProxyUserName><SecondaryProxyPassword></SecondaryProxyPassword><AuthUserName></AuthUserName><AuthUserPassword></AuthUserPassword><UseTransparentProxy>0</UseTransparentProxy></Proxy_Options><Proxy_Certificates><ServerCertFileName>C:\Program Files (x86)\RadView\WebLOAD\bin\Certificates\server.pem</ServerCertFileName><ServerCertPassword>password</ServerCertPassword><ServerCertTrustFileName>C:\Program Files (x86)\RadView\WebLOAD\bin\Certificates\root.pem</ServerCertTrustFileName><ClientCertFileName></ClientCertFileName><ClientCertPassword></ClientCertPassword></Proxy_Certificates><Script_Content><CommentRequestHeaders>0</CommentRequestHeaders><CommentResponseHesders>0</CommentResponseHesders><CommentStatus>0</CommentStatus><DecodeQueryString>1</DecodeQueryString><RecordAuthentication>1</RecordAuthentication><RecordHeaders>0</RecordHeaders><RecordProxy>1</RecordProxy><RecordProxyAuthentication>1</RecordProxyAuthentication><RecordRedirectionPath>0</RecordRedirectionPath><RecordRefererHeader>1</RecordRefererHeader><EncodeBinaryData>0</EncodeBinaryData><RecordViewstateData>1</RecordViewstateData><RecordCustomHeaders>1</RecordCustomHeaders><SaveRedirectionHeaders>0</SaveRedirectionHeaders><SaveClientSideCookies>0</SaveClientSideCookies></Script_Content><Default_Encoding_Type><DefaultEncodingType>0</DefaultEncodingType></Default_Encoding_Type><Default_Browser_Selection><BrowserType>0</BrowserType><ListNetscapeAndMicrosoftBrowserws>|Chrome|Microsoft Internet Explorer|Mozilla Firefox|Safari|</ListNetscapeAndMicrosoftBrowserws><SelectedBrowser>Microsoft Internet Explorer</SelectedBrowser><OtherBrowser></OtherBrowser><SetAutoProxyDefs>1</SetAutoProxyDefs><ClearCache>1</ClearCache><ClearCookies>1</ClearCookies><CreateNewBrowser>1</CreateNewBrowser><MobileBrowserType>iPhone</MobileBrowserType><MobileUserAgent>iPhone 5.0</MobileUserAgent><BrowserWidth>0</BrowserWidth><BrowserHeight>0</BrowserHeight><IsSimulateMobile>0</IsSimulateMobile></Default_Browser_Selection><Correlation_options><AutoCorrelation>3</AutoCorrelation><CorrLogLevel>1</CorrLogLevel><CorrAddComments>1</CorrAddComments><CorrPreserveUser>1</CorrPreserveUser><CorrRulesFilename>C:\Program Files (x86)\RadView\WebLOAD\extensions\Correlation\correlationRules.xml</CorrRulesFilename><CorrLogFilename>C:\ProgramData\RadView\WebLOAD\Log\correlation.log</CorrLogFilename><ConvertHiddenFields>0</ConvertHiddenFields><CorrFlex>1</CorrFlex><DSIds>0</DSIds></Correlation_options><Correlation_Auto_options><CorrShowForm>2</CorrShowForm><CorrScoreTreshold>1</CorrScoreTreshold><CorrValueLength>0AFC6C60</CorrValueLength><CorrValueDelimeters>\#/?+;`': "&lt;&gt;()&amp; =	|</CorrValueDelimeters></Correlation_Auto_options><Filter_Url_options><FilteredUrls>|toolbarqueries.google|toolbar.google.com|safebrowsing-cache.google.com|toolbar.google.co.il|safebrowsing.clients.google.com|safebrowsing.google.com|http://clients?.google.com/*|https://clients?.google.com/*|http://clients?.google.co.il/*|https://clients?.google.co.il/*|https://www.google.com/searchdomaincheck/*|http://www.google.com/tools/toolbar/*|http://www.google.com/complete/search*|https://translate.googleapis.com/translate_a/l/*|https://www.gstatic.com/chrome/config/plugins_win.json|urs.microsoft.com|us.update.toolbar.com|windowsupdate.microsof.com|update.microsoft.com|sqm.microsoft.com|pgq.microsoft.com|toolbar.msn.com|g.msn|http://api.bing.com/qsml.aspx*|http://ieonline.microsoft.com/s/iess/instrumentation.cer|https://ieonline.microsoft.com/ieflipahead/ie10/rules.xml*|https://iecvlist.microsoft.com/IE11/*/iecompatviewlist.xml|http://go.microsoft.com/browserconfig.xml|https://go.microsoft.com/fwlink/*|https://t.urs.microsoft.com/urstelemetry.asmx*|www.download.windowsupdate.com|</FilteredUrls><OnlyUrls>|</OnlyUrls></Filter_Url_options></RECORD_OPTIONS><ADDITIONAL_INFORMATION><ProjectComments></ProjectComments><CreatedBy></CreatedBy><Custom1></Custom1><Custom2></Custom2><Custom3></Custom3><Subject></Subject><TestDescription></TestDescription><ResultsDescription></ResultsDescription><VersionBuild></VersionBuild><Title></Title></ADDITIONAL_INFORMATION><VisualAgenda><Agenda CallBack="Do_Agenda" ClonedXML="0" StartJSBlockLine="38" JSBlockLength="0"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0"/><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript></NodeScript><NodeID Visible="0">1</NodeID><PersistentCorrelation Visible="0"/><InitAgenda Type="JavaScript" ReadOnly="0">
+IncludeFile("AsmLib.js",WLExecuteScript)
+OutputFolder = "C:\\PerformanceTesting\\Projects\\STD_AUTOOUTPUT"
+IncludeFile("C:\\PerformanceTesting\\Projects\\ACTIVE_Environment.js")
+env_details()
+
+Web_Offer_Details_File = CopyFile(Web_Offer_Details_data_file)
+
+//#########################   The below code would over write the existing sleep time and introduce a random sleep time ######################################
+/*wlGlobals.DisableSleep = false
+wlGlobals.SleepRandomMax = 60000
+wlGlobals.SleepRandomMin = 30000*/
+//############################################################################################################################################
+
+wlGlobals.ParseTables = "No"
+//wlGlobals.ParseForms = "No"
+wlGlobals.GetImages   = "No"
+wlGlobals.ParseImages = "No"
+wlGlobals.FilterUrl = "https://dmbuckflgzcfm.cloudfront.net"
+
+wlGlobals.SaveSource = true
+wlGlobals.GetFrames = true 
+wlGlobals.UserAgent = "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.130 Safari/537.36"
+</InitAgenda><InitClient Type="JavaScript" ReadOnly="0">//start of function
+
+Web_Offer_Details_DataFileParam = WLDataFileParam ( "Web_Offer_Details", Web_Offer_Details_File, 1,",",WLParamRandom,WLParamLocal,WLParamUpdateRound,WLParamCycle);
+Offer = WLDataFileField(Web_Offer_Details_DataFileParam, 1);
+
+
+</InitClient><TerminateAgenda Type="JavaScript" ReadOnly="0"></TerminateAgenda><TerminateClient Type="JavaScript" ReadOnly="0"></TerminateClient><JSNodeCounter Visible="0">66</JSNodeCounter></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="GlobalVariables"><System Type="Array" ReadOnly="0"><Variable Name="ClientNum" Description="Returns the main thread number for each client"/><Variable Name="GeneratorName()" Description="Returns the name of this load generator as a string"/><Variable Name="GMTDate()" Description="Current date in GMT/UTC as a string"/><Variable Name="Hours()" Description="Current Hour (0-23)"/><Variable Name="LocalDate()" Description="Current date in local time as a string"/><Variable Name="Milliseconds()" Description="Current ms value"/><Variable Name="Minutes()" Description="Current minutes (0-59)"/><Variable Name="RandomNumber()" Description="Generate a random number"/><Variable Name="RoundNum" Description="Returns the number of rounds for the specific client"/><Variable Name="Seconds()" Description="Current seconds (0-59)"/><Variable Name="ThisYear()" Description="Current Year (4-digit, e.g. 2001)"/><Variable Name="Time()" Description="Time in ms since 1/1/1970"/><Variable Name="TodaysDate()" Description="Current date (1-31)"/><Variable Name="TodaysDay()" Description="Current Day (0-6, 0==Sunday)"/><Variable Name="TodaysMonth()" Description="Current Month (0-11)"/><Variable Name="VCUniqueID()" Description="Returns a string unique to this VC"/></System><ParameterManagerData CallBack="Do_ParameterManagerData"><Array ArrayName="Parameters" ArrayLen="0" NewParamIndex="1"/></ParameterManagerData><UserDefined Type="Array" ReadOnly="0"/><InputParameters Type="Array" ReadOnly="0"/><OutputParameters Type="Array" ReadOnly="0"/><GlobalInputFilesParams Type="Array" ReadOnly="0"/><FileCounter>0</FileCounter></PropertyPage></Properties><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">JavaScript</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - JavaScript - ID:66 *****/
+Mob_RandomNum =  wlRand.Range(1,9)
+//random no. for email address
+InfoMessage(Mob_RandomNum)
+// END WLIDE
+</NodeScript><NodeID Visible="0">66</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - JavaScript - ID:66 *****/
+Mob_RandomNum =  wlRand.Range(1,9)
+//random no. for email address
+InfoMessage(Mob_RandomNum)
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"/><JSScriptToInitClient Visible="0"/><JSScriptToTerminateAgenda Visible="0"/><JSScriptToTerminateClient Visible="0"/></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="9"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">http://www.t0.nectar.com/offers/45B0004AI0?optin=true&amp;cm_mmc=email-_-nectar-_-one-email-_-offers1-coaliation-160311</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - URL : http://www.t0.nectar.com/offers/45B0004AI0?optin=true&amp;cm_mmc=email-_-nectar-_-one-email-_-offers1-coaliation-160311 - ID:26 *****/ 
+wlHttp.SaveSource = true
+wlGlobals.UserAgent = "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0)"
+wlHttp.Header["DNT"] = "1"
+wlHttp.FormdataEncodingType = 1
+wlHttp.FormData["optin"] = "true"
+wlHttp.FormData["cm_mmc"] = "email-_-nectar-_-one-email-_-offers1-coaliation-160311"
+wlHttp.Get("http://www.t0.nectar.com/offers/45B0004AI0")
+
+corr_New_r14_XCSRFTOKEN_26 = extractValue( "     token : '", "'\n      ", document.wlSource, 1)
+corr_New_r15__csrf_26 = GetElementValueByName("_csrf")
+
+
+// END WLIDE</NodeScript><NodeID Visible="0">26</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - URL : http://www.t0.nectar.com/offers/45B0004AI0?optin=true&amp;cm_mmc=email-_-nectar-_-one-email-_-offers1-coaliation-160311 - ID:26 *****/ 
+wlHttp.SaveSource = true
+wlGlobals.UserAgent = "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0)"
+wlHttp.Header["DNT"] = "1"
+wlHttp.FormdataEncodingType = 1
+wlHttp.FormData["optin"] = "true"
+wlHttp.FormData["cm_mmc"] = "email-_-nectar-_-one-email-_-offers1-coaliation-160311"
+wlHttp.Get("http://www.t0.nectar.com/offers/45B0004AI0")
+// WLCORR-INFO	:  Extracting the dynamic value from the response according to Correlation Rule New - r14_XCSRFTOKEN
+corr_New_r14_XCSRFTOKEN_26 = extractValue( "     token : '", "'\n      ", document.wlSource, 1)
+ValidateCorrelation( /*Original value was*/ "0d1bedc6-3b0f-4616-b2df-f5ff0b8ae731", /*extracted into*/ corr_New_r14_XCSRFTOKEN_26, "corr_New_r14_XCSRFTOKEN_26");
+// WLCORR-INFO	:  Extracting the dynamic value from the response according to Correlation Rule New - r15__csrf
+corr_New_r15__csrf_26 = GetElementValueByName("_csrf")
+ValidateCorrelation( /*Original value was*/ "0d1bedc6-3b0f-4616-b2df-f5ff0b8ae731", /*extracted into*/ corr_New_r15__csrf_26, "corr_New_r15__csrf_26");
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"><HeaderItem Text=" GET http://www.t0.nectar.com/offers/45B0004AI0?optin=true&amp;cm_mmc=email-_-nectar-_-one-email-_-offers1-coaliation-160311 HTTP/1.1" Type="Request"><HeaderItem Text="Accept: text/html, application/xhtml+xml, */*" Type="Request"/><HeaderItem Text="Accept-Language: en-GB" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0)" Type="Request"/><HeaderItem Text="Accept-Encoding: gzip, deflate" Type="Request"/><HeaderItem Text="Host: www.t0.nectar.com" Type="Request"/><HeaderItem Text="DNT: 1" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text=" HTTP/1.1 302 Found" Type="Response"><HeaderItem Text="Date: Fri, 11 Mar 2016 17:38:44 GMT" Type="Response"/><HeaderItem Text="Server: Apache-Coyote/1.1" Type="Response"/><HeaderItem Text="Location: http://www.t0.nectar.com/login" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BTa=&quot;R:0|g:642fd6de-385d-4eae-99eb-61c7b10b1c2a&quot;; Version=1; Max-Age=30; Expires=Fri, 11-Mar-2016 17:39:15 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT1=&quot;R:0|i:1378644&quot;; Version=1; Max-Age=30; Expires=Fri, 11-Mar-2016 17:39:15 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BTs=&quot;R:0|s:f&quot;; Version=1; Max-Age=30; Expires=Fri, 11-Mar-2016 17:39:15 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: NECTARWEBSESSIONID=EE4C83ACEB3762F8036DAB9BF90845C9.app2; Path=/; HttpOnly" Type="Response"/><HeaderItem Text="Vary: Accept-Encoding,User-Agent" Type="Response"/><HeaderItem Text="Content-Encoding: gzip" Type="Response"/><HeaderItem Text="Content-Length: 20" Type="Response"/><HeaderItem Text="Keep-Alive: timeout=15, max=100" Type="Response"/><HeaderItem Text="Connection: Keep-Alive" Type="Response"/><HeaderItem Text="Content-Type: text/plain" Type="Response"/></HeaderItem></HeaderItem><HeaderItem Text=" GET http://www.t0.nectar.com/login HTTP/1.1" Type="Request"><HeaderItem Text="Accept: text/html, application/xhtml+xml, */*" Type="Request"/><HeaderItem Text="Accept-Language: en-GB" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0)" Type="Request"/><HeaderItem Text="Accept-Encoding: gzip, deflate" Type="Request"/><HeaderItem Text="Host: www.t0.nectar.com" Type="Request"/><HeaderItem Text="DNT: 1" Type="Request"/><HeaderItem Text="Cookie: ADRUM_BTa=&quot;R:0|g:642fd6de-385d-4eae-99eb-61c7b10b1c2a&quot;; ADRUM_BT1=&quot;R:0|i:1378644&quot;; ADRUM_BTs=&quot;R:0|s:f&quot;; NECTARWEBSESSIONID=EE4C83ACEB3762F8036DAB9BF90845C9.app2" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text=" HTTP/1.1 302 Found" Type="Response"><HeaderItem Text="Date: Fri, 11 Mar 2016 17:38:44 GMT" Type="Response"/><HeaderItem Text="Server: Apache-Coyote/1.1" Type="Response"/><HeaderItem Text="Location: http://www.t0.nectar.com/login" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BTa=&quot;R:0|g:642fd6de-385d-4eae-99eb-61c7b10b1c2a&quot;; Version=1; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT1=&quot;R:0|i:1378644&quot;; Version=1; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BTs=&quot;R:0|s:f&quot;; Version=1; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BTa=&quot;R:0|g:14a1c7bb-1fcc-4231-a24d-1909183e7ec1&quot;; Version=1; Max-Age=30; Expires=Fri, 11-Mar-2016 17:39:15 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT1=&quot;R:0|i:1378333&quot;; Version=1; Max-Age=30; Expires=Fri, 11-Mar-2016 17:39:15 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT1=&quot;R:0|i:1378333|e:4&quot;; Version=1; Max-Age=30; Expires=Fri, 11-Mar-2016 17:39:15 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: NECTARWEBSESSIONID=673B64DC4E09322B30E9664349126C8F.app2; Path=/; HttpOnly" Type="Response"/><HeaderItem Text="Vary: Accept-Encoding,User-Agent" Type="Response"/><HeaderItem Text="Content-Encoding: gzip" Type="Response"/><HeaderItem Text="Content-Length: 20" Type="Response"/><HeaderItem Text="Keep-Alive: timeout=15, max=99" Type="Response"/><HeaderItem Text="Connection: Keep-Alive" Type="Response"/><HeaderItem Text="Content-Type: text/plain" Type="Response"/></HeaderItem></HeaderItem><HeaderItem Text=" GET http://www.t0.nectar.com/login HTTP/1.1" Type="Request"><HeaderItem Text="Accept: text/html, application/xhtml+xml, */*" Type="Request"/><HeaderItem Text="Accept-Language: en-GB" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0)" Type="Request"/><HeaderItem Text="Accept-Encoding: gzip, deflate" Type="Request"/><HeaderItem Text="Host: www.t0.nectar.com" Type="Request"/><HeaderItem Text="DNT: 1" Type="Request"/><HeaderItem Text="Cookie: NECTARWEBSESSIONID=673B64DC4E09322B30E9664349126C8F.app2; ADRUM_BTa=&quot;R:0|g:14a1c7bb-1fcc-4231-a24d-1909183e7ec1&quot;; ADRUM_BT1=&quot;R:0|i:1378333|e:4&quot;" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text=" HTTP/1.1 200 OK" Type="Response"><HeaderItem Text="Date: Fri, 11 Mar 2016 17:38:44 GMT" Type="Response"/><HeaderItem Text="Server: Apache-Coyote/1.1" Type="Response"/><HeaderItem Text="Content-Type: text/html;charset=UTF-8" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BTa=&quot;R:0|g:14a1c7bb-1fcc-4231-a24d-1909183e7ec1&quot;; Version=1; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT1=&quot;R:0|i:1378333|e:4&quot;; Version=1; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BTa=&quot;R:0|g:16190f83-ad11-473f-8fe3-c299278548a4&quot;; Version=1; Max-Age=30; Expires=Fri, 11-Mar-2016 17:39:15 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT1=&quot;R:0|i:1378333&quot;; Version=1; Max-Age=30; Expires=Fri, 11-Mar-2016 17:39:15 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT1=&quot;R:0|i:1378333|e:4&quot;; Version=1; Max-Age=30; Expires=Fri, 11-Mar-2016 17:39:15 GMT; Path=/" Type="Response"/><HeaderItem Text="Vary: Accept-Encoding,User-Agent" Type="Response"/><HeaderItem Text="Content-Encoding: gzip" Type="Response"/><HeaderItem Text="Keep-Alive: timeout=15, max=98" Type="Response"/><HeaderItem Text="Connection: Keep-Alive" Type="Response"/><HeaderItem Text="Transfer-Encoding: chunked" Type="Response"/></HeaderItem></HeaderItem></PropertyPage><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0">38</StartJSBlockLine><JSBlockLength Visible="0">15</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0">true</IsProtocolRecordedNode><TestTalkMessageID Visible="0">16</TestTalkMessageID><RecordingCallback Visible="0">OnGet</RecordingCallback><Encoded Visible="0">true</Encoded><ContentType Visible="0"></ContentType></PropertyPage><preview domid="61"/></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="10"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">Sleep</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - Sleep - ID:27 *****/
+Sleep(3693)
+// END WLIDE</NodeScript><NodeID Visible="0">27</NodeID><PersistentCorrelation Visible="0"/><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0">53</StartJSBlockLine><JSBlockLength Visible="0">4</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="11"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">http://www.t0.nectar.com/api/activate/card-check/50984003013</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - URL : http://www.t0.nectar.com/api/activate/card-check/50984003013 - ID:32 *****/ 
+wlGlobals.UserAgent = "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0)"
+// WLCORR-INFO	:  Replacing "0d1bedc6-3b0f-4616-b2df-f5ff0b8ae731" with correlation parameter corr_New_r14_XCSRFTOKEN_26
+wlHttp.Header["X-CSRF-TOKEN"] = corr_New_r14_XCSRFTOKEN_26
+wlHttp.Header["X-Requested-With"] = "XMLHttpRequest"
+wlHttp.Header["Referer"] = "http://www.t0.nectar.com/login"
+wlHttp.Header["DNT"] = "1"
+wlHttp.Get("http://www.t0.nectar.com/api/activate/card-check/50984003013")
+
+// END WLIDE</NodeScript><NodeID Visible="0">32</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - URL : http://www.t0.nectar.com/api/activate/card-check/50984003013 - ID:32 *****/ 
+wlGlobals.UserAgent = "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0)"
+// WLCORR-INFO	:  Replacing "0d1bedc6-3b0f-4616-b2df-f5ff0b8ae731" with correlation parameter corr_New_r14_XCSRFTOKEN_26
+wlHttp.Header["X-CSRF-TOKEN"] = corr_New_r14_XCSRFTOKEN_26
+wlHttp.Header["X-Requested-With"] = "XMLHttpRequest"
+wlHttp.Header["Referer"] = "http://www.t0.nectar.com/login"
+wlHttp.Header["DNT"] = "1"
+wlHttp.Get("http://www.t0.nectar.com/api/activate/card-check/50984003013")
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"><HeaderItem Text=" GET http://www.t0.nectar.com/api/activate/card-check/50984003013 HTTP/1.1" Type="Request"><HeaderItem Text="X-CSRF-TOKEN: 0d1bedc6-3b0f-4616-b2df-f5ff0b8ae731" Type="Request"/><HeaderItem Text="Accept: */*" Type="Request"/><HeaderItem Text="X-Requested-With: XMLHttpRequest" Type="Request"/><HeaderItem Text="Referer: http://www.t0.nectar.com/login" Type="Request"/><HeaderItem Text="Accept-Language: en-GB" Type="Request"/><HeaderItem Text="Accept-Encoding: gzip, deflate" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0)" Type="Request"/><HeaderItem Text="DNT: 1" Type="Request"/><HeaderItem Text="Host: www.t0.nectar.com" Type="Request"/><HeaderItem Text="Cookie: NECTARWEBSESSIONID=673B64DC4E09322B30E9664349126C8F.app2; ADRUM_BTa=&quot;R:30|g:c8e33796-f4e1-4aa6-a9d1-a06ef01eacf2&quot;; ADRUM_BT1=&quot;R:30|i:1378346&quot;; ADRUM_BTs=&quot;R:30|s:f&quot;" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text=" HTTP/1.1 200 OK" Type="Response"><HeaderItem Text="Date: Fri, 11 Mar 2016 17:38:55 GMT" Type="Response"/><HeaderItem Text="Server: Apache-Coyote/1.1" Type="Response"/><HeaderItem Text="ADRUM_0: g:e42c75c8-de3c-41e1-bf11-2a62abd65539" Type="Response"/><HeaderItem Text="ADRUM_1: i:1378643" Type="Response"/><HeaderItem Text="ADRUM_2: e:13" Type="Response"/><HeaderItem Text="Cache-Control: no-cache" Type="Response"/><HeaderItem Text="Pragma: no-cache" Type="Response"/><HeaderItem Text="Expires: Thu, 01 Jan 1970 00:00:00 GMT" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BTa=&quot;R:30|g:c8e33796-f4e1-4aa6-a9d1-a06ef01eacf2&quot;; Version=1; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT1=&quot;R:30|i:1378346&quot;; Version=1; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BTs=&quot;R:30|s:f&quot;; Version=1; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/" Type="Response"/><HeaderItem Text="Vary: Accept-Encoding,User-Agent" Type="Response"/><HeaderItem Text="Content-Encoding: gzip" Type="Response"/><HeaderItem Text="Content-Length: 20" Type="Response"/><HeaderItem Text="Keep-Alive: timeout=15, max=98" Type="Response"/><HeaderItem Text="Connection: Keep-Alive" Type="Response"/><HeaderItem Text="Content-Type: text/plain" Type="Response"/></HeaderItem></HeaderItem></PropertyPage><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0">57</StartJSBlockLine><JSBlockLength Visible="0">11</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0">true</IsProtocolRecordedNode><TestTalkMessageID Visible="0">19</TestTalkMessageID><RecordingCallback Visible="0">OnGet</RecordingCallback><Encoded Visible="0">true</Encoded><ContentType Visible="0"></ContentType></PropertyPage><preview domid="80"/><PropertyPage Name="ClientCookies" Visible="-1"><CookieItem cookieName="ADRUM_BTs" cookieValue="&quot;R:30|s:f&quot;" cookieDomain="www.t0.nectar.com" cookiePath="/" cookieExpire="" cookieSecure=""/><CookieItem cookieName="ADRUM_BT1" cookieValue="&quot;R:30|i:1378346&quot;" cookieDomain="www.t0.nectar.com" cookiePath="/" cookieExpire="" cookieSecure=""/><CookieItem cookieName="ADRUM_BTa" cookieValue="&quot;R:30|g:c8e33796-f4e1-4aa6-a9d1-a06ef01eacf2&quot;" cookieDomain="www.t0.nectar.com" cookiePath="/" cookieExpire="" cookieSecure=""/></PropertyPage></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="12"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">Sleep</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - Sleep - ID:33 *****/
+Sleep(7197)
+// END WLIDE</NodeScript><NodeID Visible="0">33</NodeID><PersistentCorrelation Visible="0"/><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0">68</StartJSBlockLine><JSBlockLength Visible="0">4</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="13"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">http://www.t0.nectar.com/do_login</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - URL : http://www.t0.nectar.com/do_login - ID:34 *****/ 
+wlHttp.SaveSource = true
+wlHttp.Header["Referer"] = "http://www.t0.nectar.com/login"
+wlHttp.Header["DNT"] = "1"
+wlHttp.FormdataEncodingType = 1
+wlHttp.ContentType = "application/x-www-form-urlencoded"
+// WLCORR-INFO	:  Replacing "0d1bedc6-3b0f-4616-b2df-f5ff0b8ae731" with correlation parameter corr_New_r15__csrf_26
+wlHttp.FormData["_csrf"] = corr_New_r15__csrf_26
+wlHttp.FormData["username"] = "50984003013"
+wlHttp.FormData["password"] = "Pa55word"
+wlHttp.FormData["destination"] = "$WL$EMPTY$STRING$"
+wlHttp.Post("http://www.t0.nectar.com/do_login")
+
+// &lt;a class="inner" href="offers/45B00071DE"&gt;
+res =   extractValue( "offers/", "\"&gt;",document.wlSource)
+
+
+InfoMessage(res)
+// END WLIDE</NodeScript><NodeID Visible="0">34</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - URL : http://www.t0.nectar.com/do_login - ID:34 *****/ 
+wlHttp.SaveSource = true
+wlHttp.Header["Referer"] = "http://www.t0.nectar.com/login"
+wlHttp.Header["DNT"] = "1"
+wlHttp.FormdataEncodingType = 1
+wlHttp.ContentType = "application/x-www-form-urlencoded"
+// WLCORR-INFO	:  Replacing "0d1bedc6-3b0f-4616-b2df-f5ff0b8ae731" with correlation parameter corr_New_r15__csrf_26
+wlHttp.FormData["_csrf"] = corr_New_r15__csrf_26
+wlHttp.FormData["username"] = "50984003013"
+wlHttp.FormData["password"] = "Pa55word"
+wlHttp.FormData["destination"] = "$WL$EMPTY$STRING$"
+wlHttp.Post("http://www.t0.nectar.com/do_login")
+// WLCORR-INFO	:  Extracting the dynamic value from the response according to Correlation Rule New - r16_cConsent_accepted
+corr_New_r16_cConsent_accepted_34 = extractValue( "document.cookie = '", "' +", document.wlSource, 1)
+ValidateCorrelation( /*Original value was*/ "cConsent_accepted", /*extracted into*/ corr_New_r16_cConsent_accepted_34, "corr_New_r16_cConsent_accepted_34");
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"><HeaderItem Text=" POST http://www.t0.nectar.com/do_login HTTP/1.1" Type="Request"><HeaderItem Text="Accept: text/html, application/xhtml+xml, */*" Type="Request"/><HeaderItem Text="Referer: http://www.t0.nectar.com/login" Type="Request"/><HeaderItem Text="Accept-Language: en-GB" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0)" Type="Request"/><HeaderItem Text="Content-Type: application/x-www-form-urlencoded" Type="Request"/><HeaderItem Text="Accept-Encoding: gzip, deflate" Type="Request"/><HeaderItem Text="Content-Length: 94" Type="Request"/><HeaderItem Text="DNT: 1" Type="Request"/><HeaderItem Text="Host: www.t0.nectar.com" Type="Request"/><HeaderItem Text="Pragma: no-cache" Type="Request"/><HeaderItem Text="Cookie: NECTARWEBSESSIONID=673B64DC4E09322B30E9664349126C8F.app2" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text="_csrf=0d1bedc6-3b0f-4616-b2df-f5ff0b8ae731&amp;username=50984003013&amp;password=Pa55word&amp;destination=" Type="FormData"/><HeaderItem Text=" HTTP/1.1 302 Found" Type="Response"><HeaderItem Text="Date: Fri, 11 Mar 2016 17:39:02 GMT" Type="Response"/><HeaderItem Text="Server: Apache-Coyote/1.1" Type="Response"/><HeaderItem Text="Location: http://www.t0.nectar.com/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BTa=&quot;R:30|g:afb17ea2-34c5-44db-a2d8-1cb2ab9db199&quot;; Version=1; Max-Age=30; Expires=Fri, 11-Mar-2016 17:39:32 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT1=&quot;R:30|i:1378360&quot;; Version=1; Max-Age=30; Expires=Fri, 11-Mar-2016 17:39:32 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT1=&quot;R:30|i:1378360|e:64&quot;; Version=1; Max-Age=30; Expires=Fri, 11-Mar-2016 17:39:32 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: NECTARWEBSESSIONID=90E8E46FB6AEC0F82E651839B9C2580E.app2; Path=/; HttpOnly" Type="Response"/><HeaderItem Text="Vary: Accept-Encoding,User-Agent" Type="Response"/><HeaderItem Text="Content-Encoding: gzip" Type="Response"/><HeaderItem Text="Content-Length: 20" Type="Response"/><HeaderItem Text="Connection: close" Type="Response"/><HeaderItem Text="Content-Type: text/plain" Type="Response"/></HeaderItem></HeaderItem><HeaderItem Text=" GET http://www.t0.nectar.com/ HTTP/1.1" Type="Request"><HeaderItem Text="Accept: text/html, application/xhtml+xml, */*" Type="Request"/><HeaderItem Text="Referer: http://www.t0.nectar.com/login" Type="Request"/><HeaderItem Text="Accept-Language: en-GB" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0)" Type="Request"/><HeaderItem Text="DNT: 1" Type="Request"/><HeaderItem Text="Accept-Encoding: gzip, deflate" Type="Request"/><HeaderItem Text="Cookie: NECTARWEBSESSIONID=90E8E46FB6AEC0F82E651839B9C2580E.app2; ADRUM_BTa=&quot;R:30|g:afb17ea2-34c5-44db-a2d8-1cb2ab9db199&quot;; ADRUM_BT1=&quot;R:30|i:1378360|e:64&quot;" Type="Request"/><HeaderItem Text="Host: www.t0.nectar.com" Type="Request"/><HeaderItem Text="Pragma: no-cache" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text=" HTTP/1.1 200 OK" Type="Response"><HeaderItem Text="Date: Fri, 11 Mar 2016 17:39:02 GMT" Type="Response"/><HeaderItem Text="Server: Apache-Coyote/1.1" Type="Response"/><HeaderItem Text="Content-Type: text/html;charset=UTF-8" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BTa=&quot;R:30|g:afb17ea2-34c5-44db-a2d8-1cb2ab9db199&quot;; Version=1; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT1=&quot;R:30|i:1378360|e:64&quot;; Version=1; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BTa=&quot;R:30|g:d9108a8f-72ed-45b5-8b39-fd798c6b17f1&quot;; Version=1; Max-Age=30; Expires=Fri, 11-Mar-2016 17:39:32 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT1=&quot;R:30|i:1378332&quot;; Version=1; Max-Age=30; Expires=Fri, 11-Mar-2016 17:39:32 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT1=&quot;R:30|i:1378332|e:365&quot;; Version=1; Max-Age=30; Expires=Fri, 11-Mar-2016 17:39:32 GMT; Path=/" Type="Response"/><HeaderItem Text="Vary: Accept-Encoding,User-Agent" Type="Response"/><HeaderItem Text="Content-Encoding: gzip" Type="Response"/><HeaderItem Text="Keep-Alive: timeout=15, max=100" Type="Response"/><HeaderItem Text="Connection: Keep-Alive" Type="Response"/><HeaderItem Text="Transfer-Encoding: chunked" Type="Response"/></HeaderItem></HeaderItem></PropertyPage><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0">72</StartJSBlockLine><JSBlockLength Visible="0">20</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0">true</IsProtocolRecordedNode><TestTalkMessageID Visible="0">20</TestTalkMessageID><RecordingCallback Visible="0">OnPost</RecordingCallback><Encoded Visible="0">true</Encoded><ContentType Visible="0">application/x-www-form-urlencoded</ContentType></PropertyPage><preview domid="81"/></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="14"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">Sleep</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - Sleep - ID:35 *****/
+Sleep(2362)
+// END WLIDE</NodeScript><NodeID Visible="0">35</NodeID><PersistentCorrelation Visible="0"/><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0">92</StartJSBlockLine><JSBlockLength Visible="0">4</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="15"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">http://www.t0.nectar.com/offers/45B0004AJZ</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - URL : http://www.t0.nectar.com/offers/45B0004AJZ - ID:54 *****/ 
+wlHttp.SaveSource = true
+wlGlobals.UserAgent = "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0)"
+wlHttp.Header["DNT"] = "1"
+wlHttp.FormdataEncodingType = 1
+wlHttp.FormData["optin"] = "true"
+wlHttp.FormData["cm_mmc"] = "email-_-nectar-_-one-email-_-offers1-coaliation-160311"
+wlHttp.Get("http://www.t0.nectar.com/offers/"+res+"")
+
+// END WLIDE</NodeScript><NodeID Visible="0">54</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - URL : http://www.t0.nectar.com/offers/45B0004AJZ - ID:54 *****/ 
+wlGlobals.UserAgent = "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0)"
+wlHttp.Header["Referer"] = "http://www.t0.nectar.com/"
+wlHttp.Header["DNT"] = "1"
+wlHttp.Get("http://www.t0.nectar.com/offers/45B0004AJZ")
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"><HeaderItem Text=" GET http://www.t0.nectar.com/offers/45B0004AJZ HTTP/1.1" Type="Request"><HeaderItem Text="Accept: text/html, application/xhtml+xml, */*" Type="Request"/><HeaderItem Text="Referer: http://www.t0.nectar.com/" Type="Request"/><HeaderItem Text="Accept-Language: en-GB" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0)" Type="Request"/><HeaderItem Text="Accept-Encoding: gzip, deflate" Type="Request"/><HeaderItem Text="DNT: 1" Type="Request"/><HeaderItem Text="Host: www.t0.nectar.com" Type="Request"/><HeaderItem Text="Cookie: NECTARWEBSESSIONID=90E8E46FB6AEC0F82E651839B9C2580E.app2; ADRUM_BTa=&quot;R:25|g:e6bab036-6e08-4b1a-a3d9-877baa8cc948&quot;; ADRUM_BT1=&quot;R:25|i:1378346&quot;; cConsent_accepted=cConsent_accepted" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text=" HTTP/1.1 200 OK" Type="Response"><HeaderItem Text="Date: Fri, 11 Mar 2016 17:39:16 GMT" Type="Response"/><HeaderItem Text="Server: Apache-Coyote/1.1" Type="Response"/><HeaderItem Text="Content-Type: text/html;charset=UTF-8" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BTa=&quot;R:25|g:e6bab036-6e08-4b1a-a3d9-877baa8cc948&quot;; Version=1; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT1=&quot;R:25|i:1378346&quot;; Version=1; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BTa=&quot;R:25|g:02267f62-00e1-4bb6-bc65-313bb1a31867&quot;; Version=1; Max-Age=30; Expires=Fri, 11-Mar-2016 17:39:46 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT1=&quot;R:25|i:1378644&quot;; Version=1; Max-Age=30; Expires=Fri, 11-Mar-2016 17:39:46 GMT; Path=/" Type="Response"/><HeaderItem Text="Vary: Accept-Encoding,User-Agent" Type="Response"/><HeaderItem Text="Content-Encoding: gzip" Type="Response"/><HeaderItem Text="Keep-Alive: timeout=15, max=98" Type="Response"/><HeaderItem Text="Connection: Keep-Alive" Type="Response"/><HeaderItem Text="Transfer-Encoding: chunked" Type="Response"/></HeaderItem></HeaderItem></PropertyPage><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0">96</StartJSBlockLine><JSBlockLength Visible="0">11</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0">true</IsProtocolRecordedNode><TestTalkMessageID Visible="0">35</TestTalkMessageID><RecordingCallback Visible="0">OnGet</RecordingCallback><Encoded Visible="0">true</Encoded><ContentType Visible="0"></ContentType></PropertyPage><preview domid="113"/><PropertyPage Name="ClientCookies" Visible="-1"><CookieItem cookieName="cConsent_accepted" cookieValue="cConsent_accepted" cookieDomain="www.t0.nectar.com" cookiePath="/" cookieExpire="" cookieSecure=""/><CookieItem cookieName="ADRUM_BT1" cookieValue="&quot;R:25|i:1378346&quot;" cookieDomain="www.t0.nectar.com" cookiePath="/" cookieExpire="" cookieSecure=""/><CookieItem cookieName="ADRUM_BTa" cookieValue="&quot;R:25|g:e6bab036-6e08-4b1a-a3d9-877baa8cc948&quot;" cookieDomain="www.t0.nectar.com" cookiePath="/" cookieExpire="" cookieSecure=""/></PropertyPage></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="16"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">http://www.t0.nectar.com/do_logout</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - URL : http://www.t0.nectar.com/do_logout - ID:61 *****/ 
+wlGlobals.UserAgent = "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0)"
+wlHttp.Header["Referer"] = "http://www.t0.nectar.com/offers/"+res+""
+wlHttp.Header["DNT"] = "1"
+wlHttp.Get("http://www.t0.nectar.com/do_logout")
+
+// END WLIDE</NodeScript><NodeID Visible="0">61</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - URL : http://www.t0.nectar.com/do_logout - ID:61 *****/ 
+wlGlobals.UserAgent = "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0)"
+wlHttp.Header["Referer"] = "http://www.t0.nectar.com/offers/45B0004AJZ"
+wlHttp.Header["DNT"] = "1"
+wlHttp.Get("http://www.t0.nectar.com/do_logout")
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"><HeaderItem Text=" GET http://www.t0.nectar.com/do_logout HTTP/1.1" Type="Request"><HeaderItem Text="Accept: text/html, application/xhtml+xml, */*" Type="Request"/><HeaderItem Text="Referer: http://www.t0.nectar.com/offers/45B0004AJZ" Type="Request"/><HeaderItem Text="Accept-Language: en-GB" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0)" Type="Request"/><HeaderItem Text="Accept-Encoding: gzip, deflate" Type="Request"/><HeaderItem Text="DNT: 1" Type="Request"/><HeaderItem Text="Host: www.t0.nectar.com" Type="Request"/><HeaderItem Text="Cookie: NECTARWEBSESSIONID=90E8E46FB6AEC0F82E651839B9C2580E.app2; cConsent_accepted=cConsent_accepted; ADRUM_BTa=&quot;R:25|g:02267f62-00e1-4bb6-bc65-313bb1a31867&quot;; ADRUM_BT1=&quot;R:25|i:1378644&quot;" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text=" HTTP/1.1 302 Found" Type="Response"><HeaderItem Text="Date: Fri, 11 Mar 2016 17:39:26 GMT" Type="Response"/><HeaderItem Text="Server: Apache-Coyote/1.1" Type="Response"/><HeaderItem Text="Location: http://www.t0.nectar.com/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BTa=&quot;R:25|g:02267f62-00e1-4bb6-bc65-313bb1a31867&quot;; Version=1; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT1=&quot;R:25|i:1378644&quot;; Version=1; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BTa=&quot;R:42|g:1e8065d1-83af-4a50-ac72-cb620a1f2d64&quot;; Version=1; Max-Age=30; Expires=Fri, 11-Mar-2016 17:39:57 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT1=&quot;R:42|i:1381420&quot;; Version=1; Max-Age=30; Expires=Fri, 11-Mar-2016 17:39:57 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT1=&quot;R:42|i:1381420|e:0&quot;; Version=1; Max-Age=30; Expires=Fri, 11-Mar-2016 17:39:57 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: JSESSIONID=&quot;&quot;; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: NECTAR_REMEMBER_ME=&quot;&quot;; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: NECTARWEBSESSIONID=A3E0DDD423B5C5A7E56CF965066D7C68.app2; Path=/; HttpOnly" Type="Response"/><HeaderItem Text="Vary: Accept-Encoding,User-Agent" Type="Response"/><HeaderItem Text="Content-Encoding: gzip" Type="Response"/><HeaderItem Text="Content-Length: 20" Type="Response"/><HeaderItem Text="Keep-Alive: timeout=15, max=99" Type="Response"/><HeaderItem Text="Connection: Keep-Alive" Type="Response"/><HeaderItem Text="Content-Type: text/plain" Type="Response"/></HeaderItem></HeaderItem><HeaderItem Text=" GET http://www.t0.nectar.com/ HTTP/1.1" Type="Request"><HeaderItem Text="Accept: text/html, application/xhtml+xml, */*" Type="Request"/><HeaderItem Text="Referer: http://www.t0.nectar.com/offers/45B0004AJZ" Type="Request"/><HeaderItem Text="Accept-Language: en-GB" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0)" Type="Request"/><HeaderItem Text="Accept-Encoding: gzip, deflate" Type="Request"/><HeaderItem Text="DNT: 1" Type="Request"/><HeaderItem Text="Host: www.t0.nectar.com" Type="Request"/><HeaderItem Text="Cookie: NECTARWEBSESSIONID=A3E0DDD423B5C5A7E56CF965066D7C68.app2; cConsent_accepted=cConsent_accepted; ADRUM_BTa=&quot;R:42|g:1e8065d1-83af-4a50-ac72-cb620a1f2d64&quot;; ADRUM_BT1=&quot;R:42|i:1381420|e:0&quot;" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text=" HTTP/1.1 200 OK" Type="Response"><HeaderItem Text="Date: Fri, 11 Mar 2016 17:39:26 GMT" Type="Response"/><HeaderItem Text="Server: Apache-Coyote/1.1" Type="Response"/><HeaderItem Text="Content-Type: text/html;charset=UTF-8" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BTa=&quot;R:42|g:1e8065d1-83af-4a50-ac72-cb620a1f2d64&quot;; Version=1; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT1=&quot;R:42|i:1381420|e:0&quot;; Version=1; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BTa=&quot;R:42|g:f648cb89-90b4-4431-adc5-82ed008005e3&quot;; Version=1; Max-Age=30; Expires=Fri, 11-Mar-2016 17:39:57 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT1=&quot;R:42|i:1378332&quot;; Version=1; Max-Age=30; Expires=Fri, 11-Mar-2016 17:39:57 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT1=&quot;R:42|i:1378332|e:360&quot;; Version=1; Max-Age=30; Expires=Fri, 11-Mar-2016 17:39:57 GMT; Path=/" Type="Response"/><HeaderItem Text="Vary: Accept-Encoding,User-Agent" Type="Response"/><HeaderItem Text="Content-Encoding: gzip" Type="Response"/><HeaderItem Text="Keep-Alive: timeout=15, max=98" Type="Response"/><HeaderItem Text="Connection: Keep-Alive" Type="Response"/><HeaderItem Text="Transfer-Encoding: chunked" Type="Response"/></HeaderItem></HeaderItem></PropertyPage><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0">107</StartJSBlockLine><JSBlockLength Visible="0">8</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0">true</IsProtocolRecordedNode><TestTalkMessageID Visible="0">40</TestTalkMessageID><RecordingCallback Visible="0">OnGet</RecordingCallback><Encoded Visible="0">true</Encoded><ContentType Visible="0"></ContentType></PropertyPage><preview domid="122"/></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="17"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">Sleep</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - Sleep - ID:62 *****/
+Sleep(4865)
+// END WLIDE</NodeScript><NodeID Visible="0">62</NodeID><PersistentCorrelation Visible="0"/><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0">115</StartJSBlockLine><JSBlockLength Visible="0">4</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject></Agenda></VisualAgenda><ORACLE_PROJECT_INCLUDE_PATH></ORACLE_PROJECT_INCLUDE_PATH><BreakPointsMap/></Project>
