@@ -1,7 +1,0 @@
-StoreName
-sainsburys
-sainsburys-online
-expedia
-eurostar
-argos
-homebase
