@@ -1,1 +1,0 @@
-The Files are stored at C:\Documents and Settings\GAL\My Documents\WebLOAD\Sessions\T0\Baselines

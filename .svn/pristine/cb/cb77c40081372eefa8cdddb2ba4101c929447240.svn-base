@@ -1,6 +1,0 @@
-[OAuth_CertApi]
-Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\OpenAPI\OAuth_CertApi.wlp
-Weight=1
-[Content]
-ScriptsNumber=1
-Scripts=OAuth_CertApi;

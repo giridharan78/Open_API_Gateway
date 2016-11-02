@@ -1,9 +1,0 @@
-[OAuth_Refresh_token]
-Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\OpenAPI\json_Scripts\OAuth_Refresh_token.wlp
-Weight=75
-[OAuth_Revoke]
-Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\OpenAPI\json_Scripts\OAuth_Revoke.wlp
-Weight=25
-[Content]
-ScriptsNumber=2
-Scripts=OAuth_Refresh_token;OAuth_Revoke;
