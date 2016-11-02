@@ -1,0 +1,737 @@
+<Project><VisualAgenda><Agenda CallBack="Do_Agenda" ClonedXML="0" StartJSBlockLine="32" JSBlockLength="0"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0"/><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript></NodeScript><NodeID Visible="0">1</NodeID><PersistentCorrelation Visible="0"/><InitAgenda Type="JavaScript" ReadOnly="0">
+IncludeFile("AsmLib.js",WLExecuteScript)
+OutputFolder = "C:\\PerformanceTesting\\Projects\\STD_AUTOOUTPUT"
+IncludeFile("C:\\PerformanceTesting\\Projects\\ACTIVE_Environment.js")
+env_details()
+
+Web_Forgot_File = CopyFile(Web_Forgot_pwd_data_file)
+
+
+//#########################   The below code would over write the existing sleep time and introduce a random sleep time ######################################
+wlGlobals.DisableSleep = false
+wlGlobals.SleepRandomMax = 60000
+wlGlobals.SleepRandomMin = 30000
+//############################################################################################################################################
+
+wlGlobals.ParseTables = "No"
+//wlGlobals.ParseForms = "No"
+wlGlobals.GetImages   = "No"
+wlGlobals.ParseImages = "No"
+
+wlGlobals.FilterUrl = "https://uk.adadvisor.net/adscores/g.pixel?"
+wlGlobals.SaveSource = true
+wlGlobals.GetFrames = true 
+wlGlobals.UserAgent = "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.125 Safari/537.36"
+</InitAgenda><InitClient Type="JavaScript" ReadOnly="0">Web_Forgot_DataFileParam = WLDataFileParam ( "Web_Forgot", Web_Forgot_File, 0,",",WLParamRandom,WLParamLocal,WLParamUpdateRound,WLParamCycle);
+CollectorNumber = WLDataFileField(Web_Forgot_DataFileParam, 1);
+</InitClient><TerminateAgenda Type="JavaScript" ReadOnly="0"></TerminateAgenda><TerminateClient Type="JavaScript" ReadOnly="0"></TerminateClient><JSNodeCounter Visible="0">127</JSNodeCounter></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="GlobalVariables"><System Type="Array" ReadOnly="0"><Variable Name="ClientNum" Description="Returns the main thread number for each client"/><Variable Name="GeneratorName()" Description="Returns the name of this load generator as a string"/><Variable Name="GMTDate()" Description="Current date in GMT/UTC as a string"/><Variable Name="Hours()" Description="Current Hour (0-23)"/><Variable Name="LocalDate()" Description="Current date in local time as a string"/><Variable Name="Milliseconds()" Description="Current ms value"/><Variable Name="Minutes()" Description="Current minutes (0-59)"/><Variable Name="RandomNumber()" Description="Generate a random number"/><Variable Name="RoundNum" Description="Returns the number of rounds for the specific client"/><Variable Name="Seconds()" Description="Current seconds (0-59)"/><Variable Name="ThisYear()" Description="Current Year (4-digit, e.g. 2001)"/><Variable Name="Time()" Description="Time in ms since 1/1/1970"/><Variable Name="TodaysDate()" Description="Current date (1-31)"/><Variable Name="TodaysDay()" Description="Current Day (0-6, 0==Sunday)"/><Variable Name="TodaysMonth()" Description="Current Month (0-11)"/><Variable Name="VCUniqueID()" Description="Returns a string unique to this VC"/></System><ParameterManagerData CallBack="Do_ParameterManagerData"><Array ArrayName="Parameters" ArrayLen="0" NewParamIndex="1"/></ParameterManagerData><UserDefined Type="Array" ReadOnly="0"/><InputParameters Type="Array" ReadOnly="0"/><OutputParameters Type="Array" ReadOnly="0"/><GlobalInputFilesParams Type="Array" ReadOnly="0"/><FileCounter>0</FileCounter></PropertyPage></Properties><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="0"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">JavaScript</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - JavaScript - ID:127 *****/
+/*This piece of code would generate the code for the OAuth . The Jar files should be placed in the extensions/java directory of the Parent Webload Directory. Jar files need to be placed in the LG's as well.
+~~~~~~~~~~~~~~Windows XP, 2003~~~~~~~~~~~~~~~~
+C:\Documents and Settings\All Users\Application Data\RadView\WebLOAD\extensions\java
+
+~~~~~~~~~~~Other OS~~~~~~~~~~~~~~~~
+C:\ProgramData\RadView\WebLOAD\extensions\java
+
+1. API.jar
+2. nectar-openapi-transaction-services-3.3-SNAPSHOT.jar
+3.  nectar-openapi-common-domain-1.5-SNAPSHOT.jar
+4.  aerogear-otp-java-1.0.0.jar 
+5.  domain-3.3.1.jar*/
+
+
+
+code = new Packages.secureCode.CardCode();
+a = code.extractCardNumberCode(CollectorNumber.getValue());
+
+// END WLIDE</NodeScript><NodeID Visible="0">127</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - JavaScript - ID:127 *****/
+/*This piece of code would generate the code for the OAuth . The Jar files should be placed in the extensions/java directory of the Parent Webload Directory. Jar files need to be placed in the LG's as well.
+~~~~~~~~~~~~~~Windows XP, 2003~~~~~~~~~~~~~~~~
+C:\Documents and Settings\All Users\Application Data\RadView\WebLOAD\extensions\java
+
+~~~~~~~~~~~Other OS~~~~~~~~~~~~~~~~
+C:\ProgramData\RadView\WebLOAD\extensions\java
+
+1. API.jar
+2. nectar-openapi-transaction-services-3.3-SNAPSHOT.jar
+3.  nectar-openapi-common-domain-1.5-SNAPSHOT.jar
+4.  aerogear-otp-java-1.0.0.jar 
+5.  domain-3.3.1.jar*/
+
+
+
+code = new Packages.secureCode.CardCode();
+a = code.extractCardNumberCode(CardNum.getValue());
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0">32</StartJSBlockLine><JSBlockLength Visible="0">21</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="1"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">BeginTransaction::CMS_WEB_FP_LAUNCH_01</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - BeginTransaction::CMS_WEB_FP_LAUNCH_01 - ID:109 *****/
+BeginTransaction("CMS_WEB_FP_LAUNCH_01")
+
+// END WLIDE</NodeScript><NodeID Visible="0">109</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - BeginTransaction::CMS_WEB_FP_LAUNCH_01 - ID:109 *****/
+BeginTransaction("CMS_WEB_FP_LAUNCH_01")
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon></BuildingBlockIcon><StartJSBlockLine Visible="0">53</StartJSBlockLine><JSBlockLength Visible="0">5</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage><preview domid="-1"/></Properties><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="2"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">http://"+Web_environment_ip+"/</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - URL : http://"+Web_environment_ip+"/ - ID:2 *****/
+wlGlobals.GetFrames = false 
+wlGlobals.UserAgent = "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.2; Trident/4.0; .NET CLR 1.1.4322; .NET4.0C; .NET4.0E)"
+wlHttp.Get(""+Web_environment_ip+"/")
+
+var patt=new RegExp("Enter card number");
+var res01 = patt.exec(document.wlSource);
+// END WLIDE</NodeScript><NodeID Visible="0">2</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - URL : http://www.t0.nectar.com/ - ID:2 *****/
+wlGlobals.GetFrames = false 
+wlGlobals.UserAgent = "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.2; Trident/4.0; .NET CLR 1.1.4322; .NET4.0C; .NET4.0E)"
+wlHttp.Get("http://www.t0.nectar.com/")
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"><HeaderItem Text=" GET http://www.t0.nectar.com/ HTTP/1.1" Type="Request"><HeaderItem Text="Accept: image/gif, image/jpeg, image/pjpeg, image/pjpeg, application/vnd.ms-excel, application/msword, application/xaml+xml, application/x-ms-xbap, application/x-ms-application, */*" Type="Request"/><HeaderItem Text="Accept-Language: en-us" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.2; Trident/4.0; .NET CLR 1.1.4322; .NET4.0C; .NET4.0E)" Type="Request"/><HeaderItem Text="Accept-Encoding: gzip, deflate" Type="Request"/><HeaderItem Text="Host: www.t0.nectar.com" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text=" HTTP/1.1 301 Moved Permanently" Type="Response"><HeaderItem Text="Date: Tue, 03 Nov 2015 22:27:56 GMT" Type="Response"/><HeaderItem Text="Server: Apache" Type="Response"/><HeaderItem Text="Location: https://www.t0.nectar.com/" Type="Response"/><HeaderItem Text="Content-Length: 234" Type="Response"/><HeaderItem Text="Keep-Alive: timeout=15, max=100" Type="Response"/><HeaderItem Text="Connection: Keep-Alive" Type="Response"/><HeaderItem Text="Content-Type: text/html; charset=iso-8859-1" Type="Response"/></HeaderItem></HeaderItem><HeaderItem Text=" GET https://www.t0.nectar.com/ HTTP/1.1" Type="Request"><HeaderItem Text="Accept: image/gif, image/jpeg, image/pjpeg, image/pjpeg, application/vnd.ms-excel, application/msword, application/xaml+xml, application/x-ms-xbap, application/x-ms-application, */*" Type="Request"/><HeaderItem Text="Accept-Language: en-us" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.2; Trident/4.0; .NET CLR 1.1.4322; .NET4.0C; .NET4.0E)" Type="Request"/><HeaderItem Text="Accept-Encoding: gzip, deflate" Type="Request"/><HeaderItem Text="Host: www.t0.nectar.com" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text=" HTTP/1.1 200 OK" Type="Response"><HeaderItem Text="Date: Tue, 03 Nov 2015 21:28:34 GMT" Type="Response"/><HeaderItem Text="Server: Apache-Coyote/1.1" Type="Response"/><HeaderItem Text="Content-Type: text/html;charset=UTF-8" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT=R%3A0%7CclientRequestGUID%3A723e9cc2-fc1f-42b2-b47b-e822366f21e6; Expires=Tue, 03-Nov-2015 21:29:03 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT=R%3A0%7CclientRequestGUID%3A723e9cc2-fc1f-42b2-b47b-e822366f21e6%7CbtId%3A1378332; Expires=Tue, 03-Nov-2015 21:29:03 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT=R%3A0%7CclientRequestGUID%3A723e9cc2-fc1f-42b2-b47b-e822366f21e6%7CbtId%3A1378332%7CserverSnapshotType%3Af; Expires=Tue, 03-Nov-2015 21:29:03 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: NECTARWEBSESSIONID=9762A92EAF4D99B9A06531305FB6251D.app1; Path=/; HttpOnly" Type="Response"/><HeaderItem Text="Vary: Accept-Encoding,User-Agent" Type="Response"/><HeaderItem Text="Content-Encoding: gzip" Type="Response"/><HeaderItem Text="Keep-Alive: timeout=15, max=100" Type="Response"/><HeaderItem Text="Connection: Keep-Alive" Type="Response"/><HeaderItem Text="Transfer-Encoding: chunked" Type="Response"/></HeaderItem></HeaderItem></PropertyPage><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0">58</StartJSBlockLine><JSBlockLength Visible="0">9</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0">true</IsProtocolRecordedNode><TestTalkMessageID Visible="0">1</TestTalkMessageID><RecordingCallback Visible="0">OnGet</RecordingCallback><Encoded Visible="0">true</Encoded><ContentType Visible="0"></ContentType></PropertyPage><preview domid="1"/></Properties></JavaScriptObject></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="3"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">EndTransaction::CMS_WEB_FP_LAUNCH_01</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - EndTransaction::CMS_WEB_FP_LAUNCH_01 - ID:110 *****/
+if (res01 == "Enter card number")
+{
+EndTransaction("CMS_WEB_FP_LAUNCH_01",WLSuccess,false)
+}
+else
+{
+EndTransaction("CMS_WEB_FP_LAUNCH_01",WLError,true,"Failed")
+}
+
+// END WLIDE</NodeScript><NodeID Visible="0">110</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - EndTransaction::CMS_WEB_FP_LAUNCH_01 - ID:110 *****/
+EndTransaction("CMS_WEB_FP_LAUNCH_01",WLSuccess,false)
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon></BuildingBlockIcon><StartJSBlockLine Visible="0">67</StartJSBlockLine><JSBlockLength Visible="0">12</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage><preview domid="-1"/></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="4"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">Sleep</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - Sleep - ID:3 *****/
+Sleep(6297)
+// END WLIDE</NodeScript><NodeID Visible="0">3</NodeID><PersistentCorrelation Visible="0"/><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0">79</StartJSBlockLine><JSBlockLength Visible="0">4</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="5"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">BeginTransaction::CMS_WEB_FP_LOGIN_02</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - BeginTransaction::CMS_WEB_FP_LOGIN_02 - ID:111 *****/
+BeginTransaction("CMS_WEB_FP_LOGIN_02")
+
+// END WLIDE</NodeScript><NodeID Visible="0">111</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - BeginTransaction::CMS_WEB_FP_LOGIN_02 - ID:111 *****/
+BeginTransaction("CMS_WEB_FP_LOGIN_02")
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon></BuildingBlockIcon><StartJSBlockLine Visible="0">83</StartJSBlockLine><JSBlockLength Visible="0">5</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage><preview domid="-1"/></Properties><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="6"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">"+Web_environment_ip+"/login</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - URL : "+Web_environment_ip+"/login - ID:28 *****/ 
+wlHttp.Header["Referer"] = ""+Web_environment_ip+"/"
+wlHttp.Get(""+Web_environment_ip+"/login")
+
+var matt=new RegExp("Log in");
+var res02 = matt.exec(document.wlSource);
+
+// WLCORR-INFO	:  Extracting the dynamic value from the response according to Correlation Rule New1 - r1__csrf
+corr_New1_r1__csrf_28 = GetElementValueByName("_csrf")
+
+
+// END WLIDE</NodeScript><NodeID Visible="0">28</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - URL : https://www.t0.nectar.com/login - ID:28 *****/ 
+wlHttp.Header["Referer"] = "https://www.t0.nectar.com/"
+wlHttp.Get("https://www.t0.nectar.com/login")
+// WLCORR-INFO	:  Extracting the dynamic value from the response according to Correlation Rule New1 - r1__csrf
+corr_New1_r1__csrf_28 = GetElementValueByName("_csrf")
+ValidateCorrelation( /*Original value was*/ "1586ad05-a7ab-47a9-96d2-59ffa214c493", /*extracted into*/ corr_New1_r1__csrf_28, "corr_New1_r1__csrf_28");
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"><HeaderItem Text=" GET https://www.t0.nectar.com/login HTTP/1.1" Type="Request"><HeaderItem Text="Accept: image/gif, image/jpeg, image/pjpeg, image/pjpeg, application/vnd.ms-excel, application/msword, application/xaml+xml, application/x-ms-xbap, application/x-ms-application, */*" Type="Request"/><HeaderItem Text="Referer: https://www.t0.nectar.com/" Type="Request"/><HeaderItem Text="Accept-Language: en-us" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.2; Trident/4.0; .NET CLR 1.1.4322; .NET4.0C; .NET4.0E)" Type="Request"/><HeaderItem Text="Accept-Encoding: gzip, deflate" Type="Request"/><HeaderItem Text="Host: www.t0.nectar.com" Type="Request"/><HeaderItem Text="Cookie: NECTARWEBSESSIONID=9E4F6BF25F984EF86D8BA0BA3C106C46.app1; ADRUM_BT=R%3A0%7CclientRequestGUID%3A51829c67-c580-43ad-b676-1246d78f9a49%7CbtId%3A1378333; cmTPSet=Y; _ga=GA1.3.955074585.1446586174; _dc_gtm_UA-66784354-1=1" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text=" HTTP/1.1 200 OK" Type="Response"><HeaderItem Text="Date: Tue, 03 Nov 2015 22:31:26 GMT" Type="Response"/><HeaderItem Text="Server: Apache-Coyote/1.1" Type="Response"/><HeaderItem Text="Content-Type: text/html;charset=UTF-8" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT=R%3A0%7CclientRequestGUID%3A51829c67-c580-43ad-b676-1246d78f9a49%7CbtId%3A1378333; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT=R%3A26%7CclientRequestGUID%3A8cbb4234-6ee0-42c5-bd71-a293cdb98363; Expires=Tue, 03-Nov-2015 22:31:56 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT=R%3A26%7CclientRequestGUID%3A8cbb4234-6ee0-42c5-bd71-a293cdb98363%7CbtId%3A1378333; Expires=Tue, 03-Nov-2015 22:31:56 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT=R%3A26%7CclientRequestGUID%3A8cbb4234-6ee0-42c5-bd71-a293cdb98363%7CbtId%3A1378333%7CbtERT%3A22; Expires=Tue, 03-Nov-2015 22:31:56 GMT; Path=/" Type="Response"/><HeaderItem Text="Vary: Accept-Encoding,User-Agent" Type="Response"/><HeaderItem Text="Content-Encoding: gzip" Type="Response"/><HeaderItem Text="Keep-Alive: timeout=15, max=100" Type="Response"/><HeaderItem Text="Connection: Keep-Alive" Type="Response"/><HeaderItem Text="Transfer-Encoding: chunked" Type="Response"/></HeaderItem></HeaderItem></PropertyPage><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0">88</StartJSBlockLine><JSBlockLength Visible="0">13</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0">true</IsProtocolRecordedNode><TestTalkMessageID Visible="0">19</TestTalkMessageID><RecordingCallback Visible="0">OnGet</RecordingCallback><Encoded Visible="0">true</Encoded><ContentType Visible="0"></ContentType></PropertyPage><preview domid="46"/><PropertyPage Name="ClientCookies" Visible="-1"><CookieItem cookieName="_ga" cookieValue="GA1.3.955074585.1446586174" cookieDomain="www.t0.nectar.com" cookiePath="/" cookieExpire="" cookieSecure=""/><CookieItem cookieName="_dc_gtm_UA-66784354-1" cookieValue="1" cookieDomain="www.t0.nectar.com" cookiePath="/" cookieExpire="" cookieSecure=""/><CookieItem cookieName="cmTPSet" cookieValue="Y" cookieDomain="www.t0.nectar.com" cookiePath="/" cookieExpire="" cookieSecure=""/><CookieItem cookieName="ADRUM_BT" cookieValue="R%3A0%7CclientRequestGUID%3A51829c67-c580-43ad-b676-1246d78f9a49%7CbtId%3A1378333" cookieDomain="www.t0.nectar.com" cookiePath="/" cookieExpire="" cookieSecure=""/></PropertyPage></Properties></JavaScriptObject></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="7"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">EndTransaction::CMS_WEB_FP_LOGIN_02</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - EndTransaction::CMS_WEB_FP_LOGIN_02 - ID:112 *****/
+if (res02 == "Log in")
+{
+EndTransaction("CMS_WEB_FP_LOGIN_02",WLSuccess,false)
+}
+else
+{
+EndTransaction("CMS_WEB_FP_LOGIN_02",WLError,true,"Failed")
+}
+// END WLIDE</NodeScript><NodeID Visible="0">112</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - EndTransaction::CMS_WEB_FP_LOGIN_02 - ID:112 *****/
+EndTransaction("CMS_WEB_FP_LOGIN_02",WLSuccess,false)
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon></BuildingBlockIcon><StartJSBlockLine Visible="0">101</StartJSBlockLine><JSBlockLength Visible="0">11</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage><preview domid="-1"/></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="8"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">Sleep</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - Sleep - ID:29 *****/
+Sleep(10032)
+// END WLIDE</NodeScript><NodeID Visible="0">29</NodeID><PersistentCorrelation Visible="0"/><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0">112</StartJSBlockLine><JSBlockLength Visible="0">4</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="9"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">BeginTransaction::CMS_WEB_FP_CARD_VERIFICATION_03</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - BeginTransaction::CMS_WEB_FP_CARD_VERIFICATION_03 - ID:113 *****/
+BeginTransaction("CMS_WEB_FP_CARD_VERIFICATION_03")
+
+// END WLIDE</NodeScript><NodeID Visible="0">113</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - BeginTransaction::CMS_WEB_FP_CARD_VERIFICATION_03 - ID:113 *****/
+BeginTransaction("CMS_WEB_FP_CARD_VERIFICATION_03")
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon></BuildingBlockIcon><StartJSBlockLine Visible="0">116</StartJSBlockLine><JSBlockLength Visible="0">5</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage><preview domid="-1"/></Properties><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="10"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">"+Web_environment_ip+"/api/activate/card-check/51252363014</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - URL : "+Web_environment_ip+"/api/activate/card-check/51252363014 - ID:41 *****/ 
+wlHttp.Header["x-requested-with"] = "XMLHttpRequest"
+wlHttp.Header["Referer"] = ""+Web_environment_ip+"/login"
+wlHttp.Header["x-csrf-token"] = "1586ad05-a7ab-47a9-96d2-59ffa214c493"
+wlHttp.Get(""+Web_environment_ip+"/api/activate/card-check/"+CollectorNumber.getValue()+"")
+
+// END WLIDE</NodeScript><NodeID Visible="0">41</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - URL : https://www.t0.nectar.com/api/activate/card-check/51252363014 - ID:41 *****/ 
+wlHttp.Header["x-requested-with"] = "XMLHttpRequest"
+wlHttp.Header["Referer"] = "https://www.t0.nectar.com/login"
+wlHttp.Header["x-csrf-token"] = "1586ad05-a7ab-47a9-96d2-59ffa214c493"
+wlHttp.Get("https://www.t0.nectar.com/api/activate/card-check/51252363014")
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"><HeaderItem Text=" GET https://www.t0.nectar.com/api/activate/card-check/51252363014 HTTP/1.1" Type="Request"><HeaderItem Text="x-requested-with: XMLHttpRequest" Type="Request"/><HeaderItem Text="Accept-Language: en-us" Type="Request"/><HeaderItem Text="Referer: https://www.t0.nectar.com/login" Type="Request"/><HeaderItem Text="Accept: */*" Type="Request"/><HeaderItem Text="x-csrf-token: 1586ad05-a7ab-47a9-96d2-59ffa214c493" Type="Request"/><HeaderItem Text="Accept-Encoding: gzip, deflate" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.2; Trident/4.0; .NET CLR 1.1.4322; .NET4.0C; .NET4.0E)" Type="Request"/><HeaderItem Text="Host: www.t0.nectar.com" Type="Request"/><HeaderItem Text="Cookie: NECTARWEBSESSIONID=9E4F6BF25F984EF86D8BA0BA3C106C46.app1; cmTPSet=Y; ADRUM_BT=R%3A31%7CclientRequestGUID%3Aa328f79d-1ef9-4d70-90b1-1f4564535972%7CbtId%3A1378346%7CbtERT%3A1; _ga=GA1.3.955074585.1446586174; _dc_gtm_UA-66784354-1=1" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text=" HTTP/1.1 200 OK" Type="Response"><HeaderItem Text="Date: Tue, 03 Nov 2015 22:31:49 GMT" Type="Response"/><HeaderItem Text="Server: Apache-Coyote/1.1" Type="Response"/><HeaderItem Text="Cache-Control: no-cache" Type="Response"/><HeaderItem Text="Pragma: no-cache" Type="Response"/><HeaderItem Text="Expires: Thu, 01 Jan 1970 00:00:00 GMT" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT=R%3A31%7CclientRequestGUID%3Aa328f79d-1ef9-4d70-90b1-1f4564535972%7CbtId%3A1378346%7CbtERT%3A1; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT=R%3A31%7CclientRequestGUID%3A988fba72-1b28-49e0-962d-5971e726b2e0; Expires=Tue, 03-Nov-2015 22:32:19 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT=R%3A31%7CclientRequestGUID%3A988fba72-1b28-49e0-962d-5971e726b2e0%7CbtId%3A1378643; Expires=Tue, 03-Nov-2015 22:32:19 GMT; Path=/" Type="Response"/><HeaderItem Text="Vary: Accept-Encoding,User-Agent" Type="Response"/><HeaderItem Text="Content-Encoding: gzip" Type="Response"/><HeaderItem Text="Content-Length: 20" Type="Response"/><HeaderItem Text="Keep-Alive: timeout=15, max=100" Type="Response"/><HeaderItem Text="Connection: Keep-Alive" Type="Response"/><HeaderItem Text="Content-Type: text/plain" Type="Response"/></HeaderItem></HeaderItem></PropertyPage><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0">121</StartJSBlockLine><JSBlockLength Visible="0">8</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0">true</IsProtocolRecordedNode><TestTalkMessageID Visible="0">28</TestTalkMessageID><RecordingCallback Visible="0">OnGet</RecordingCallback><Encoded Visible="0">true</Encoded><ContentType Visible="0"></ContentType></PropertyPage><preview domid="74"/><PropertyPage Name="ClientCookies" Visible="-1"><CookieItem cookieName="ADRUM_BT" cookieValue="R%3A31%7CclientRequestGUID%3Aa328f79d-1ef9-4d70-90b1-1f4564535972%7CbtId%3A1378346%7CbtERT%3A1" cookieDomain="www.t0.nectar.com" cookiePath="/" cookieExpire="" cookieSecure=""/></PropertyPage></Properties></JavaScriptObject></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="11"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">EndTransaction::CMS_WEB_FP_CARD_VERIFICATION_03</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - EndTransaction::CMS_WEB_FP_CARD_VERIFICATION_03 - ID:114 *****/
+EndTransaction("CMS_WEB_FP_CARD_VERIFICATION_03",WLSuccess,false)
+
+// END WLIDE</NodeScript><NodeID Visible="0">114</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - EndTransaction::CMS_WEB_FP_CARD_VERIFICATION_03 - ID:114 *****/
+EndTransaction("CMS_WEB_FP_CARD_VERIFICATION_03",WLSuccess,false)
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon></BuildingBlockIcon><StartJSBlockLine Visible="0">129</StartJSBlockLine><JSBlockLength Visible="0">5</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage><preview domid="-1"/></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="12"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">Sleep</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - Sleep - ID:42 *****/
+Sleep(8766)
+// END WLIDE</NodeScript><NodeID Visible="0">42</NodeID><PersistentCorrelation Visible="0"/><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0">134</StartJSBlockLine><JSBlockLength Visible="0">4</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="13"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">BeginTransaction::CMS_WEB_FP_ENTER_CARD_04</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - BeginTransaction::CMS_WEB_FP_ENTER_CARD_04 - ID:115 *****/
+BeginTransaction("CMS_WEB_FP_ENTER_CARD_04")
+
+// END WLIDE</NodeScript><NodeID Visible="0">115</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - BeginTransaction::CMS_WEB_FP_ENTER_CARD_04 - ID:115 *****/
+BeginTransaction("CMS_WEB_FP_ENTER_CARD_04")
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon></BuildingBlockIcon><StartJSBlockLine Visible="0">138</StartJSBlockLine><JSBlockLength Visible="0">5</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage><preview domid="-1"/></Properties><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="14"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">"+Web_environment_ip+"/forgotten-password?client=web&amp;data=51252363014</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - URL : "+Web_environment_ip+"/forgotten-password?client=web&amp;data=51252363014 - ID:43 *****/ 
+wlHttp.Header["Referer"] = ""+Web_environment_ip+"/login"
+wlHttp.FormdataEncodingType = 1
+wlHttp.FormData["client"] = "web"
+wlHttp.FormData["data"] = CollectorNumber.getValue()  //"51252363014"
+wlHttp.Get(""+Web_environment_ip+"/forgotten-password")
+
+var satt=new RegExp("password");
+var  res04 = satt.exec(document.wlSource);
+value = extractValue( "action=\"/_hn:action%7Cr","_r1%7C", document.wlSource)
+// END WLIDE</NodeScript><NodeID Visible="0">43</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - URL : https://www.t0.nectar.com/forgotten-password?client=web&amp;data=51252363014 - ID:43 *****/ 
+wlHttp.Header["Referer"] = "https://www.t0.nectar.com/login"
+wlHttp.FormdataEncodingType = 1
+wlHttp.FormData["client"] = "web"
+wlHttp.FormData["data"] = "51252363014"
+wlHttp.Get("https://www.t0.nectar.com/forgotten-password")
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"><HeaderItem Text=" GET https://www.t0.nectar.com/forgotten-password?client=web&amp;data=51252363014 HTTP/1.1" Type="Request"><HeaderItem Text="Accept: image/gif, image/jpeg, image/pjpeg, image/pjpeg, application/vnd.ms-excel, application/msword, application/xaml+xml, application/x-ms-xbap, application/x-ms-application, */*" Type="Request"/><HeaderItem Text="Referer: https://www.t0.nectar.com/login" Type="Request"/><HeaderItem Text="Accept-Language: en-us" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.2; Trident/4.0; .NET CLR 1.1.4322; .NET4.0C; .NET4.0E)" Type="Request"/><HeaderItem Text="Accept-Encoding: gzip, deflate" Type="Request"/><HeaderItem Text="Host: www.t0.nectar.com" Type="Request"/><HeaderItem Text="Cookie: NECTARWEBSESSIONID=9E4F6BF25F984EF86D8BA0BA3C106C46.app1; cmTPSet=Y; ADRUM_BT=R%3A31%7CclientRequestGUID%3A988fba72-1b28-49e0-962d-5971e726b2e0%7CbtId%3A1378643; _ga=GA1.3.955074585.1446586174; _dc_gtm_UA-66784354-1=1" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text=" HTTP/1.1 302 Found" Type="Response"><HeaderItem Text="Date: Tue, 03 Nov 2015 22:31:58 GMT" Type="Response"/><HeaderItem Text="Server: Apache-Coyote/1.1" Type="Response"/><HeaderItem Text="Location: https://www.t0.nectar.com/forgotten-password" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT=R%3A31%7CclientRequestGUID%3A988fba72-1b28-49e0-962d-5971e726b2e0%7CbtId%3A1378643; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT=R%3A31%7CclientRequestGUID%3A1571d920-dc81-423f-a9a5-0a831f2ef9c1; Expires=Tue, 03-Nov-2015 22:32:28 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT=R%3A31%7CclientRequestGUID%3A1571d920-dc81-423f-a9a5-0a831f2ef9c1%7CbtId%3A1381459; Expires=Tue, 03-Nov-2015 22:32:28 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT=R%3A31%7CclientRequestGUID%3A1571d920-dc81-423f-a9a5-0a831f2ef9c1%7CbtId%3A1381459%7CserverSnapshotType%3Af; Expires=Tue, 03-Nov-2015 22:32:28 GMT; Path=/" Type="Response"/><HeaderItem Text="Vary: Accept-Encoding,User-Agent" Type="Response"/><HeaderItem Text="Content-Encoding: gzip" Type="Response"/><HeaderItem Text="Content-Length: 20" Type="Response"/><HeaderItem Text="Keep-Alive: timeout=15, max=99" Type="Response"/><HeaderItem Text="Connection: Keep-Alive" Type="Response"/><HeaderItem Text="Content-Type: text/plain" Type="Response"/></HeaderItem></HeaderItem><HeaderItem Text=" GET https://www.t0.nectar.com/forgotten-password HTTP/1.1" Type="Request"><HeaderItem Text="Accept: image/gif, image/jpeg, image/pjpeg, image/pjpeg, application/vnd.ms-excel, application/msword, application/xaml+xml, application/x-ms-xbap, application/x-ms-application, */*" Type="Request"/><HeaderItem Text="Referer: https://www.t0.nectar.com/login" Type="Request"/><HeaderItem Text="Accept-Language: en-us" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.2; Trident/4.0; .NET CLR 1.1.4322; .NET4.0C; .NET4.0E)" Type="Request"/><HeaderItem Text="Accept-Encoding: gzip, deflate" Type="Request"/><HeaderItem Text="Host: www.t0.nectar.com" Type="Request"/><HeaderItem Text="Cookie: NECTARWEBSESSIONID=9E4F6BF25F984EF86D8BA0BA3C106C46.app1; cmTPSet=Y; ADRUM_BT=R%3A31%7CclientRequestGUID%3A1571d920-dc81-423f-a9a5-0a831f2ef9c1%7CbtId%3A1381459%7CserverSnapshotType%3Af; _ga=GA1.3.955074585.1446586174; _dc_gtm_UA-66784354-1=1" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text=" HTTP/1.1 200 OK" Type="Response"><HeaderItem Text="Date: Tue, 03 Nov 2015 22:32:00 GMT" Type="Response"/><HeaderItem Text="Server: Apache-Coyote/1.1" Type="Response"/><HeaderItem Text="Content-Type: text/html;charset=UTF-8" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT=R%3A31%7CclientRequestGUID%3A1571d920-dc81-423f-a9a5-0a831f2ef9c1%7CbtId%3A1381459%7CserverSnapshotType%3Af; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT=R%3A31%7CclientRequestGUID%3A28d73358-9a22-4ef5-af34-8df887ca7a0f; Expires=Tue, 03-Nov-2015 22:32:30 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT=R%3A31%7CclientRequestGUID%3A28d73358-9a22-4ef5-af34-8df887ca7a0f%7CbtId%3A1381459; Expires=Tue, 03-Nov-2015 22:32:30 GMT; Path=/" Type="Response"/><HeaderItem Text="Vary: Accept-Encoding,User-Agent" Type="Response"/><HeaderItem Text="Content-Encoding: gzip" Type="Response"/><HeaderItem Text="Keep-Alive: timeout=15, max=98" Type="Response"/><HeaderItem Text="Connection: Keep-Alive" Type="Response"/><HeaderItem Text="Transfer-Encoding: chunked" Type="Response"/></HeaderItem></HeaderItem></PropertyPage><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0">143</StartJSBlockLine><JSBlockLength Visible="0">11</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0">true</IsProtocolRecordedNode><TestTalkMessageID Visible="0">29</TestTalkMessageID><RecordingCallback Visible="0">OnGet</RecordingCallback><Encoded Visible="0">true</Encoded><ContentType Visible="0"></ContentType></PropertyPage><preview domid="75"/></Properties></JavaScriptObject></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="15"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">EndTransaction::CMS_WEB_FP_ENTER_CARD_04</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - EndTransaction::CMS_WEB_FP_ENTER_CARD_04 - ID:116 *****/
+if (res04 == "password")
+{
+EndTransaction("CMS_WEB_FP_ENTER_CARD_04",WLSuccess,false)
+}
+else
+{
+EndTransaction("CMS_WEB_FP_ENTER_CARD_04",WLError,true,"Failed")
+}
+// END WLIDE</NodeScript><NodeID Visible="0">116</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - EndTransaction::CMS_WEB_FP_ENTER_CARD_04 - ID:116 *****/
+EndTransaction("CMS_WEB_FP_ENTER_CARD_04",WLSuccess,false)
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon></BuildingBlockIcon><StartJSBlockLine Visible="0">154</StartJSBlockLine><JSBlockLength Visible="0">11</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage><preview domid="-1"/></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="16"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">Sleep</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - Sleep - ID:125 *****/
+Sleep(8766)
+// END WLIDE</NodeScript><NodeID Visible="0">125</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - Sleep - ID:125 *****/
+Sleep(8766)
+// END WLIDE</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0">165</StartJSBlockLine><JSBlockLength Visible="0">4</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="17"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">BeginTransaction::CMS_WEB_FP_RESET_PASS_05</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - BeginTransaction::CMS_WEB_FP_RESET_PASS_05 - ID:117 *****/
+BeginTransaction("CMS_WEB_FP_RESET_PASS_05")
+
+// END WLIDE</NodeScript><NodeID Visible="0">117</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - BeginTransaction::CMS_WEB_FP_RESET_PASS_05 - ID:117 *****/
+BeginTransaction("CMS_WEB_FP_RESET_PASS_05")
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon></BuildingBlockIcon><StartJSBlockLine Visible="0">169</StartJSBlockLine><JSBlockLength Visible="0">5</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage><preview domid="-1"/></Properties><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="18"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">"+Web_environment_ip+"/_hn:action%7Cr114_r1%7C/forgotten-password</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - URL : "+Web_environment_ip+"/_hn:action%7Cr114_r1%7C/forgotten-password - ID:58 *****/ 
+wlHttp.Header["Referer"] = ""+Web_environment_ip+"/forgotten-password"
+wlHttp.FormdataEncodingType = 1
+wlHttp.ContentType = "application/x-www-form-urlencoded"
+// WLCORR-INFO	:  Replacing "1586ad05-a7ab-47a9-96d2-59ffa214c493" with correlation parameter corr_New1_r1__csrf_28
+wlHttp.FormData["_csrf"] = corr_New1_r1__csrf_28
+wlHttp.FormData["username"] = CollectorNumber.getValue() //"51252363014"
+wlHttp.FormData["destination"] = "$WL$EMPTY$STRING$"
+wlHttp.Post(""+Web_environment_ip+"/_hn:action%7Cr"+value+"_r1%7C/forgotten-password")
+
+var batt=new RegExp("code");
+var  res05 = batt.exec(document.wlSource);
+value1 = extractValue( "action=\"/_hn:action%7Cr","_r1%7C", document.wlSource)
+// END WLIDE</NodeScript><NodeID Visible="0">58</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - URL : https://www.t0.nectar.com/_hn:action%7Cr114_r1%7C/forgotten-password - ID:58 *****/ 
+wlHttp.Header["Referer"] = "https://www.t0.nectar.com/forgotten-password"
+wlHttp.FormdataEncodingType = 1
+wlHttp.ContentType = "application/x-www-form-urlencoded"
+// WLCORR-INFO	:  Replacing "1586ad05-a7ab-47a9-96d2-59ffa214c493" with correlation parameter corr_New1_r1__csrf_28
+wlHttp.FormData["_csrf"] = corr_New1_r1__csrf_28
+wlHttp.FormData["username"] = "51252363014"
+wlHttp.FormData["destination"] = "$WL$EMPTY$STRING$"
+wlHttp.Post("https://www.t0.nectar.com/_hn:action%7Cr114_r1%7C/forgotten-password")
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"><HeaderItem Text=" POST https://www.t0.nectar.com/_hn:action%7Cr114_r1%7C/forgotten-password HTTP/1.1" Type="Request"><HeaderItem Text="Accept: image/gif, image/jpeg, image/pjpeg, image/pjpeg, application/vnd.ms-excel, application/msword, application/xaml+xml, application/x-ms-xbap, application/x-ms-application, */*" Type="Request"/><HeaderItem Text="Referer: https://www.t0.nectar.com/forgotten-password" Type="Request"/><HeaderItem Text="Accept-Language: en-us" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.2; Trident/4.0; .NET CLR 1.1.4322; .NET4.0C; .NET4.0E)" Type="Request"/><HeaderItem Text="Content-Type: application/x-www-form-urlencoded" Type="Request"/><HeaderItem Text="Accept-Encoding: gzip, deflate" Type="Request"/><HeaderItem Text="Host: www.t0.nectar.com" Type="Request"/><HeaderItem Text="Content-Length: 76" Type="Request"/><HeaderItem Text="Cache-Control: no-cache" Type="Request"/><HeaderItem Text="Cookie: NECTARWEBSESSIONID=9E4F6BF25F984EF86D8BA0BA3C106C46.app1; cmTPSet=Y; ADRUM_BT=R%3A31%7CclientRequestGUID%3A28d73358-9a22-4ef5-af34-8df887ca7a0f%7CbtId%3A1381459; _ga=GA1.3.955074585.1446586174; _dc_gtm_UA-66784354-1=1" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text="_csrf=1586ad05-a7ab-47a9-96d2-59ffa214c493&amp;username=51252363014&amp;destination=" Type="FormData"/><HeaderItem Text=" HTTP/1.1 302 Found" Type="Response"><HeaderItem Text="Date: Tue, 03 Nov 2015 22:32:25 GMT" Type="Response"/><HeaderItem Text="Server: Apache-Coyote/1.1" Type="Response"/><HeaderItem Text="Location: https://www.t0.nectar.com/forgotten-password/authenticate" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT=R%3A31%7CclientRequestGUID%3A28d73358-9a22-4ef5-af34-8df887ca7a0f%7CbtId%3A1381459; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT=R%3A44%7CclientRequestGUID%3Aad77b5ec-f5ca-4afb-9816-0a68be92e00e; Expires=Tue, 03-Nov-2015 22:32:55 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT=R%3A44%7CclientRequestGUID%3Aad77b5ec-f5ca-4afb-9816-0a68be92e00e%7CbtId%3A77377; Expires=Tue, 03-Nov-2015 22:32:55 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT=R%3A44%7CclientRequestGUID%3Aad77b5ec-f5ca-4afb-9816-0a68be92e00e%7CbtId%3A77377%7CserverSnapshotType%3Af; Expires=Tue, 03-Nov-2015 22:32:55 GMT; Path=/" Type="Response"/><HeaderItem Text="Vary: Accept-Encoding,User-Agent" Type="Response"/><HeaderItem Text="Content-Encoding: gzip" Type="Response"/><HeaderItem Text="Content-Length: 20" Type="Response"/><HeaderItem Text="Keep-Alive: timeout=15, max=100" Type="Response"/><HeaderItem Text="Connection: Keep-Alive" Type="Response"/><HeaderItem Text="Content-Type: text/plain" Type="Response"/></HeaderItem></HeaderItem><HeaderItem Text=" GET https://www.t0.nectar.com/forgotten-password/authenticate HTTP/1.1" Type="Request"><HeaderItem Text="Accept: image/gif, image/jpeg, image/pjpeg, image/pjpeg, application/vnd.ms-excel, application/msword, application/xaml+xml, application/x-ms-xbap, application/x-ms-application, */*" Type="Request"/><HeaderItem Text="Referer: https://www.t0.nectar.com/forgotten-password" Type="Request"/><HeaderItem Text="Accept-Language: en-us" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.2; Trident/4.0; .NET CLR 1.1.4322; .NET4.0C; .NET4.0E)" Type="Request"/><HeaderItem Text="Accept-Encoding: gzip, deflate" Type="Request"/><HeaderItem Text="Host: www.t0.nectar.com" Type="Request"/><HeaderItem Text="Cache-Control: no-cache" Type="Request"/><HeaderItem Text="Cookie: NECTARWEBSESSIONID=9E4F6BF25F984EF86D8BA0BA3C106C46.app1; cmTPSet=Y; ADRUM_BT=R%3A44%7CclientRequestGUID%3Aad77b5ec-f5ca-4afb-9816-0a68be92e00e%7CbtId%3A77377%7CserverSnapshotType%3Af; _ga=GA1.3.955074585.1446586174; _dc_gtm_UA-66784354-1=1" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text=" HTTP/1.1 200 OK" Type="Response"><HeaderItem Text="Date: Tue, 03 Nov 2015 22:32:27 GMT" Type="Response"/><HeaderItem Text="Server: Apache-Coyote/1.1" Type="Response"/><HeaderItem Text="Content-Type: text/html;charset=UTF-8" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT=R%3A44%7CclientRequestGUID%3Aad77b5ec-f5ca-4afb-9816-0a68be92e00e%7CbtId%3A77377%7CserverSnapshotType%3Af; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT=R%3A44%7CclientRequestGUID%3Ada3aad98-ec22-4f24-bcfb-f9019cb86589; Expires=Tue, 03-Nov-2015 22:32:57 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT=R%3A44%7CclientRequestGUID%3Ada3aad98-ec22-4f24-bcfb-f9019cb86589%7CbtId%3A1381459; Expires=Tue, 03-Nov-2015 22:32:57 GMT; Path=/" Type="Response"/><HeaderItem Text="Vary: Accept-Encoding,User-Agent" Type="Response"/><HeaderItem Text="Content-Encoding: gzip" Type="Response"/><HeaderItem Text="Keep-Alive: timeout=15, max=99" Type="Response"/><HeaderItem Text="Connection: Keep-Alive" Type="Response"/><HeaderItem Text="Transfer-Encoding: chunked" Type="Response"/></HeaderItem></HeaderItem></PropertyPage><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0">174</StartJSBlockLine><JSBlockLength Visible="0">14</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0">true</IsProtocolRecordedNode><TestTalkMessageID Visible="0">41</TestTalkMessageID><RecordingCallback Visible="0">OnPost</RecordingCallback><Encoded Visible="0">true</Encoded><ContentType Visible="0">application/x-www-form-urlencoded</ContentType></PropertyPage><preview domid="91"/></Properties></JavaScriptObject></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="19"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">EndTransaction::CMS_WEB_FP_RESET_PASS_05</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - EndTransaction::CMS_WEB_FP_RESET_PASS_05 - ID:118 *****/
+if (res05 == "code")
+{
+EndTransaction("CMS_WEB_FP_RESET_PASS_05",WLSuccess,false)
+}
+else
+{
+EndTransaction("CMS_WEB_FP_RESET_PASS_05",WLError,true,"Failed")
+}
+// END WLIDE</NodeScript><NodeID Visible="0">118</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - EndTransaction::CMS_WEB_FP_RESET_PASS_05 - ID:118 *****/
+EndTransaction("CMS_WEB_FP_RESET_PASS_05",WLSuccess,false)
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon></BuildingBlockIcon><StartJSBlockLine Visible="0">188</StartJSBlockLine><JSBlockLength Visible="0">11</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage><preview domid="-1"/></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="20"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">Sleep</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - Sleep - ID:59 *****/
+Sleep(7188)
+
+// END WLIDE</NodeScript><NodeID Visible="0">59</NodeID><PersistentCorrelation Visible="0"/><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0">199</StartJSBlockLine><JSBlockLength Visible="0">5</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="21"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">BeginTransaction::CMS_WEB_FP_ENTER_2FA_06</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - BeginTransaction::CMS_WEB_FP_ENTER_2FA_06 - ID:119 *****/
+BeginTransaction("CMS_WEB_FP_ENTER_2FA_06")
+
+// END WLIDE</NodeScript><NodeID Visible="0">119</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - BeginTransaction::CMS_WEB_FP_ENTER_2FA_06 - ID:119 *****/
+BeginTransaction("CMS_WEB_FP_ENTER_2FA_06")
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon></BuildingBlockIcon><StartJSBlockLine Visible="0">204</StartJSBlockLine><JSBlockLength Visible="0">5</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage><preview domid="-1"/></Properties><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="22"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">"+Web_environment_ip+"/_hn:action%7Cr61_r1%7C/forgotten-password/authenticate</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - URL : "+Web_environment_ip+"/_hn:action%7Cr61_r1%7C/forgotten-password/authenticate - ID:71 *****/ 
+wlHttp.Header["Referer"] = ""+Web_environment_ip+"/forgotten-password/authenticate"
+wlHttp.FormdataEncodingType = 1
+wlHttp.ContentType = "application/x-www-form-urlencoded"
+// WLCORR-INFO	:  Replacing "1586ad05-a7ab-47a9-96d2-59ffa214c493" with correlation parameter corr_New1_r1__csrf_28
+wlHttp.FormData["_csrf"] = corr_New1_r1__csrf_28
+wlHttp.FormData["two-factor"] = a //"315204"
+wlHttp.FormData["destination"] = "$WL$EMPTY$STRING$"
+wlHttp.Post(""+Web_environment_ip+"/_hn:action%7Cr"+value1+"_r1%7C/forgotten-password/authenticate")
+
+var catt=new RegExp("accepted");
+var res06 = catt.exec(document.wlSource);
+value2 = extractValue( "action=\"/_hn:action%7Cr","_r1%7C", document.wlSource)
+// END WLIDE</NodeScript><NodeID Visible="0">71</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - URL : https://www.t0.nectar.com/_hn:action%7Cr61_r1%7C/forgotten-password/authenticate - ID:71 *****/ 
+wlHttp.Header["Referer"] = "https://www.t0.nectar.com/forgotten-password/authenticate"
+wlHttp.FormdataEncodingType = 1
+wlHttp.ContentType = "application/x-www-form-urlencoded"
+// WLCORR-INFO	:  Replacing "1586ad05-a7ab-47a9-96d2-59ffa214c493" with correlation parameter corr_New1_r1__csrf_28
+wlHttp.FormData["_csrf"] = corr_New1_r1__csrf_28
+wlHttp.FormData["two-factor"] = "315204"
+wlHttp.FormData["destination"] = "$WL$EMPTY$STRING$"
+wlHttp.Post("https://www.t0.nectar.com/_hn:action%7Cr61_r1%7C/forgotten-password/authenticate")
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"><HeaderItem Text=" POST https://www.t0.nectar.com/_hn:action%7Cr61_r1%7C/forgotten-password/authenticate HTTP/1.1" Type="Request"><HeaderItem Text="Accept: image/gif, image/jpeg, image/pjpeg, image/pjpeg, application/vnd.ms-excel, application/msword, application/xaml+xml, application/x-ms-xbap, application/x-ms-application, */*" Type="Request"/><HeaderItem Text="Referer: https://www.t0.nectar.com/forgotten-password/authenticate" Type="Request"/><HeaderItem Text="Accept-Language: en-us" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.2; Trident/4.0; .NET CLR 1.1.4322; .NET4.0C; .NET4.0E)" Type="Request"/><HeaderItem Text="Content-Type: application/x-www-form-urlencoded" Type="Request"/><HeaderItem Text="Accept-Encoding: gzip, deflate" Type="Request"/><HeaderItem Text="Host: www.t0.nectar.com" Type="Request"/><HeaderItem Text="Content-Length: 73" Type="Request"/><HeaderItem Text="Cache-Control: no-cache" Type="Request"/><HeaderItem Text="Cookie: NECTARWEBSESSIONID=9E4F6BF25F984EF86D8BA0BA3C106C46.app1; cmTPSet=Y; ADRUM_BT=R%3A44%7CclientRequestGUID%3Ada3aad98-ec22-4f24-bcfb-f9019cb86589%7CbtId%3A1381459; _ga=GA1.3.955074585.1446586174; _dc_gtm_UA-66784354-1=1" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text="_csrf=1586ad05-a7ab-47a9-96d2-59ffa214c493&amp;two-factor=315204&amp;destination=" Type="FormData"/><HeaderItem Text=" HTTP/1.1 302 Found" Type="Response"><HeaderItem Text="Date: Tue, 03 Nov 2015 22:32:52 GMT" Type="Response"/><HeaderItem Text="Server: Apache-Coyote/1.1" Type="Response"/><HeaderItem Text="Location: https://www.t0.nectar.com/forgotten-password/reset" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT=R%3A44%7CclientRequestGUID%3Ada3aad98-ec22-4f24-bcfb-f9019cb86589%7CbtId%3A1381459; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT=R%3A57%7CclientRequestGUID%3A17ea8d46-2cf1-4ca4-8ef7-195a082c0364; Expires=Tue, 03-Nov-2015 22:33:22 GMT; Path=/" Type="Response"/><HeaderItem Text="Vary: Accept-Encoding,User-Agent" Type="Response"/><HeaderItem Text="Content-Encoding: gzip" Type="Response"/><HeaderItem Text="Content-Length: 20" Type="Response"/><HeaderItem Text="Keep-Alive: timeout=15, max=100" Type="Response"/><HeaderItem Text="Connection: Keep-Alive" Type="Response"/><HeaderItem Text="Content-Type: text/plain" Type="Response"/></HeaderItem></HeaderItem><HeaderItem Text=" GET https://www.t0.nectar.com/forgotten-password/reset HTTP/1.1" Type="Request"><HeaderItem Text="Accept: image/gif, image/jpeg, image/pjpeg, image/pjpeg, application/vnd.ms-excel, application/msword, application/xaml+xml, application/x-ms-xbap, application/x-ms-application, */*" Type="Request"/><HeaderItem Text="Referer: https://www.t0.nectar.com/forgotten-password/authenticate" Type="Request"/><HeaderItem Text="Accept-Language: en-us" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.2; Trident/4.0; .NET CLR 1.1.4322; .NET4.0C; .NET4.0E)" Type="Request"/><HeaderItem Text="Accept-Encoding: gzip, deflate" Type="Request"/><HeaderItem Text="Host: www.t0.nectar.com" Type="Request"/><HeaderItem Text="Cache-Control: no-cache" Type="Request"/><HeaderItem Text="Cookie: NECTARWEBSESSIONID=9E4F6BF25F984EF86D8BA0BA3C106C46.app1; cmTPSet=Y; ADRUM_BT=R%3A57%7CclientRequestGUID%3A17ea8d46-2cf1-4ca4-8ef7-195a082c0364; _ga=GA1.3.955074585.1446586174; _dc_gtm_UA-66784354-1=1" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text=" HTTP/1.1 200 OK" Type="Response"><HeaderItem Text="Date: Tue, 03 Nov 2015 22:32:55 GMT" Type="Response"/><HeaderItem Text="Server: Apache-Coyote/1.1" Type="Response"/><HeaderItem Text="Content-Type: text/html;charset=UTF-8" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT=R%3A57%7CclientRequestGUID%3A17ea8d46-2cf1-4ca4-8ef7-195a082c0364; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT=R%3A57%7CclientRequestGUID%3Aee8f11d2-853a-44cc-a5b3-4c0dfdedd37c; Expires=Tue, 03-Nov-2015 22:33:25 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT=R%3A57%7CclientRequestGUID%3Aee8f11d2-853a-44cc-a5b3-4c0dfdedd37c%7CbtId%3A1381459; Expires=Tue, 03-Nov-2015 22:33:25 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT=R%3A57%7CclientRequestGUID%3Aee8f11d2-853a-44cc-a5b3-4c0dfdedd37c%7CbtId%3A1381459%7CbtERT%3A19; Expires=Tue, 03-Nov-2015 22:33:25 GMT; Path=/" Type="Response"/><HeaderItem Text="Vary: Accept-Encoding,User-Agent" Type="Response"/><HeaderItem Text="Content-Encoding: gzip" Type="Response"/><HeaderItem Text="Keep-Alive: timeout=15, max=99" Type="Response"/><HeaderItem Text="Connection: Keep-Alive" Type="Response"/><HeaderItem Text="Transfer-Encoding: chunked" Type="Response"/></HeaderItem></HeaderItem></PropertyPage><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0">209</StartJSBlockLine><JSBlockLength Visible="0">15</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0">true</IsProtocolRecordedNode><TestTalkMessageID Visible="0">51</TestTalkMessageID><RecordingCallback Visible="0">OnPost</RecordingCallback><Encoded Visible="0">true</Encoded><ContentType Visible="0">application/x-www-form-urlencoded</ContentType></PropertyPage><preview domid="105"/></Properties></JavaScriptObject></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="23"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">EndTransaction::CMS_WEB_FP_ENTER_2FA_06</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - EndTransaction::CMS_WEB_FP_ENTER_2FA_06 - ID:120 *****/
+if(res06 == "accepted")
+{
+EndTransaction("CMS_WEB_FP_ENTER_2FA_06",WLSuccess,false)
+}
+else
+{
+EndTransaction("CMS_WEB_FP_ENTER_2FA_06",WLError,true,"Failed")
+}
+// END WLIDE</NodeScript><NodeID Visible="0">120</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - EndTransaction::CMS_WEB_FP_ENTER_2FA_06 - ID:120 *****/
+EndTransaction("CMS_WEB_FP_ENTER_2FA_06",WLSuccess,false)
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon></BuildingBlockIcon><StartJSBlockLine Visible="0">224</StartJSBlockLine><JSBlockLength Visible="0">11</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage><preview domid="-1"/></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="24"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">Sleep</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - Sleep - ID:72 *****/
+Sleep(9406)
+// END WLIDE</NodeScript><NodeID Visible="0">72</NodeID><PersistentCorrelation Visible="0"/><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0">235</StartJSBlockLine><JSBlockLength Visible="0">4</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="25"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">BeginTransaction::CMS_WEB_FP_ALL_DONE_07</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - BeginTransaction::CMS_WEB_FP_ALL_DONE_07 - ID:121 *****/
+BeginTransaction("CMS_WEB_FP_ALL_DONE_07")
+
+// END WLIDE</NodeScript><NodeID Visible="0">121</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - BeginTransaction::CMS_WEB_FP_ALL_DONE_07 - ID:121 *****/
+BeginTransaction("CMS_WEB_FP_ALL_DONE_07")
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon></BuildingBlockIcon><StartJSBlockLine Visible="0">239</StartJSBlockLine><JSBlockLength Visible="0">5</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage><preview domid="-1"/></Properties><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="26"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">"+Web_environment_ip+"/_hn:action%7Cr130_r1%7C/forgotten-password/reset</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - URL : "+Web_environment_ip+"/_hn:action%7Cr130_r1%7C/forgotten-password/reset - ID:84 *****/ 
+wlHttp.Header["Referer"] = ""+Web_environment_ip+"/forgotten-password/reset"
+wlHttp.FormdataEncodingType = 1
+wlHttp.ContentType = "application/x-www-form-urlencoded"
+// WLCORR-INFO	:  Replacing "1586ad05-a7ab-47a9-96d2-59ffa214c493" with correlation parameter corr_New1_r1__csrf_28
+wlHttp.FormData["_csrf"] = corr_New1_r1__csrf_28
+wlHttp.FormData["setpassword"] = "Pa55word"
+wlHttp.FormData["confirmpassword"] = "Pa55word"
+wlHttp.FormData["destination"] = "$WL$EMPTY$STRING$"
+wlHttp.Post(""+Web_environment_ip+"/_hn:action%7Cr"+value2+"_r1%7C/forgotten-password/reset")
+
+var oatt=new RegExp("All done");
+var res07 = oatt.exec(document.wlSource);
+// END WLIDE</NodeScript><NodeID Visible="0">84</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - URL : https://www.t0.nectar.com/_hn:action%7Cr130_r1%7C/forgotten-password/reset - ID:84 *****/ 
+wlHttp.Header["Referer"] = "https://www.t0.nectar.com/forgotten-password/reset"
+wlHttp.FormdataEncodingType = 1
+wlHttp.ContentType = "application/x-www-form-urlencoded"
+// WLCORR-INFO	:  Replacing "1586ad05-a7ab-47a9-96d2-59ffa214c493" with correlation parameter corr_New1_r1__csrf_28
+wlHttp.FormData["_csrf"] = corr_New1_r1__csrf_28
+wlHttp.FormData["setpassword"] = "Pa55word"
+wlHttp.FormData["confirmpassword"] = "Pa55word"
+wlHttp.FormData["destination"] = "$WL$EMPTY$STRING$"
+wlHttp.Post("https://www.t0.nectar.com/_hn:action%7Cr130_r1%7C/forgotten-password/reset")
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"><HeaderItem Text=" POST https://www.t0.nectar.com/_hn:action%7Cr130_r1%7C/forgotten-password/reset HTTP/1.1" Type="Request"><HeaderItem Text="Accept: image/gif, image/jpeg, image/pjpeg, image/pjpeg, application/vnd.ms-excel, application/msword, application/xaml+xml, application/x-ms-xbap, application/x-ms-application, */*" Type="Request"/><HeaderItem Text="Referer: https://www.t0.nectar.com/forgotten-password/reset" Type="Request"/><HeaderItem Text="Accept-Language: en-us" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.2; Trident/4.0; .NET CLR 1.1.4322; .NET4.0C; .NET4.0E)" Type="Request"/><HeaderItem Text="Content-Type: application/x-www-form-urlencoded" Type="Request"/><HeaderItem Text="Accept-Encoding: gzip, deflate" Type="Request"/><HeaderItem Text="Host: www.t0.nectar.com" Type="Request"/><HeaderItem Text="Content-Length: 101" Type="Request"/><HeaderItem Text="Cache-Control: no-cache" Type="Request"/><HeaderItem Text="Cookie: NECTARWEBSESSIONID=9E4F6BF25F984EF86D8BA0BA3C106C46.app1; cmTPSet=Y; ADRUM_BT=R%3A57%7CclientRequestGUID%3Aee8f11d2-853a-44cc-a5b3-4c0dfdedd37c%7CbtId%3A1381459%7CbtERT%3A19; _ga=GA1.3.955074585.1446586174; _dc_gtm_UA-66784354-1=1" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text="_csrf=1586ad05-a7ab-47a9-96d2-59ffa214c493&amp;setpassword=Pa55word&amp;confirmpassword=Pa55word&amp;destination=" Type="FormData"/><HeaderItem Text=" HTTP/1.1 302 Found" Type="Response"><HeaderItem Text="Date: Tue, 03 Nov 2015 22:33:17 GMT" Type="Response"/><HeaderItem Text="Server: Apache-Coyote/1.1" Type="Response"/><HeaderItem Text="Location: https://www.t0.nectar.com/forgotten-password/success" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT=R%3A57%7CclientRequestGUID%3Aee8f11d2-853a-44cc-a5b3-4c0dfdedd37c%7CbtId%3A1381459%7CbtERT%3A19; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT=R%3A50%7CclientRequestGUID%3Aa6f696ad-026b-4100-8511-1c24ed77d68e; Expires=Tue, 03-Nov-2015 22:33:47 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT=R%3A50%7CclientRequestGUID%3Aa6f696ad-026b-4100-8511-1c24ed77d68e%7CbtId%3A1386307; Expires=Tue, 03-Nov-2015 22:33:47 GMT; Path=/" Type="Response"/><HeaderItem Text="Vary: Accept-Encoding,User-Agent" Type="Response"/><HeaderItem Text="Content-Encoding: gzip" Type="Response"/><HeaderItem Text="Content-Length: 20" Type="Response"/><HeaderItem Text="Keep-Alive: timeout=15, max=100" Type="Response"/><HeaderItem Text="Connection: Keep-Alive" Type="Response"/><HeaderItem Text="Content-Type: text/plain" Type="Response"/></HeaderItem></HeaderItem><HeaderItem Text=" GET https://www.t0.nectar.com/forgotten-password/success HTTP/1.1" Type="Request"><HeaderItem Text="Accept: image/gif, image/jpeg, image/pjpeg, image/pjpeg, application/vnd.ms-excel, application/msword, application/xaml+xml, application/x-ms-xbap, application/x-ms-application, */*" Type="Request"/><HeaderItem Text="Referer: https://www.t0.nectar.com/forgotten-password/reset" Type="Request"/><HeaderItem Text="Accept-Language: en-us" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.2; Trident/4.0; .NET CLR 1.1.4322; .NET4.0C; .NET4.0E)" Type="Request"/><HeaderItem Text="Accept-Encoding: gzip, deflate" Type="Request"/><HeaderItem Text="Host: www.t0.nectar.com" Type="Request"/><HeaderItem Text="Cache-Control: no-cache" Type="Request"/><HeaderItem Text="Cookie: NECTARWEBSESSIONID=9E4F6BF25F984EF86D8BA0BA3C106C46.app1; cmTPSet=Y; ADRUM_BT=R%3A50%7CclientRequestGUID%3Aa6f696ad-026b-4100-8511-1c24ed77d68e%7CbtId%3A1386307; _ga=GA1.3.955074585.1446586174; _dc_gtm_UA-66784354-1=1" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text=" HTTP/1.1 200 OK" Type="Response"><HeaderItem Text="Date: Tue, 03 Nov 2015 22:33:20 GMT" Type="Response"/><HeaderItem Text="Server: Apache-Coyote/1.1" Type="Response"/><HeaderItem Text="Content-Type: text/html;charset=UTF-8" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT=R%3A50%7CclientRequestGUID%3Aa6f696ad-026b-4100-8511-1c24ed77d68e%7CbtId%3A1386307; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT=R%3A50%7CclientRequestGUID%3Ae01c8899-95c1-4747-86b5-34412f21df5d; Expires=Tue, 03-Nov-2015 22:33:50 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT=R%3A50%7CclientRequestGUID%3Ae01c8899-95c1-4747-86b5-34412f21df5d%7CbtId%3A1381459; Expires=Tue, 03-Nov-2015 22:33:50 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT=R%3A50%7CclientRequestGUID%3Ae01c8899-95c1-4747-86b5-34412f21df5d%7CbtId%3A1381459%7CbtERT%3A19; Expires=Tue, 03-Nov-2015 22:33:50 GMT; Path=/" Type="Response"/><HeaderItem Text="Vary: Accept-Encoding,User-Agent" Type="Response"/><HeaderItem Text="Content-Encoding: gzip" Type="Response"/><HeaderItem Text="Keep-Alive: timeout=15, max=99" Type="Response"/><HeaderItem Text="Connection: Keep-Alive" Type="Response"/><HeaderItem Text="Transfer-Encoding: chunked" Type="Response"/></HeaderItem></HeaderItem></PropertyPage><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0">244</StartJSBlockLine><JSBlockLength Visible="0">15</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0">true</IsProtocolRecordedNode><TestTalkMessageID Visible="0">61</TestTalkMessageID><RecordingCallback Visible="0">OnPost</RecordingCallback><Encoded Visible="0">true</Encoded><ContentType Visible="0">application/x-www-form-urlencoded</ContentType></PropertyPage><preview domid="120"/></Properties></JavaScriptObject></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="27"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">EndTransaction::CMS_WEB_FP_ALL_DONE_07</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - EndTransaction::CMS_WEB_FP_ALL_DONE_07 - ID:122 *****/
+if (res07 == "All done")
+{
+EndTransaction("CMS_WEB_FP_ALL_DONE_07",WLSuccess,false)
+}
+else
+{
+EndTransaction("CMS_WEB_FP_ALL_DONE_07",WLError,true,"Failed")
+}
+// END WLIDE</NodeScript><NodeID Visible="0">122</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - EndTransaction::CMS_WEB_FP_ALL_DONE_07 - ID:122 *****/
+EndTransaction("CMS_WEB_FP_ALL_DONE_07",WLSuccess,false)
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon></BuildingBlockIcon><StartJSBlockLine Visible="0">259</StartJSBlockLine><JSBlockLength Visible="0">11</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage><preview domid="-1"/></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="28"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">Sleep</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - Sleep - ID:85 *****/
+Sleep(7203)
+// END WLIDE</NodeScript><NodeID Visible="0">85</NodeID><PersistentCorrelation Visible="0"/><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0">270</StartJSBlockLine><JSBlockLength Visible="0">4</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="29"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">BeginTransaction::CMS_WEB_FP_LOGIN_SCREEN_08</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - BeginTransaction::CMS_WEB_FP_LOGIN_SCREEN_08 - ID:123 *****/
+BeginTransaction("CMS_WEB_FP_LOGIN_SCREEN_08")
+
+// END WLIDE</NodeScript><NodeID Visible="0">123</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - BeginTransaction::CMS_WEB_FP_LOGIN_SCREEN_08 - ID:123 *****/
+BeginTransaction("CMS_WEB_FP_LOGIN_SCREEN_08")
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon></BuildingBlockIcon><StartJSBlockLine Visible="0">274</StartJSBlockLine><JSBlockLength Visible="0">5</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage><preview domid="-1"/></Properties><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="30"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">"+Web_environment_ip+"/login</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - URL : "+Web_environment_ip+"/login - ID:98 *****/ 
+wlHttp.Get(""+Web_environment_ip+"/login")
+
+// END WLIDE</NodeScript><NodeID Visible="0">98</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - URL : https://www.t0.nectar.com/login - ID:98 *****/ 
+wlHttp.Get("https://www.t0.nectar.com/login")
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"><HeaderItem Text=" GET https://www.t0.nectar.com/login HTTP/1.1" Type="Request"><HeaderItem Text="Accept: image/gif, image/jpeg, image/pjpeg, image/pjpeg, application/vnd.ms-excel, application/msword, application/xaml+xml, application/x-ms-xbap, application/x-ms-application, */*" Type="Request"/><HeaderItem Text="Accept-Language: en-us" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.2; Trident/4.0; .NET CLR 1.1.4322; .NET4.0C; .NET4.0E)" Type="Request"/><HeaderItem Text="Accept-Encoding: gzip, deflate" Type="Request"/><HeaderItem Text="Host: www.t0.nectar.com" Type="Request"/><HeaderItem Text="Cookie: NECTARWEBSESSIONID=9E4F6BF25F984EF86D8BA0BA3C106C46.app1; cmTPSet=Y; ADRUM_BT=R%3A50%7CclientRequestGUID%3Ae01c8899-95c1-4747-86b5-34412f21df5d%7CbtId%3A1381459%7CbtERT%3A19; _ga=GA1.3.955074585.1446586174; _dc_gtm_UA-66784354-1=1" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text=" HTTP/1.1 200 OK" Type="Response"><HeaderItem Text="Date: Tue, 03 Nov 2015 22:33:30 GMT" Type="Response"/><HeaderItem Text="Server: Apache-Coyote/1.1" Type="Response"/><HeaderItem Text="Content-Type: text/html;charset=UTF-8" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT=R%3A50%7CclientRequestGUID%3Ae01c8899-95c1-4747-86b5-34412f21df5d%7CbtId%3A1381459%7CbtERT%3A19; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT=R%3A0%7CclientRequestGUID%3A673ede49-2f2d-4141-b358-ce1c8071e3b4; Expires=Tue, 03-Nov-2015 22:34:00 GMT; Path=/" Type="Response"/><HeaderItem Text="Set-Cookie: ADRUM_BT=R%3A0%7CclientRequestGUID%3A673ede49-2f2d-4141-b358-ce1c8071e3b4%7CbtId%3A1378333; Expires=Tue, 03-Nov-2015 22:34:00 GMT; Path=/" Type="Response"/><HeaderItem Text="Vary: Accept-Encoding,User-Agent" Type="Response"/><HeaderItem Text="Content-Encoding: gzip" Type="Response"/><HeaderItem Text="Keep-Alive: timeout=15, max=100" Type="Response"/><HeaderItem Text="Connection: Keep-Alive" Type="Response"/><HeaderItem Text="Transfer-Encoding: chunked" Type="Response"/></HeaderItem></HeaderItem></PropertyPage><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0">279</StartJSBlockLine><JSBlockLength Visible="0">5</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0">true</IsProtocolRecordedNode><TestTalkMessageID Visible="0">72</TestTalkMessageID><RecordingCallback Visible="0">OnGet</RecordingCallback><Encoded Visible="0">true</Encoded><ContentType Visible="0"></ContentType></PropertyPage><preview domid="135"/></Properties></JavaScriptObject></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="31"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">EndTransaction::CMS_WEB_FP_LOGIN_SCREEN_08</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - EndTransaction::CMS_WEB_FP_LOGIN_SCREEN_08 - ID:124 *****/
+EndTransaction("CMS_WEB_FP_LOGIN_SCREEN_08",WLSuccess,false)
+
+// END WLIDE</NodeScript><NodeID Visible="0">124</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - EndTransaction::CMS_WEB_FP_LOGIN_SCREEN_08 - ID:124 *****/
+EndTransaction("CMS_WEB_FP_LOGIN_SCREEN_08",WLSuccess,false)
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon></BuildingBlockIcon><StartJSBlockLine Visible="0">284</StartJSBlockLine><JSBlockLength Visible="0">5</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage><preview domid="-1"/></Properties></JavaScriptObject></Agenda></VisualAgenda><PRODUCT_VERSION><ProjectCreatedProductVersion>WebLOADPro Version 10.1.0.133.00  Supports 128 bit SSL </ProjectCreatedProductVersion><LastProjectSavedProductVersion>WebLOADPro Version 10.1.0.133.00  Supports 128 bit SSL </LastProjectSavedProductVersion></PRODUCT_VERSION><PROJECT_TYPE>Protocol</PROJECT_TYPE><AGENDA_OPTIONS><AgendaName xmlns="Default Project Options"/><Options><DiagnosticOptions><bSyntaxCheck>0</bSyntaxCheck><bTraceCheck>0</bTraceCheck><bAutomaticStateCheck>0</bAutomaticStateCheck><bSaveCSJSCheck>0</bSaveCSJSCheck><bCSJSDiagnosticMessages>0</bCSJSDiagnosticMessages></DiagnosticOptions><FunctionalTestingOptions><bTransFailed>0</bTransFailed><nFailedTime>20</nFailedTime><nSeverity>2</nSeverity><sTextSearch></sTextSearch><bCheckCRC>0</bCheckCRC><bCheckCompareValues>0</bCheckCompareValues><VarificationData><nCompareTitle>2</nCompareTitle><nFramesNumber>0</nFramesNumber><nTextSearch>0</nTextSearch><nVerifyLink>0</nVerifyLink><nCompareLinks>0</nCompareLinks><nCompareForms>0</nCompareForms><nCompareImages>0</nCompareImages><nCompareTables>0</nCompareTables></VarificationData></FunctionalTestingOptions><SleepTimeControlOptions><nSleepControlType>2</nSleepControlType><nBetween>2</nBetween><nAnd>10</nAnd><nDeviationPersent>10</nDeviationPersent></SleepTimeControlOptions><IE_OPTIONS Option_version="19">
+			<IE_DIALOG name="Alert">
+				<readonly>yes</readonly>
+				<Answer>
+					<value>OK</value>
+					<default>OK</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="Confirm">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="Prompt">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+				<field type="string" name="Input"></field>
+			</IE_DIALOG>
+			<IE_DIALOG name="Print">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="Cookie_IE6">
+				<Answer>
+					<value>Allow</value>
+					<value>Block</value>
+					<default>Allow</default>
+				</Answer>
+				<field type="checkbox" name="ApplyToAll">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="Cookie">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+				<field type="checkbox" name="NeverShow">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="FormSubmit">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+				<field type="checkbox" name="NeverShow">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="FormResubmit">
+				<Answer>
+					<value>Retry</value>
+					<value>Cancel</value>
+					<default>Retry</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="SwitchNonSecure">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+				<field type="checkbox" name="NeverShow">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="SwitchSecure">
+				<Answer>
+					<value>OK</value>
+					<default>OK</default>
+				</Answer>
+				<field type="checkbox" name="NeverShow">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="NonSecureOnSecure">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="ClientAuthentication">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+				<field type="string" name="Username"></field>
+				<field type="string" name="Password"></field>
+				<field type="string" name="Domain"></field>
+				<field type="checkbox" name="Save">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="ConnectToMS_WinXP">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+				<field type="string" name="Email"></field>
+				<field type="string" name="Password"></field>
+				<field type="checkbox" name="AutoSignIn">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="ClientAuthentication_WinXP">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+				<field type="string" name="Username"></field>
+				<field type="string" name="Password"></field>
+				<field type="checkbox" name="Save">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="ClientCertificate">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+				<field type="string" name="Certificate">
+					<default>0</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="HostCertificate">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="FileDownload">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+				<field type="checkbox" name="AlwaysAsk">
+					<default>checked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="FileDownload_IE6">
+				<Answer>
+					<value>Open</value>
+					<value>Save</value>
+					<value>Cancel</value>
+					<default>Save</default>
+				</Answer>
+				<field type="checkbox" name="AlwaysAsk">
+					<default>checked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="FileDownload_IE6_XP">
+				<Answer>
+					<value>Open</value>
+					<value>Save</value>
+					<value>Cancel</value>
+					<default>Save</default>
+				</Answer>
+				<field type="checkbox" name="AlwaysAsk">
+					<default>checked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="SaveFile">
+				<Answer>
+					<value>Save</value>
+					<value>Cancel</value>
+					<default>Save</default>
+				</Answer>
+				<field type="string" name="FileName"></field>
+			</IE_DIALOG>
+			<IE_DIALOG name="SaveFileConfirmation">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="ActiveXInstall">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+				<field type="checkbox" name="AlwaysTrust">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="RunActiveX">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="UnsafeActiveX">
+				<readonly>yes</readonly>
+				<Answer>
+					<value>OK</value>
+					<default>OK</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="ScriptAccessingActiveX">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="NavigateSubFrames">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="ActiveScripting">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="JavaScripting">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="Redirection">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+				<field type="checkbox" name="NeverShow">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="AutoComplete">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>No</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="RememberPassword">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>No</default>
+				</Answer>
+				<field type="checkbox" name="DoNotOffer">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="FtpAuthentication">
+				<Answer>
+					<value>Login</value>
+					<value>Cancel</value>
+					<default>Login</default>
+				</Answer>
+				<field type="string" name="Server"></field>
+				<field type="string" name="Username"></field>
+				<field type="string" name="Password"></field>
+				<field type="string" name="Email"></field>
+				<field type="checkbox" name="Anonymous">
+					<default>unchecked</default>
+				</field>
+				<field type="checkbox" name="Save">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="FtpFolderError">
+				<readonly>yes</readonly>
+				<Answer>
+					<value>OK</value>
+					<default>OK</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="DocumentModified">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<value>Cancel</value>
+					<default>No</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="JavascriptError">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>No</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="WindowClosing">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="SuspiciousActiveX">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="Reboot">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>No</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="YesNoCancel">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<value>Cancel</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="YesNo">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="OkCancel">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="Ok">
+				<readonly>yes</readonly>
+				<Answer>
+					<value>OK</value>
+					<default>OK</default>
+				</Answer>
+			</IE_DIALOG>
+		</IE_OPTIONS><PlayBackOptions><nNavigationTimeOut>60</nNavigationTimeOut><nFileDownloadTimeout>0</nFileDownloadTimeout><nStartNavigationTimeOut>3</nStartNavigationTimeOut><bClearCache>0</bClearCache><bClearCookies>0</bClearCookies><nPlaybackMode>1</nPlaybackMode><bUseDOROptimizer>0</bUseDOROptimizer></PlayBackOptions><PassFailDefinition><bCheckErrors>1</bCheckErrors><bCheckSevere>1</bCheckSevere><bCheckWarnings>0</bCheckWarnings><nErrorNum>1</nErrorNum><nRuleCheck>15</nRuleCheck><nWarningNum>15</nWarningNum></PassFailDefinition><ErrorHandling><SubmitButton>1</SubmitButton><NavObject>9</NavObject><Page>4</Page><PageRetryNum>3</PageRetryNum><Object>6</Object></ErrorHandling><EmulationPlaybackOptions><bUseOptimizer>1</bUseOptimizer><bUseHistory>0</bUseHistory><nHistoryLimit>1</nHistoryLimit><bCodeFormatter>0</bCodeFormatter><bCSJSRecovery>1</bCSJSRecovery></EmulationPlaybackOptions><WebServices><sBasicPassword></sBasicPassword><sUserName></sUserName><sProxyHost></sProxyHost><sProxyPassword></sProxyPassword><sProxyUser></sProxyUser><sProxyPort></sProxyPort><nWSClientType>1</nWSClientType></WebServices><BrowserEmulationOptions><bDNSCache>1</bDNSCache><bSSLCache>1</bSSLCache><bKeepAlive>1</bKeepAlive><bRedirectionEnabled>1</bRedirectionEnabled><nRedirectionLimit>10</nRedirectionLimit><strBrowserType>Chrome</strBrowserType><strUserAgent>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1309.0 Safari/537.17</strUserAgent><strEncodingValue>0</strEncodingValue><bEnforceEncoding>0</bEnforceEncoding></BrowserEmulationOptions><HTTPParametersOptions><bGZipSupport>0</bGZipSupport><bHTTPVersion>1</bHTTPVersion><bMultiIPSupport>0</bMultiIPSupport><bEncodeFormData>1</bEncodeFormData><bAcceptLanguage>0</bAcceptLanguage><strAcceptLanguage></strAcceptLanguage></HTTPParametersOptions><Authentication><sUserName></sUserName><sPassWord></sPassWord><sNTUserName></sNTUserName><sNTUserPassword></sNTUserPassword><sKerberosServer></sKerberosServer><iAuthType>0</iAuthType><sProxyUserName></sProxyUserName><sProxyPassWord></sProxyPassWord><sProxyHost></sProxyHost><sProxyPort></sProxyPort><sSSLClientCertificateFile></sSSLClientCertificateFile><sSSLClientCertificatePassword></sSSLClientCertificatePassword></Authentication><BrowserCacheOptions><bFilterApplets>1</bFilterApplets><bFilterImages>1</bFilterImages><bFilterJSFiles>1</bFilterJSFiles><bFilterStyleSheets>1</bFilterStyleSheets><bFilterXMLFiles>1</bFilterXMLFiles><bFilterDynamic>0</bFilterDynamic><nCacheType>0</nCacheType></BrowserCacheOptions><JavaOptions><strSelectedJVM>Default</strSelectedJVM></JavaOptions></Options></AGENDA_OPTIONS><RECORD_OPTIONS><File_Extensions><IgnoredExtensions>|gif|mov|mpg|txt|mpeg|class|cab|jpeg|jpg|css|csx|png|js|jsx|mp3|mp4|</IgnoredExtensions><RecordedExtensions>|asp|htm|html|xml|aspx|jsp|swf|php|cgi|none|</RecordedExtensions><RecordAllExtensions>0</RecordAllExtensions><RecordUnknownExtensions>0</RecordUnknownExtensions></File_Extensions><Security><EncryptProtocolPasswords>1</EncryptProtocolPasswords><EncryptFormPasswords>0</EncryptFormPasswords><PasswordsFormFields>|password|pass|passwd|</PasswordsFormFields></Security><Content_Types><IgnoredTypes>|image/gif|image/jpeg|</IgnoredTypes><RecordedTypes>|text/html|text/plain|text/xml|application/xml|application/json|application/x-amf|application/x-shockwave-flash|</RecordedTypes><RecordAllTypes>0</RecordAllTypes><RecordUnknownTypes>0</RecordUnknownTypes></Content_Types><Post_Data><Data>|text/xml|application/json; charset=utf-8|application/xml; charset=utf-8|application/json-rpc|text/xml; charset=utf-8|</Data><Datafile>|multipart/form-data|</Datafile><RecordUnknownPostTypesAsFiles>1</RecordUnknownPostTypesAsFiles></Post_Data><Proxy_Options><ProxyPort>9884</ProxyPort><SecondaryProxyName>proxy</SecondaryProxyName><SecondaryProxyExceptions></SecondaryProxyExceptions><SecondaryProxyPort>8081</SecondaryProxyPort><SecondaryProxySslName></SecondaryProxySslName><SecondaryProxySslPort>1</SecondaryProxySslPort><UseSecondaryProxy>0</UseSecondaryProxy><UseSystemProxy>1</UseSystemProxy><SecondaryProxyUserName></SecondaryProxyUserName><SecondaryProxyPassword></SecondaryProxyPassword><AuthUserName></AuthUserName><AuthUserPassword></AuthUserPassword><UseTransparentProxy>0</UseTransparentProxy></Proxy_Options><Proxy_Certificates><ServerCertFileName>C:\Program Files\RadView\WebLOAD\bin\Certificates\server.pem</ServerCertFileName><ServerCertPassword>password</ServerCertPassword><ServerCertTrustFileName>C:\Program Files\RadView\WebLOAD\bin\Certificates\root.pem</ServerCertTrustFileName><ClientCertFileName></ClientCertFileName><ClientCertPassword></ClientCertPassword></Proxy_Certificates><Script_Content><CommentRequestHeaders>0</CommentRequestHeaders><CommentResponseHesders>0</CommentResponseHesders><CommentStatus>0</CommentStatus><DecodeQueryString>1</DecodeQueryString><RecordAuthentication>1</RecordAuthentication><RecordHeaders>0</RecordHeaders><RecordProxy>1</RecordProxy><RecordProxyAuthentication>1</RecordProxyAuthentication><RecordRedirectionPath>0</RecordRedirectionPath><RecordRefererHeader>1</RecordRefererHeader><EncodeBinaryData>0</EncodeBinaryData><RecordViewstateData>1</RecordViewstateData><RecordCustomHeaders>1</RecordCustomHeaders><SaveRedirectionHeaders>0</SaveRedirectionHeaders><SaveClientSideCookies>0</SaveClientSideCookies></Script_Content><Default_Encoding_Type><DefaultEncodingType>0</DefaultEncodingType></Default_Encoding_Type><Default_Browser_Selection><BrowserType>0</BrowserType><ListNetscapeAndMicrosoftBrowserws>|Chrome|Microsoft Internet Explorer|</ListNetscapeAndMicrosoftBrowserws><SelectedBrowser>Microsoft Internet Explorer</SelectedBrowser><OtherBrowser></OtherBrowser><SetAutoProxyDefs>1</SetAutoProxyDefs><ClearCache>1</ClearCache><ClearCookies>1</ClearCookies><CreateNewBrowser>1</CreateNewBrowser><MobileBrowserType></MobileBrowserType><MobileUserAgent></MobileUserAgent><BrowserWidth>0</BrowserWidth><BrowserHeight>0</BrowserHeight><IsSimulateMobile>0</IsSimulateMobile></Default_Browser_Selection><Correlation_options><AutoCorrelation>3</AutoCorrelation><CorrLogLevel>1</CorrLogLevel><CorrAddComments>1</CorrAddComments><CorrPreserveUser>1</CorrPreserveUser><CorrRulesFilename>C:\Program Files\RadView\WebLOAD\extensions\Correlation\correlationRules.xml</CorrRulesFilename><CorrLogFilename>C:\Documents and Settings\All Users\Application Data\RadView\WebLOAD\Log\correlation.log</CorrLogFilename><ConvertHiddenFields>0</ConvertHiddenFields><CorrFlex>1</CorrFlex><DSIds>0</DSIds></Correlation_options><Correlation_Auto_options><CorrShowForm>2</CorrShowForm><CorrScoreTreshold>1</CorrScoreTreshold><CorrValueLength>0A2EE408</CorrValueLength><CorrValueDelimeters>\#/?+;`': "&lt;&gt;()&amp; =	|</CorrValueDelimeters></Correlation_Auto_options><Filter_Url_options><FilteredUrls>|toolbarqueries.google|toolbar.google.com|safebrowsing-cache.google.com|toolbar.google.co.il|safebrowsing.clients.google.com|safebrowsing.google.com|http://clients?.google.com/*|https://clients?.google.com/*|http://clients?.google.co.il/*|https://clients?.google.co.il/*|https://www.google.com/searchdomaincheck/*|http://www.google.com/tools/toolbar/*|http://www.google.com/complete/search*|https://translate.googleapis.com/translate_a/l/*|https://www.gstatic.com/chrome/config/plugins_win.json|urs.microsoft.com|us.update.toolbar.com|windowsupdate.microsof.com|update.microsoft.com|sqm.microsoft.com|pgq.microsoft.com|toolbar.msn.com|g.msn|http://api.bing.com/qsml.aspx*|http://ieonline.microsoft.com/s/iess/instrumentation.cer|https://ieonline.microsoft.com/ieflipahead/ie10/rules.xml*|https://iecvlist.microsoft.com/IE11/*/iecompatviewlist.xml|http://go.microsoft.com/browserconfig.xml|https://go.microsoft.com/fwlink/*|https://t.urs.microsoft.com/urstelemetry.asmx*|www.download.windowsupdate.com|</FilteredUrls><OnlyUrls>|</OnlyUrls></Filter_Url_options></RECORD_OPTIONS><ADDITIONAL_INFORMATION><ProjectComments></ProjectComments><CreatedBy></CreatedBy><Custom1></Custom1><Custom2></Custom2><Custom3></Custom3><Subject></Subject><TestDescription></TestDescription><ResultsDescription></ResultsDescription><VersionBuild></VersionBuild><Title>C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\WEB\CMS_WEB_FORGOTTEN_PWD.wlp</Title></ADDITIONAL_INFORMATION><ORACLE_PROJECT_INCLUDE_PATH></ORACLE_PROJECT_INCLUDE_PATH><BreakPointsMap/></Project>

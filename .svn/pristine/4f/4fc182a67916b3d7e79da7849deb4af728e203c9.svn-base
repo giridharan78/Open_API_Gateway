@@ -1,0 +1,18 @@
+[01_Validation_Service]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\OpenAPI\01_Validation_Service.wlp
+Weight=8
+[02_Information_Service]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\OpenAPI\02_Information_Service.wlp
+Weight=2
+[03_Redemption_Reversal Service]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\OpenAPI\03_Redemption_Reversal Service.wlp
+Weight=4
+[Reversal_NOA_128]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\OpenAPI\Release 2\Reversal_NOA_128.wlp
+Weight=2
+[01_Offers]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\OpenAPI\Release 2\01_Offers.wlp
+Weight=8
+[Content]
+ScriptsNumber=5
+Scripts=01_Validation_Service;02_Information_Service;03_Redemption_Reversal Service;Reversal_NOA_128;01_Offers;

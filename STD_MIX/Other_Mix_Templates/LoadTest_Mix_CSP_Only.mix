@@ -1,0 +1,15 @@
+[CSP_AUDTRAIL]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\CSP\CSP_AUDTRAIL.wlp
+Weight=20
+[CSP_FINDUPDT]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\CSP\CSP_FINDUPDT.wlp
+Weight=30
+[CSP_REDEEM]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\CSP\CSP_REDEEM.wlp
+Weight=20
+[CSP_TRANSDET]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\CSP\CSP_TRANSDET.wlp
+Weight=30
+[Content]
+ScriptsNumber=4
+Scripts=CSP_AUDTRAIL;CSP_FINDUPDT;CSP_REDEEM;CSP_TRANSDET;

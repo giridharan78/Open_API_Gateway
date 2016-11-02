@@ -1,0 +1,9 @@
+[NectarToolbar_INSTALL_UNINSTALL]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\Toolbar\NectarToolbar_INSTALL_UNINSTALL.wlp
+Weight=5
+[NectarToolbar_Search]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\Toolbar\NectarToolbar_Search.wlp
+Weight=95
+[Content]
+ScriptsNumber=2
+Scripts=NectarToolbar_INSTALL_UNINSTALL;NectarToolbar_Search;

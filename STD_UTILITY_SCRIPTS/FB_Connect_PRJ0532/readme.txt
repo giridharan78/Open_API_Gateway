@@ -1,0 +1,1 @@
+ACTIVE_Environment.js file will need to be updated with URL details for FB users to be created (FB_user_creation_script). The ACTIVE_Environment.js resides in "C:\PerformanceTesting\Projects\STD_UTILITY_SCRIPTS\"

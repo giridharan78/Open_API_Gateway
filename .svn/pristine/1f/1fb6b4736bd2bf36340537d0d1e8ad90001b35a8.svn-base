@@ -1,0 +1,145 @@
+function env_details ()
+{
+
+ //T0 CONFIG FILE
+ 
+ MOB_environment_ip = 	"mobile.t0.nectar.com";
+ MOB_data_file = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\MOB\\Points_summary.txt"; //MOB_GET_POINTS_BALANCE, MOB_GET_STORE_DETAILS
+ MOB_Logincred_file = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\MOB\\Get_Offers_Detail_estore.txt"; //MOB_ESTORES_REQUEST , MOB_GET_OFFERS
+ MOB_estores_data_file = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\MOB\\eStores_Request_Data.txt"; //MOB_ESTORES_REQUEST
+ MOB_store_details_data_file = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\MOB\\Store_Details_Data.txt"; //MOB_GET_STORE_DETAILS
+ MOB_top_deals_data_file = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\MOB\\Top_Deals_Data.txt"; //MOB_GET_TOP_DEALS
+ MOB_Store_file = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\MOB\\Collector_stores.txt"; //MOB_GET_STORE_DETAILS
+ MOB_Offers_file = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\MOB\\Get_Offers.txt"; //MOB_GET_OFFERS
+ 
+ //NEC-362 eShops API
+ MOB_eshops_store_ids_data_file = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\MOB\\eShops_StoreID.txt"; //NEC-362_eShopAPI_Get_Offers
+ // DC - trial API
+ MOB_DC_trial_data_file = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\MOB\\other\\DC_Trial_Col.txt"; //DC
+ 
+
+//Yahoo
+ MOB_Yahoo_Search = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\MOB\\Yahoo_search.txt";
+ 
+ //LBS
+ MOB_Fav_Store = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\MOB\\Accno.txt";
+ MOB_Rec_LBS = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\MOB\\Rec_LBS_Events.txt";
+ MOB_Get_LBS = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\MOB\\Get_LBS_Events.txt"; 
+
+RTR_environment_ip = "rtr.t0.nectar.com";
+ RTR_certificate_location = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\CERTIFICATES\\t0rtrclient.pem";
+ RTR_certificate_password =  "Welcome123";
+ RTR_getCollectorAddress_data_file= "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\RTR\\Get_Collector_Address.txt"; //GET_COLLECTOR_ADDRESS
+ RTR_getCollectorBasics_data_file= "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\RTR\\Get_Collector_Basics.txt"; //GET_COLLECTOR_BASICS
+ RTR_getCollectorDetails_data_file= "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\RTR\\Get_Collector_Details.txt"; //GET_COLLECTOR_DETAILS
+ RTR_getPointsBalance_data_file= "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\RTR\\Get_Points_Balance.txt"; //GET_POINTS_BALANCE
+ RTR_RedeemBasket_data_file= "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\RTR\\Redeem_Basket.txt"; //REDEEM AND REVERSE BASKET
+ RTR_RedeemReward_data_file= "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\RTR\\Redeem_Reward.txt"; //REDEEM AND REVERSE REWARD
+
+ EPR_environment_ip = "rtr.t0.nectar.com";
+ EPR_certificate_location =   "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\CERTIFICATES\\t0rtrclient.pem";
+ EPR_certificate_password =  "Welcome123";
+ EPR_getEnrolmentPack_data_file= "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\EPR\\GetEnrolmentPack.txt"; //GET_ENROLMENT_PACK_SUCCESS
+ //Echo or Ebay
+ EPR_getEnrolmentPack_Echo_data_file= "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\EPR\\GetEnrolmentPackEcho.txt"; // 
+
+
+ RTE_environment_ip = "rte.t0.nectar.com";
+ RTE_getCollectorData_data_file= "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\RTE\\Get_Collector_Data.txt"; //RTE_GET_COLLECTOR_DATA
+ RTE_getPointsBalance_data_file= "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\RTE\\RTE_Get_Points_Balance.txt"; //RTE_GET_POINTS_BALANCE
+
+
+
+Web_environment_ip = "www.t0.nectar.com";
+//"192.168.21.90";
+Web_Change_Details_data_file ="C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\WEB\\Changedetails.txt";  //WEB_ACCTMNGT
+Web_Estores_data_file = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\WEB\\estorescardnum.txt";  //WEB_ESTORES
+Web_Transaction_Cardnum_data_file = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\WEB\\Transactioncardnum.txt";  //WEB_PNTSUPDT, WEB_REWARDSE
+Web_Bonus_points_data_file = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\WEB\\Bonuspoints.txt";  //WEB_MBP
+Web_Spend_Cardnum_data_file = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\WEB\\Spendcardnum.txt"; //WEB_REDEEMRW
+Web_Store_Details_data_file = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\WEB\\Storename.txt";  //WEB_REWARDSE
+Web_EStore_Details_data_file = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\WEB\\Estoredata.txt"; //WEB_ESTORES
+Web_Red_Store_Details_data_file = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\WEB\\Red_Storename.txt"; //WEB_REDEEMRW
+Web_Forgot_pwd_data_file = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\WEB\\ForgotPwd.txt";  //WEB_FORGOT_PWD
+Web_SSO_data_file="C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\WEB\\SSO.txt"; //WEB_SSO_LOGIN
+Web_View_Links= "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\WEB\\View_Linked_Status.txt"; //WEB_VIEW_LINKS
+//SPIKE TEST
+Web_EVTokens_data_file = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\WEB\\EVTokens.txt"; //WEb_EV_LOGIN
+Web_Optin_data_file="C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\WEB\\Optin_token.txt"; //WEB_EV_LOGIN_OPTIN
+//CR
+Web_Spend_sec_data_file = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\WEB\\Secondary_Collector.txt"; //WEB_REDEEMRW_SEC
+
+
+
+//Ebay or Echo
+Web_Echo_Ebay_data_file = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\WEB\\Ebay_users.txt";
+
+//Forgot Password Project-- 
+Web_FP_Cardnum_data_file = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\WEB\\FP_Only.txt";
+Web_FP_Change_Email_data_file = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\WEB\\FP_Change_email.txt";
+Web_LC_data_file = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\WEB\\FP_Lost_card.txt";
+DB_Data_file = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\WEB\\LC_query.txt";   
+
+//Registration utility script data used for registration of collectors with random fname,sname.
+Date_of_birth_file = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\WEB\\Date_of_birth.txt";
+Address_Det_File = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\WEB\\Address.txt";
+
+
+CSP_environment_ip = "192.168.21.88";  //"cspt0.lmuk.local" 
+CSP_Credentials_data_file = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\CSP\\CSP_Credentials.txt"; // To be used by all scripts for login
+CSP_Update_data_file = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\CSP\\Update.txt"; //CSP_FINDUPDT
+CSP_CollectorID_data_file = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\CSP\\CollectorID.txt";  //CSP_REDEEM
+CSP_Surname_data_file = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\CSP\\surname.txt";  //CSP_AUDTRAIL, CSP_TRANSDET
+CSP_Redemption_data_file = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\CSP\\Redemptioncard.txt";
+CSP_ViewLinks_data_file = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\CSP\\CSP_ViewLinks.txt"; //CSP_VIEW_LINKS ,CSP_OAUTH_AUDITTRAIL
+//CSP_VIP_CR
+CSP_VIP_data_file = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\CSP\\Vip.txt";
+
+
+
+//LO T0 CONFIG FILE
+
+LO_Web_environment_ip= "littleones.t0.lmuk.local";
+Web_FirstName_data_file="C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\WEB\\LO_Firstname.txt";  //WEB_LO_UPDATE
+Web_CMP_Login_Details_file="C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\WEB\\LO_CMP_Login_Details.txt"; //WEB_LO_CMP
+Web_SurName_data_file="C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\WEB\\LO_Surname.txt"; //
+Web_Competition_ID= "LO_COMP_3"
+Web_update_Login_Details_file="C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\WEB\\LO_Update_Login_Details.txt"; //WEB_LO_UPDATE
+
+
+//OPenAPI
+Get_Collector_Validation = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_DATA\\OPENAPI\\JBOSS\\Get_Collector_Validation.txt"; //01_Validation_Service
+Get_Collector_Information = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_DATA\\OPENAPI\\JBOSS\\Get_Collector_Information.txt"; //02_Information_Service
+Get_Redeem_Reversal = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_DATA\\OPENAPI\\JBOSS\\Get_Redemption_Reversal.txt"; //03_Redemption_Reversal Service
+Get_Collector_Offers = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_DATA\\OPENAPI\\JBOSS\\Get_Collector_Offer.txt"; //04_Get_Offers
+Get_Reward_Information = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_DATA\\OPENAPI\\JBOSS\\Get_Rewards_SupplierId.txt"; //01_Get_Rewards
+Get_Coll_File = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_DATA\\OPENAPI\\JBOSS\\Get_Collector.txt"; //Update Data Choices and Mobile number
+Get_LostCard_File = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_DATA\\OPENAPI\\JBOSS\\LostCard_Coll.txt"; //LostCard
+Get_Env = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_DATA\\OPENAPI\\JBOSS\\ipaddress.txt"; // All Services
+
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//Below Scripts are using the Get_OAuth_token_fileCard No
+//Collector Details,Notification,Redemption_Reversal,Offers,Email update,Segmentation,Post code,Gender,EnrolmentDate, Rewards, Sponsor, Collect
+
+Get_OAuth_token_File = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_DATA\\OPENAPI\\Col_OAuth_token.txt"
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Get_OAuth_Statement_File = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_DATA\\OPENAPI\\Col_Statement.txt"; //Full Statement, Mini Statement
+Get_OAuth_Coll_File = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_DATA\\OPENAPI\\OAuth_coll.txt"; //OAuth_t0
+Get_OAuth_Supplier_File = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_DATA\\OPENAPI\\Col_Rewards_SupplierId.txt"; //Supplier for rewards
+Get_OAuth_RewardDetails_File = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_DATA\\OPENAPI\\Col_Reward_Details.txt"; //Reward Details
+Get_OAuth_CollectUnlinked_File = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_DATA\\OPENAPI\\Col_OAuth_Unlinked.txt"; //Collect_Unlinked
+Get_OAuth_SponsorOffer_File = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_DATA\\OPENAPI\\Col_Sponsor_Offer.txt"; //Collect_Unlinked & Linked
+Get_OAuth_SetPreference_File = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_DATA\\OPENAPI\\Col_Set_Preferences.txt"; //Set Preferences
+OAuth_Address_File= "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_DATA\\OPENAPI\\address.txt"; //New Reg
+OAuth_New_Reg_File= "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_DATA\\OPENAPI\\REG_Activation.txt"; //New Reg
+OAuth_New_CollOffer_File= "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_DATA\\OPENAPI\\New_Col_Offer.txt"; //New Collector Offer
+
+
+//Unique Data Scripts which are not used at the moment
+Get_OAuth_Reversal_File = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_DATA\\OPENAPI\\Reversal_transactionId.txt"; // Inactive_Collectors_Reversal
+Get_OAuth_Revoke_File = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_DATA\\OPENAPI\\Col_Revoke_token.txt"; //Revoke the access token
+Get_OAuth_Refresh_File = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_DATA\\OPENAPI\\Col_Refresh_token.txt"; //Refresh token
+Get_OAuth_OffersOptin_File = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_DATA\\OPENAPI\\Col_Offers_Optin.txt"; //Offers_optin
+Get_OAuth_Email_Phone_File = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_DATA\\OPENAPI\\Col_Email_Phone_Update.txt"; //Offers_optin
+}

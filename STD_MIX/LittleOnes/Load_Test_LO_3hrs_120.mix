@@ -1,0 +1,12 @@
+[WEB_LO_JOIN]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\Web_CSP\Little Ones\WEB_LO_JOIN.wlp
+Weight=30
+[WEB_LO_UPDATE]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\Web_CSP\Little Ones\WEB_LO_UPDATE.wlp
+Weight=10
+[WEB_LO_CMP]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\Web_CSP\Little Ones\WEB_LO_CMP.wlp
+Weight=60
+[Content]
+ScriptsNumber=3
+Scripts=WEB_LO_JOIN;WEB_LO_UPDATE;WEB_LO_CMP;

@@ -1,0 +1,731 @@
+<Project><VisualAgenda><Agenda CallBack="Do_Agenda" ClonedXML="0"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0"/><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript></NodeScript><NodeID Visible="0">1</NodeID><InitAgenda Type="JavaScript" ReadOnly="0">
+//IncludeFile("AsmLib.js",WLExecuteScript)
+OutputFolder = "C:\\PerformanceTesting\\Projects\\STD_AUTOOUTPUT"
+IncludeFile("C:\\PerformanceTesting\\Projects\\ACTIVE_Environment.js")
+env_details()
+
+CSP_Credentials_File = CopyFile(CSP_Credentials_data_file)
+CollectorId_File = CopyFile(CSP_CollectorID_data_file)
+
+
+//#########################   The below code would over write the existing sleep time and introduce a random sleep time ######################################
+wlGlobals.DisableSleep = false
+wlGlobals.SleepRandomMax = 60000
+wlGlobals.SleepRandomMin = 30000
+//############################################################################################################################################
+	
+wlGlobals.ParseTables = "No"
+wlGlobals.ParseForms = "No"
+wlGlobals.GetImages   = "No"
+wlGlobals.ParseImages = "No"
+</InitAgenda><InitClient Type="JavaScript" ReadOnly="0">//start of function
+
+CSP_Credentials_DataFileParam = WLDataFileParam ( "CSP_Credentials", CSP_Credentials_File, 1,",",WLParamRandom,WLParamLocal,WLParamUpdateRound,WLParamCycle);
+Username = WLDataFileField( CSP_Credentials_DataFileParam, 1);
+Password = WLDataFileField( CSP_Credentials_DataFileParam, 2);
+
+CollectorId_DataFileParam = WLDataFileParam ( "CollectorId", CollectorId_File, 1,",",WLParamRandom,WLParamLocal,WLParamUpdateRound,WLParamCycle);
+CardNum = WLDataFileField( CollectorId_DataFileParam, 1);
+</InitClient><TerminateAgenda Type="JavaScript" ReadOnly="0"></TerminateAgenda><TerminateClient Type="JavaScript" ReadOnly="0"></TerminateClient><JSNodeCounter Visible="0">170</JSNodeCounter></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="GlobalVariables"><System Type="Array" ReadOnly="0"><Variable Name="ClientNum" Description="Returns the main thread number for each client"/><Variable Name="GeneratorName()" Description="Returns the name of this load generator as a string"/><Variable Name="GMTDate()" Description="Current date in GMT/UTC as a string"/><Variable Name="Hours()" Description="Current Hour (0-23)"/><Variable Name="LocalDate()" Description="Current date in local time as a string"/><Variable Name="Milliseconds()" Description="Current ms value"/><Variable Name="Minutes()" Description="Current minutes (0-59)"/><Variable Name="RandomNumber()" Description="Generate a random number"/><Variable Name="RoundNum" Description="Returns the number of rounds for the specific client"/><Variable Name="Seconds()" Description="Current seconds (0-59)"/><Variable Name="ThisYear()" Description="Current Year (4-digit, e.g. 2001)"/><Variable Name="Time()" Description="Time in ms since 1/1/1970"/><Variable Name="TodaysDate()" Description="Current date (1-31)"/><Variable Name="TodaysDay()" Description="Current Day (0-6, 0==Sunday)"/><Variable Name="TodaysMonth()" Description="Current Month (0-11)"/><Variable Name="VCUniqueID()" Description="Returns a string unique to this VC"/></System><UserDefined Type="Array" ReadOnly="0"/><InputParameters Type="Array" ReadOnly="0"/><OutputParameters Type="Array" ReadOnly="0"/><GlobalInputFilesParams Type="Array" ReadOnly="0"/><FileCounter>0</FileCounter></PropertyPage></Properties><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="0"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">BeginTransaction::RNIUK_04_Redemption_01_LaunchAppln</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - BeginTransaction::RNIUK_04_Redemption_01_LaunchAppln - ID:97 *****/
+BeginTransaction("CSP_REDEEMRW_01_Launch")
+ // END WLIDE</NodeScript><NodeID Visible="0">97</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessage Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="1"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">https://cspt2.lmuk.local/MountainWeb/loginInternalUsers.jsp</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - URL : https://cspt2.lmuk.local/MountainWeb/loginInternalUsers.jsp - ID:98 *****/
+wlGlobals.GetFrames = false 
+wlGlobals.UserAgent = "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.2; .NET CLR 1.1.4322)"
+wlHttp.Get("https://"+CSP_environment_ip+"/MountainWeb/loginInternalUsers.jsp")
+// END WLIDE</NodeScript><NodeID Visible="0">98</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessage Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="2"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">EndTransaction::CSP_REDEEMRW_01_Launch</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - EndTransaction::CSP_REDEEMRW_01_Launch - ID:99 *****/
+EndTransaction("CSP_REDEEMRW_01_Launch",WLSuccess,false)
+
+ // END WLIDE</NodeScript><NodeID Visible="0">99</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessage Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="3"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">Sleep</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - Sleep - ID:161 *****/
+Sleep(53000)
+ // END WLIDE</NodeScript><NodeID Visible="0">161</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="4"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">BeginTransaction::CSP_REDEEMRW_02_Login</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - BeginTransaction::CSP_REDEEMRW_02_Login - ID:143 *****/
+BeginTransaction("CSP_REDEEMRW_02_Login")
+
+ // END WLIDE</NodeScript><NodeID Visible="0">143</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon></BuildingBlockIcon><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage><preview domid="-1"/></Properties><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="5"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">https://cspt2.lmuk.local/MountainWeb/SecurityServlet</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - URL : https://cspt2.lmuk.local/MountainWeb/SecurityServlet - ID:101 *****/ 
+wlHttp.Header["Referer"] = "https://"+CSP_environment_ip+"/MountainWeb/SecurityServlet"
+wlHttp.FormdataEncodingType = 1
+wlHttp.ContentType = "application/x-www-form-urlencoded"
+wlHttp.FormData["textfieldLogin"] = Username.getValue()//"INFYCSRL4"
+wlHttp.FormData["textfieldPwd"] = Password.getValue()//"infosys"
+wlHttp.Post("https://"+CSP_environment_ip+"/MountainWeb/SecurityServlet")
+
+
+ // END WLIDE</NodeScript><NodeID Visible="0">101</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessage Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="6"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">EndTransaction::CSP_REDEEMRW_02_Login</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - EndTransaction::CSP_REDEEMRW_02_Login - ID:144 *****/
+EndTransaction("CSP_REDEEMRW_02_Login",WLSuccess,false)
+
+ // END WLIDE</NodeScript><NodeID Visible="0">144</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon></BuildingBlockIcon><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage><preview domid="-1"/></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="7"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">Sleep</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - Sleep - ID:162 *****/
+Sleep(53000)
+ // END WLIDE</NodeScript><NodeID Visible="0">162</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="8"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">BeginTransaction::CSP_REDEEMRW_03_HitSearch</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - BeginTransaction::CSP_REDEEMRW_03_HitSearch - ID:141 *****/
+BeginTransaction("CSP_REDEEMRW_03_HitSearch")
+
+ // END WLIDE</NodeScript><NodeID Visible="0">141</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon></BuildingBlockIcon><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage><preview domid="-1"/></Properties><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="9"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">https://cspt2.lmuk.local/MountainWeb/collectorSearch.jsp</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - URL : https://cspt2.lmuk.local/MountainWeb/collectorSearch.jsp - ID:104 *****/ 
+wlHttp.SaveSource= true
+wlHttp.Header["Referer"] = "https://"+CSP_environment_ip+"/MountainWeb/SecurityServlet"
+wlHttp.FormdataEncodingType = 1
+wlHttp.ContentType = "application/x-www-form-urlencoded"
+wlHttp.FormData["eventName"] = "$WL$EMPTY$STRING$"
+wlHttp.Post("https://"+CSP_environment_ip+"/MountainWeb/collectorSearch.jsp")
+var patt= new RegExp("Collector Search")
+var result =  patt.exec(document.wlSource)
+ // END WLIDE</NodeScript><NodeID Visible="0">104</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessage Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="10"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">EndTransaction::CSP_REDEEMRW_03_HitSearch</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - EndTransaction::CSP_REDEEMRW_03_HitSearch - ID:142 *****/
+if (result ==  "Collector Search") {
+EndTransaction("CSP_REDEEMRW_03_HitSearch",WLSuccess,false)
+}
+else
+{
+EndTransaction("CSP_REDEEMRW_03_HitSearch",WLError,true,"Page failed")
+}
+ // END WLIDE</NodeScript><NodeID Visible="0">142</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon></BuildingBlockIcon><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage><preview domid="-1"/></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="11"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">Sleep</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - Sleep - ID:163 *****/
+Sleep(53000)
+ // END WLIDE</NodeScript><NodeID Visible="0">163</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="12"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">BeginTransaction::CSP_REDEEMRW_04_ColSearch</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - BeginTransaction::CSP_REDEEMRW_04_ColSearch - ID:140 *****/
+BeginTransaction("CSP_REDEEMRW_04_ColSearch")
+ // END WLIDE</NodeScript><NodeID Visible="0">140</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="13"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">https://cspt2.lmuk.local/MountainWeb/Mountain</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - URL : https://cspt2.lmuk.local/MountainWeb/Mountain - ID:106 *****/ 
+wlHttp.Header["Referer"] = "https://"+CSP_environment_ip+"/MountainWeb/collectorSearch.jsp"
+wlHttp.FormdataEncodingType = 1
+wlHttp.ContentType = "application/x-www-form-urlencoded"
+wlHttp.FormData["hidDate"] = "16/3/1992"
+wlHttp.FormData["eventName"] = "3500"
+wlHttp.FormData["gridIndex"] = "0"
+wlHttp.FormData["collectorId"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["Todays_Date"] = "16/3/2010"
+wlHttp.FormData["pageNumber"] = "0"
+wlHttp.FormData["accountidCSR"] = CardNum.getValue().substring(0,8) //"50016740"
+wlHttp.FormData["city"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["firstName"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["postalCode"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["lastName"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["searchValue"] = "true"
+wlHttp.Post("https://"+CSP_environment_ip+"/MountainWeb/Mountain")
+ // END WLIDE</NodeScript><NodeID Visible="0">106</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessage Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="14"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">EndTransaction::CSP_REDEEMRW_04_ColSearch</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - EndTransaction::CSP_REDEEMRW_04_ColSearch - ID:107 *****/
+EndTransaction("CSP_REDEEMRW_04_ColSearch",WLSuccess,false)
+
+ // END WLIDE</NodeScript><NodeID Visible="0">107</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessage Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="15"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">Sleep</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - Sleep - ID:164 *****/
+Sleep(53000)
+ // END WLIDE</NodeScript><NodeID Visible="0">164</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="16"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">BeginTransaction::CSP_REDEEMRW_05_ColDet</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - BeginTransaction::CSP_REDEEMRW_05_ColDet - ID:108 *****/
+BeginTransaction("CSP_REDEEMRW_05_ColDet")
+ // END WLIDE</NodeScript><NodeID Visible="0">108</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessage Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="17"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">https://cspt2.lmuk.local/MountainWeb/Mountain</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - URL : https://cspt2.lmuk.local/MountainWeb/Mountain - ID:110 *****/ 
+wlHttp.Header["Referer"] = "https://"+CSP_environment_ip+"/MountainWeb/Mountain"
+wlHttp.FormdataEncodingType = 1
+wlHttp.ContentType = "application/x-www-form-urlencoded"
+wlHttp.FormData["hidDate"] = "16/3/1992"
+wlHttp.FormData["eventName"] = "2213"
+wlHttp.FormData["gridIndex"] = "0"
+wlHttp.FormData["collectorId"] = CardNum.getValue()//"50016740012"
+wlHttp.FormData["Todays_Date"] = "16/3/2010"
+wlHttp.FormData["pageNumber"] = "0"
+wlHttp.FormData["accountidCSR"] = CardNum.getValue().substring(0,8)//"50016740"
+wlHttp.FormData["city"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["firstName"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["postalCode"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["lastName"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["radiobutton"] = CardNum.getValue()//"50016740020"
+wlHttp.FormData["searchValue"] = "true"
+wlHttp.Post("https://"+CSP_environment_ip+"/MountainWeb/Mountain")
+ // END WLIDE</NodeScript><NodeID Visible="0">110</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessage Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="18"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">EndTransaction::CSP_REDEEMRW_05_ColDet</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - EndTransaction::CSP_REDEEMRW_05_ColDet - ID:111 *****/
+EndTransaction("CSP_REDEEMRW_05_ColDet",WLSuccess,false)
+
+ // END WLIDE</NodeScript><NodeID Visible="0">111</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessage Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="19"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">Sleep</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - Sleep - ID:165 *****/
+Sleep(53000)
+ // END WLIDE</NodeScript><NodeID Visible="0">165</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="20"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">BeginTransaction::CSP_REDEEMRW_06_Rewards</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - BeginTransaction::CSP_REDEEMRW_06_Rewards - ID:112 *****/
+BeginTransaction("CSP_REDEEMRW_06_Rewards")
+ // END WLIDE</NodeScript><NodeID Visible="0">112</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessage Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="21"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">https://cspt2.lmuk.local/MountainWeb/rewards/GeneralSearchCSR.jsp</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - URL : https://cspt2.lmuk.local/MountainWeb/rewards/GeneralSearchCSR.jsp - ID:114 *****/ 
+wlHttp.SaveSource = true;
+wlHttp.Header["Referer"] = "https://"+CSP_environment_ip+"/MountainWeb/Mountain"
+wlHttp.FormdataEncodingType = 1
+wlHttp.ContentType = "application/x-www-form-urlencoded"
+wlHttp.FormData["eventName"] = "2213"
+wlHttp.FormData["CSRACCON"] = "N"
+wlHttp.FormData["refreshStatus"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["messageStatus"] = "N"
+wlHttp.FormData["collectorId"] = CardNum.getValue()//"50016740012"
+wlHttp.Post("https://"+CSP_environment_ip+"/MountainWeb/rewards/GeneralSearchCSR.jsp")
+
+var ToPoints= new RegExp("Offers of the Week")
+var result =  ToPoints.exec(document.wlSource)
+
+ // END WLIDE</NodeScript><NodeID Visible="0">114</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessage Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="22"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">EndTransaction::CSP_REDEEMRW_06_Rewards</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - EndTransaction::CSP_REDEEMRW_06_Rewards - ID:115 *****/
+if (result == "Offers of the Week"){
+EndTransaction("CSP_REDEEMRW_06_Rewards",WLSuccess,false)
+}
+else
+{
+EndTransaction("CSP_REDEEMRW_06_Rewards",WLError,true,"Page failed")
+}
+ // END WLIDE</NodeScript><NodeID Visible="0">115</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessage Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="23"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">Sleep</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - Sleep - ID:166 *****/
+Sleep(53000)
+ // END WLIDE</NodeScript><NodeID Visible="0">166</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="24"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">BeginTransaction::CSP_REDEEMRW_07_Rwdsearch</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - BeginTransaction::CSP_REDEEMRW_07_Rwdsearch - ID:116 *****/
+BeginTransaction("CSP_REDEEMRW_07_Rwdsearch")
+ // END WLIDE</NodeScript><NodeID Visible="0">116</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessage Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="25"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">https://cspt2.lmuk.local/MountainWeb/rewards/searchpanel/RewardCategorySearchCSR.jsp</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - URL : https://cspt2.lmuk.local/MountainWeb/rewards/searchpanel/RewardCategorySearchCSR.jsp - ID:118 *****/ 
+wlHttp.SaveSource = true
+wlHttp.Header["Referer"] = "https://"+CSP_environment_ip+"/MountainWeb/rewards/GeneralSearchCSR.jsp"
+wlHttp.FormdataEncodingType = 1
+wlHttp.ContentType = "application/x-www-form-urlencoded"
+wlHttp.FormData["rewardOfferId"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["hideBackToSearchResults"] = "true"
+wlHttp.FormData["eventName"] = "7027"
+wlHttp.FormData["searchType"] = "findReward"
+wlHttp.FormData["pageSubmit"] = "Yes"
+wlHttp.FormData["PageIdentifier"] = "doNotLoadSearchPage"
+wlHttp.FormData["viewType"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["siteIndicator"] = "C"
+wlHttp.FormData["pointsFrom"] = "0"
+wlHttp.FormData["pointsTo"] = ToPoints //"63721"
+wlHttp.FormData["rewardCategory"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["keyword"] = "sainsbury"
+wlHttp.Post("https://"+CSP_environment_ip+"/MountainWeb/Mountain")
+
+var rew= new RegExp("The Reward")
+var res =  rew.exec(document.wlSource)
+ // END WLIDE</NodeScript><NodeID Visible="0">118</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessage Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="26"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">EndTransaction::CSP_REDEEMRW_07_Rwdsearch</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - EndTransaction::CSP_REDEEMRW_07_Rwdsearch - ID:123 *****/
+if (res == "The Reward"){
+EndTransaction("CSP_REDEEMRW_07_Rwdsearch",WLSuccess,false)
+}
+else
+{
+EndTransaction("CSP_REDEEMRW_07_Rwdsearch",WLError,true,"Page failed")
+}
+ // END WLIDE</NodeScript><NodeID Visible="0">123</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessage Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="27"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">Sleep</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - Sleep - ID:167 *****/
+Sleep(53000)
+ // END WLIDE</NodeScript><NodeID Visible="0">167</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="28"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">BeginTransaction::CSP_REDEEMRW_08_Rwdsearch_Subcategory</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - BeginTransaction::CSP_REDEEMRW_08_Rwdsearch_Subcategory - ID:149 *****/
+BeginTransaction("CSP_REDEEMRW_08_Rwdsearch_Subcategory")
+
+ // END WLIDE</NodeScript><NodeID Visible="0">149</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon></BuildingBlockIcon><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage><preview domid="-1"/></Properties><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="29"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">https://cspt2.lmuk.local/MountainWeb/rewards/SubCategorySearchCSR.jsp</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - URL : https://cspt2.lmuk.local/MountainWeb/rewards/SubCategorySearchCSR.jsp - ID:120 *****/ 
+wlHttp.SaveSource = true
+wlHttp.Header["Referer"] = "https://"+CSP_environment_ip+"/MountainWeb/Mountain"
+wlHttp.FormdataEncodingType = 1
+wlHttp.ContentType = "application/x-www-form-urlencoded"
+wlHttp.FormData["eventName"] = "7028"
+wlHttp.FormData["rewardOfferId"] = "ROM0009382"   // These values are hard coded to redeem only 1 point as part of performance test process.
+wlHttp.FormData["PageIdentifier"] = "doNotLoadSearchPage"
+wlHttp.FormData["searchType"] = "findReward"
+wlHttp.FormData["pageSubmit"] = "No"
+wlHttp.FormData["pageName"] = "/rewards/resultpanel/GeneralRewardOffersCSR.jsp"
+wlHttp.FormData["pageDirection"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["forwardPath"] = "/rewards/resultpanel/GeneralRewardOffersCSR.jsp"
+wlHttp.FormData["siteIndicator"] = "C"
+wlHttp.FormData["pointsFrom"] = "0"
+wlHttp.FormData["pointsTo"] = ToPoints // "63721"
+wlHttp.FormData["rewardCategory"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["keyword"] = "sainsbury"
+wlHttp.Post("https://"+CSP_environment_ip+"/MountainWeb/Mountain")
+
+var vou= new RegExp("Sainsbury eVoucher")
+var ext =  vou.exec(document.wlSource)
+ // END WLIDE</NodeScript><NodeID Visible="0">120</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessage Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="30"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">EndTransaction::CSP_REDEEMRW_08_Rwdsearch_Subcategory</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - EndTransaction::CSP_REDEEMRW_08_Rwdsearch_Subcategory - ID:150 *****/
+if (ext ==  "Sainsbury eVoucher"){
+EndTransaction("CSP_REDEEMRW_08_Rwdsearch_Subcategory",WLSuccess,false)
+}
+else
+{
+EndTransaction("CSP_REDEEMRW_08_Rwdsearch_Subcategory",WLError,true,"Page failed")
+}
+ // END WLIDE</NodeScript><NodeID Visible="0">150</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon></BuildingBlockIcon><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage><preview domid="-1"/></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="31"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">Sleep</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - Sleep - ID:168 *****/
+Sleep(53000)
+ // END WLIDE</NodeScript><NodeID Visible="0">168</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="32"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">BeginTransaction::CSP_REDEEMRW_09_Redeem</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - BeginTransaction::CSP_REDEEMRW_09_Redeem - ID:124 *****/
+BeginTransaction("CSP_REDEEMRW_09_Redeem")
+ // END WLIDE</NodeScript><NodeID Visible="0">124</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessage Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="33"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">https://cspt2.lmuk.local/MountainWeb/Mountain</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - URL : https://cspt2.lmuk.local/MountainWeb/Mountain - ID:126 *****/ 
+wlHttp.SaveSource = true
+wlHttp.Header["Referer"] = "https://"+CSP_environment_ip+"/MountainWeb/Mountain"
+wlHttp.FormdataEncodingType = 1
+wlHttp.ContentType = "application/x-www-form-urlencoded"
+wlHttp.FormData["eventName"] = "5511"
+wlHttp.FormData["pointsFrom"] = "0"
+wlHttp.FormData["pointsTo"] = ToPoints // "63721"
+wlHttp.FormData["rewardCategory"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["keyword"] = "sainsbury"
+wlHttp.FormData["pageSubmit"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["PageIdentifier"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["pageName"] = "/rewards/resultpanel/GeneralRewardOffersCSR.jsp"
+wlHttp.FormData["subCategoryId"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["lowerPanel"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["rewardId"] = "RWM0004213"
+wlHttp.FormData["rewardOfferId"] = "ROM0009382"        // These values are hard coded to redeem only 1 point as part of performance test process.
+wlHttp.FormData["pageDirection"] = "current"
+wlHttp.FormData["forwardPath"] = "/rewards/resultpanel/GeneralRewardOffersCSR.jsp"
+wlHttp.FormData["valuesPresent"] = "4"
+wlHttp.FormData["hideBackToSearchResults"] = "false"
+wlHttp.FormData["siteIndicator"] = "C"
+wlHttp.FormData["numberRequired"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["totalCash"] = "0.00"
+wlHttp.FormData["totalPoints"] = "1"
+wlHttp.FormData["inputType"] = "TEXTBOX"
+wlHttp.FormData["itemPriceId"] = "RIT0022186:RIP0025945"
+wlHttp.FormData["itemPrices"] = "0.0"
+wlHttp.FormData["itemPoints"] = "1"
+wlHttp.FormData["quantity"] = "1"
+wlHttp.FormData["itemPriceId"] = "RIT0022187:RIP0025946"
+wlHttp.FormData["itemPrices"] = "0.0"
+wlHttp.FormData["itemPoints"] = "1"
+wlHttp.FormData["quantity"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["itemPriceId"] = "RIT0022188:RIP0025947"
+wlHttp.FormData["itemPrices"] = "0.0"
+wlHttp.FormData["itemPoints"] = "1"
+wlHttp.FormData["quantity"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["itemPriceId"] = "RIT0022189:RIP0025948"
+wlHttp.FormData["itemPrices"] = "0.0"
+wlHttp.FormData["itemPoints"] = "1"
+wlHttp.FormData["quantity"] = "$WL$EMPTY$STRING$"
+wlHttp.Post("https://"+CSP_environment_ip+"/MountainWeb/Mountain")
+
+var add= new RegExp("Find Address")
+var addval =  add.exec(document.wlSource)
+ // END WLIDE</NodeScript><NodeID Visible="0">126</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessage Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="34"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">EndTransaction::CSP_REDEEMRW_09_Redeem</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - EndTransaction::CSP_REDEEMRW_09_Redeem - ID:127 *****/
+if (addval == "Find Address"){
+EndTransaction("CSP_REDEEMRW_09_Redeem",WLSuccess,false)
+}
+else
+{
+EndTransaction("CSP_REDEEMRW_09_Redeem",WLError,true,"Page failed")
+}
+ // END WLIDE</NodeScript><NodeID Visible="0">127</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessage Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="35"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">Sleep</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - Sleep - ID:169 *****/
+Sleep(53000)
+ // END WLIDE</NodeScript><NodeID Visible="0">169</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="36"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">BeginTransaction::CSP_REDEEMRW_10_Rdmconfm</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - BeginTransaction::CSP_REDEEMRW_10_Rdmconfm - ID:128 *****/
+BeginTransaction("CSP_REDEEMRW_10_Rdmconfm")
+
+ // END WLIDE</NodeScript><NodeID Visible="0">128</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessage Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="37"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">https://cspt2.lmuk.local/MountainWeb/RedemptionDetailsCSR.jsp</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - URL : https://cspt2.lmuk.local/MountainWeb/RedemptionDetailsCSR.jsp - ID:130 *****/ 
+wlHttp.SaveSource= true;
+wlHttp.Header["Referer"] = "https://"+CSP_environment_ip+"/MountainWeb/Mountain"
+wlHttp.FormdataEncodingType = 1
+wlHttp.ContentType = "application/x-www-form-urlencoded"
+wlHttp.FormData["eventName"] = "5506"
+wlHttp.FormData["flagNeedtoValidate"] = "false"
+wlHttp.FormData["changeInd"] = "false"
+wlHttp.FormData["pafKey"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["deliveryPointSuffix"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["failLevel"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["recipientPafKey"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["recipientDeliveryPointSuffix"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["recipientfailLevel"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["delChangeInd"] = "false"
+wlHttp.FormData["giftInd"] = "false"
+wlHttp.FormData["details"] = "/rewards/GeneralSearchOfferDetailsCSR.jsp"
+wlHttp.FormData["proceed"] = "true"
+wlHttp.FormData["titleSelected"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["otherTitleSelected"] = " "
+wlHttp.FormData["day"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["month"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["year"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["countryRegion"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["location"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["pointsFrom"] = "0"
+wlHttp.FormData["pointsTo"] = ToPoints // "63721"
+wlHttp.FormData["rewardCategory"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["keyword"] = "sainsbury"
+wlHttp.FormData["departingFrom"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["goingTo"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["addIndicator"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["bAddress"] = "false"
+wlHttp.FormData["delbAddress"] = "false"
+wlHttp.FormData["pageName"] = "/rewards/resultpanel/GeneralRewardOffersCSR.jsp"
+wlHttp.FormData["pageSubmit"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["pageDirection"] = "current"
+wlHttp.FormData["forwardPath"] = "/rewards/resultpanel/GeneralRewardOffersCSR.jsp"
+wlHttp.FormData["rewardCategory"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["subCategoryId"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["lowerPanel"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["rewardId"] = "RWM0004213"
+wlHttp.FormData["rewardOfferId"] = "ROM0009382"
+wlHttp.FormData["hideBackToSearchResults"] = "false"
+wlHttp.FormData["totalCash"] = "0.00"
+wlHttp.FormData["totalPoints"] = "1"
+wlHttp.FormData["accountType"] = "C"
+wlHttp.FormData["flatNumber"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["houseName"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["houseNumber"] = "80"
+wlHttp.FormData["addressLine1"] = "Strand"
+wlHttp.FormData["addressLine2"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["addressLine3"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["town"] = "London"
+wlHttp.FormData["county"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["postCode"] = "WC2R 0NN"
+wlHttp.FormData["supplierReference"] = "PERFTEST"
+wlHttp.Post("https://"+CSP_environment_ip+"/MountainWeb/RedemptionDetailsCSR.jsp")
+
+var reward= new RegExp("booked successfully")
+var done =  reward.exec(document.wlSource)
+
+ // END WLIDE</NodeScript><NodeID Visible="0">130</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessage Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="38"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">EndTransaction::CSP_REDEEMRW_10_Rdmconfm</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - EndTransaction::CSP_REDEEMRW_10_Rdmconfm - ID:131 *****/
+if (done == "booked successfully"){
+EndTransaction("CSP_REDEEMRW_10_Rdmconfm",WLSuccess,false)
+}
+else
+{
+EndTransaction("CSP_REDEEMRW_10_Rdmconfm",WLError,true,"Page failed")
+}
+ // END WLIDE</NodeScript><NodeID Visible="0">131</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessage Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="39"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">Sleep</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - Sleep - ID:170 *****/
+Sleep(53000)
+ // END WLIDE</NodeScript><NodeID Visible="0">170</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="40"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">BeginTransaction::CSP_REDEEMRW_11_Logout</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - BeginTransaction::CSP_REDEEMRW_11_Logout - ID:132 *****/
+BeginTransaction("CSP_REDEEMRW_11_Logout")
+
+ // END WLIDE</NodeScript><NodeID Visible="0">132</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessage Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="41"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">https://cspt2.lmuk.local/MountainWeb/loginInternalUsers.jsp</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - URL : https://cspt2.lmuk.local/MountainWeb/loginInternalUsers.jsp - ID:134 *****/ 
+//wlHttp.Header["Referer"] = "https://"+CSP_environment_ip+"/MountainWeb/Mountain"
+//wlHttp.Get("https://"+CSP_environment_ip+"/MountainWeb/contactLogAction.csp?method=init")
+
+ // END WLIDE</NodeScript><NodeID Visible="0">134</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessage Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="42"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">https://cspt2.lmuk.local/MountainWeb/contactLogAction.csp?method=logContact&amp;contactAction=logOut&amp;contactCardNumber=46695766021&amp;contactChannelId=MXONLINEEX&amp;contactReasonId=9&amp;contactSubreasonId=6&amp;contactSubSubreasonId=12&amp;contactPartnerId=23&amp;contactStartTime=20100820132457&amp;creationUser=INFYCSRL4&amp;searchId=</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - URL : https://cspt2.lmuk.local/MountainWeb/contactLogAction.csp?method=logContact&amp;contactAction=logOut&amp;contactCardNumber=46695766021&amp;contactChannelId=MXONLINEEX&amp;contactReasonId=9&amp;contactSubreasonId=6&amp;contactSubSubreasonId=12&amp;contactPartnerId=23&amp;contactStartTime=20100820132457&amp;creationUser=INFYCSRL4&amp;searchId= - ID:136 *****/ 
+wlHttp.Get("https://"+CSP_environment_ip+"/MountainWeb/contactLogAction.csp?method=logContact&amp;contactAction=logOut&amp;contactCardNumber="+CardNum.getValue()+"&amp;contactChannelId=PHONE&amp;contactReasonId=2&amp;contactSubreasonId=4&amp;contactSubSubreasonId=106&amp;contactPartnerId=44&amp;contactStartTime=20100824163434&amp;creationUser=WEBLOAD&amp;searchId=")
+
+ // END WLIDE</NodeScript><NodeID Visible="0">136</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessage Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="43"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">EndTransaction::CSP_REDEEMRW_11_Logout</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - EndTransaction::CSP_REDEEMRW_11_Logout - ID:137 *****/
+EndTransaction("CSP_REDEEMRW_11_Logout",WLSuccess,false)
+
+ // END WLIDE</NodeScript><NodeID Visible="0">137</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessage Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject></Agenda></VisualAgenda><PRODUCT_VERSION><ProjectCreatedProductVersion>WebLOADPro Version 8.4.0.076.00  Supports 128 bit SSL </ProjectCreatedProductVersion><LastProjectSavedProductVersion>WebLOADPro Version 10.0.0.124.00  Supports 128 bit SSL </LastProjectSavedProductVersion></PRODUCT_VERSION><PROJECT_TYPE>Protocol</PROJECT_TYPE><AGENDA_OPTIONS><AgendaName xmlns=" Default Project Options"/><Options><DiagnosticOptions><bSyntaxCheck>0</bSyntaxCheck><bTraceCheck>0</bTraceCheck><bAutomaticStateCheck>0</bAutomaticStateCheck><bSaveCSJSCheck>0</bSaveCSJSCheck><bCSJSDiagnosticMessages>0</bCSJSDiagnosticMessages></DiagnosticOptions><FunctionalTestingOptions><bTransFailed>0</bTransFailed><nFailedTime>20</nFailedTime><nSeverity>2</nSeverity><sTextSearch></sTextSearch><bCheckCRC>0</bCheckCRC><bCheckCompareValues>0</bCheckCompareValues><VarificationData><nCompareTitle>2</nCompareTitle><nFramesNumber>0</nFramesNumber><nTextSearch>0</nTextSearch><nVerifyLink>0</nVerifyLink><nCompareLinks>0</nCompareLinks><nCompareForms>0</nCompareForms><nCompareImages>0</nCompareImages><nCompareTables>0</nCompareTables></VarificationData></FunctionalTestingOptions><SleepTimeControlOptions><nSleepControlType>2</nSleepControlType><nBetween>2</nBetween><nAnd>10</nAnd><nDeviationPersent>10</nDeviationPersent></SleepTimeControlOptions><IE_OPTIONS Option_version="19">
+			<IE_DIALOG name="Alert">
+				<readonly>yes</readonly>
+				<Answer>
+					<value>OK</value>
+					<default>OK</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="Confirm">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="Prompt">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+				<field type="string" name="Input"></field>
+			</IE_DIALOG>
+			<IE_DIALOG name="Print">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="Cookie_IE6">
+				<Answer>
+					<value>Allow</value>
+					<value>Block</value>
+					<default>Allow</default>
+				</Answer>
+				<field type="checkbox" name="ApplyToAll">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="Cookie">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+				<field type="checkbox" name="NeverShow">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="FormSubmit">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+				<field type="checkbox" name="NeverShow">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="FormResubmit">
+				<Answer>
+					<value>Retry</value>
+					<value>Cancel</value>
+					<default>Retry</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="SwitchNonSecure">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+				<field type="checkbox" name="NeverShow">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="SwitchSecure">
+				<Answer>
+					<value>OK</value>
+					<default>OK</default>
+				</Answer>
+				<field type="checkbox" name="NeverShow">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="NonSecureOnSecure">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="ClientAuthentication">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+				<field type="string" name="Username"></field>
+				<field type="string" name="Password"></field>
+				<field type="string" name="Domain"></field>
+				<field type="checkbox" name="Save">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="ConnectToMS_WinXP">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+				<field type="string" name="Email"></field>
+				<field type="string" name="Password"></field>
+				<field type="checkbox" name="AutoSignIn">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="ClientAuthentication_WinXP">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+				<field type="string" name="Username"></field>
+				<field type="string" name="Password"></field>
+				<field type="checkbox" name="Save">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="ClientCertificate">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+				<field type="string" name="Certificate">
+					<default>0</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="HostCertificate">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="FileDownload">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+				<field type="checkbox" name="AlwaysAsk">
+					<default>checked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="FileDownload_IE6">
+				<Answer>
+					<value>Open</value>
+					<value>Save</value>
+					<value>Cancel</value>
+					<default>Save</default>
+				</Answer>
+				<field type="checkbox" name="AlwaysAsk">
+					<default>checked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="FileDownload_IE6_XP">
+				<Answer>
+					<value>Open</value>
+					<value>Save</value>
+					<value>Cancel</value>
+					<default>Save</default>
+				</Answer>
+				<field type="checkbox" name="AlwaysAsk">
+					<default>checked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="SaveFile">
+				<Answer>
+					<value>Save</value>
+					<value>Cancel</value>
+					<default>Save</default>
+				</Answer>
+				<field type="string" name="FileName"></field>
+			</IE_DIALOG>
+			<IE_DIALOG name="SaveFileConfirmation">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="ActiveXInstall">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+				<field type="checkbox" name="AlwaysTrust">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="RunActiveX">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="UnsafeActiveX">
+				<readonly>yes</readonly>
+				<Answer>
+					<value>OK</value>
+					<default>OK</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="ScriptAccessingActiveX">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="NavigateSubFrames">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="ActiveScripting">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="JavaScripting">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="Redirection">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+				<field type="checkbox" name="NeverShow">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="AutoComplete">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>No</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="RememberPassword">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>No</default>
+				</Answer>
+				<field type="checkbox" name="DoNotOffer">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="FtpAuthentication">
+				<Answer>
+					<value>Login</value>
+					<value>Cancel</value>
+					<default>Login</default>
+				</Answer>
+				<field type="string" name="Server"></field>
+				<field type="string" name="Username"></field>
+				<field type="string" name="Password"></field>
+				<field type="string" name="Email"></field>
+				<field type="checkbox" name="Anonymous">
+					<default>unchecked</default>
+				</field>
+				<field type="checkbox" name="Save">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="FtpFolderError">
+				<readonly>yes</readonly>
+				<Answer>
+					<value>OK</value>
+					<default>OK</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="DocumentModified">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<value>Cancel</value>
+					<default>No</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="JavascriptError">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>No</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="WindowClosing">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="SuspiciousActiveX">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="Reboot">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>No</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="YesNoCancel">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<value>Cancel</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="YesNo">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="OkCancel">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="Ok">
+				<readonly>yes</readonly>
+				<Answer>
+					<value>OK</value>
+					<default>OK</default>
+				</Answer>
+			</IE_DIALOG>
+		</IE_OPTIONS><PlayBackOptions><nNavigationTimeOut>60</nNavigationTimeOut><nFileDownloadTimeout>0</nFileDownloadTimeout><nStartNavigationTimeOut>3</nStartNavigationTimeOut><bClearCache>0</bClearCache><bClearCookies>0</bClearCookies><nPlaybackMode>1</nPlaybackMode><bUseDOROptimizer>0</bUseDOROptimizer></PlayBackOptions><PassFailDefinition><bCheckErrors>1</bCheckErrors><bCheckSevere>1</bCheckSevere><bCheckWarnings>0</bCheckWarnings><nErrorNum>1</nErrorNum><nRuleCheck>15</nRuleCheck><nWarningNum>15</nWarningNum></PassFailDefinition><ErrorHandling><SubmitButton>1</SubmitButton><NavObject>9</NavObject><Page>4</Page><PageRetryNum>3</PageRetryNum><Object>6</Object></ErrorHandling><EmulationPlaybackOptions><bUseOptimizer>1</bUseOptimizer><bUseHistory>0</bUseHistory><nHistoryLimit>1</nHistoryLimit><bCodeFormatter>0</bCodeFormatter><bCSJSRecovery>1</bCSJSRecovery></EmulationPlaybackOptions><WebServices><sBasicPassword></sBasicPassword><sUserName></sUserName><sProxyHost></sProxyHost><sProxyPassword></sProxyPassword><sProxyUser></sProxyUser><sProxyPort></sProxyPort><nWSClientType>1</nWSClientType></WebServices><BrowserEmulationOptions><bDNSCache>1</bDNSCache><bSSLCache>1</bSSLCache><bKeepAlive>1</bKeepAlive><bRedirectionEnabled>1</bRedirectionEnabled><nRedirectionLimit>10</nRedirectionLimit><strBrowserType>Default</strBrowserType><strUserAgent>Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)</strUserAgent><strEncodingValue>0</strEncodingValue><bEnforceEncoding>0</bEnforceEncoding></BrowserEmulationOptions><HTTPParametersOptions><bGZipSupport>0</bGZipSupport><bHTTPVersion>1</bHTTPVersion><bMultiIPSupport>0</bMultiIPSupport><bEncodeFormData>1</bEncodeFormData><bAcceptLanguage>0</bAcceptLanguage><strAcceptLanguage></strAcceptLanguage></HTTPParametersOptions><Authentication><sUserName></sUserName><sPassWord></sPassWord><sNTUserName></sNTUserName><sNTUserPassword></sNTUserPassword><sKerberosServer></sKerberosServer><iAuthType>0</iAuthType><sProxyUserName></sProxyUserName><sProxyPassWord></sProxyPassWord><sProxyHost></sProxyHost><sProxyPort></sProxyPort><sSSLClientCertificateFile></sSSLClientCertificateFile><sSSLClientCertificatePassword></sSSLClientCertificatePassword></Authentication><BrowserCacheOptions><bFilterApplets>1</bFilterApplets><bFilterImages>1</bFilterImages><bFilterJSFiles>1</bFilterJSFiles><bFilterStyleSheets>1</bFilterStyleSheets><bFilterXMLFiles>1</bFilterXMLFiles><nCacheType>3</nCacheType></BrowserCacheOptions><JavaOptions><strSelectedJVM>Default</strSelectedJVM></JavaOptions></Options></AGENDA_OPTIONS><RECORD_OPTIONS><File_Extensions><IgnoredExtensions>|gif|mov|mpg|txt|mpeg|class|cab|jpeg|jpg|css|png|js|mp3|mp4|</IgnoredExtensions><RecordedExtensions>|asp|htm|html|xml|aspx|jsp|swf|php|cgi|none|</RecordedExtensions><RecordAllExtensions>0</RecordAllExtensions><RecordUnknownExtensions>0</RecordUnknownExtensions></File_Extensions><Content_Types><IgnoredTypes>|image/gif|image/jpeg|</IgnoredTypes><RecordedTypes>|text/html|text/plain|text/xml|application/xml|application/json|application/x-amf|application/x-shockwave-flash|</RecordedTypes><RecordAllTypes>0</RecordAllTypes><RecordUnknownTypes>0</RecordUnknownTypes></Content_Types><Post_Data><Data>|text/xml|application/json; charset=utf-8|application/xml; charset=utf-8|application/json-rpc|text/xml; charset=utf-8|</Data><Datafile>|multipart/form-data|</Datafile><RecordUnknownPostTypesAsFiles>1</RecordUnknownPostTypesAsFiles></Post_Data><Proxy_Options><ProxyPort>9884</ProxyPort><SecondaryProxyName>proxy</SecondaryProxyName><SecondaryProxyExceptions></SecondaryProxyExceptions><SecondaryProxyPort>8081</SecondaryProxyPort><SecondaryProxySslName>proxy</SecondaryProxySslName><SecondaryProxySslPort>8081</SecondaryProxySslPort><UseSecondaryProxy>0</UseSecondaryProxy><UseSystemProxy>1</UseSystemProxy><SecondaryProxyUserName></SecondaryProxyUserName><SecondaryProxyPassword></SecondaryProxyPassword><AuthUserName></AuthUserName><AuthUserPassword></AuthUserPassword><UseTransparentProxy>0</UseTransparentProxy></Proxy_Options><Proxy_Certificates><ServerCertFileName>C:\Program Files\RadView\WebLOAD\bin\Certificates\server.pem</ServerCertFileName><ServerCertPassword>password</ServerCertPassword><ServerCertTrustFileName>C:\Program Files\RadView\WebLOAD\bin\Certificates\root.pem</ServerCertTrustFileName><ClientCertFileName></ClientCertFileName><ClientCertPassword></ClientCertPassword></Proxy_Certificates><Script_Content><CommentRequestHeaders>0</CommentRequestHeaders><CommentResponseHesders>0</CommentResponseHesders><CommentStatus>0</CommentStatus><DecodeQueryString>1</DecodeQueryString><RecordAuthentication>1</RecordAuthentication><RecordHeaders>0</RecordHeaders><RecordProxy>1</RecordProxy><RecordProxyAuthentication>1</RecordProxyAuthentication><RecordRedirectionPath>0</RecordRedirectionPath><RecordRefererHeader>1</RecordRefererHeader><EncodeBinaryData>0</EncodeBinaryData><RecordViewstateData>1</RecordViewstateData><RecordCustomHeaders>1</RecordCustomHeaders><SaveRedirectionHeaders>0</SaveRedirectionHeaders><SaveClientSideCookies>0</SaveClientSideCookies></Script_Content><Default_Encoding_Type><DefaultEncodingType>0</DefaultEncodingType></Default_Encoding_Type><Default_Browser_Selection><BrowserType>0</BrowserType><ListNetscapeAndMicrosoftBrowserws>|Microsoft Internet Explorer|Chrome|</ListNetscapeAndMicrosoftBrowserws><SelectedBrowser>Microsoft Internet Explorer</SelectedBrowser><OtherBrowser></OtherBrowser><SetAutoProxyDefs>1</SetAutoProxyDefs><ClearCache>1</ClearCache><ClearCookies>1</ClearCookies><CreateNewBrowser>1</CreateNewBrowser><MobileBrowserType>iPhone</MobileBrowserType><MobileUserAgent>iPhone 5.0</MobileUserAgent><BrowserWidth>0</BrowserWidth><BrowserHeight>0</BrowserHeight><IsSimulateMobile>0</IsSimulateMobile></Default_Browser_Selection><Correlation_options><AutoCorrelation>3</AutoCorrelation><CorrLogLevel>1</CorrLogLevel><CorrAddComments>1</CorrAddComments><CorrRulesFilename>C:\Program Files\RadView\WebLOAD\extensions\Correlation\correlationRules.xml</CorrRulesFilename><CorrLogFilename>C:\Documents and Settings\All Users\Application Data\RadView\WebLOAD\Log\correlation.log</CorrLogFilename><ConvertHiddenFields>0</ConvertHiddenFields><CorrFlex>1</CorrFlex><DSIds>0</DSIds></Correlation_options><Correlation_Auto_options><CorrShowForm>2</CorrShowForm><CorrScoreTreshold>1</CorrScoreTreshold><CorrValueLength>09DF1588</CorrValueLength><CorrValueDelimeters>\#/?+;`': "&lt;&gt;()&amp; =	|</CorrValueDelimeters></Correlation_Auto_options><Filter_Url_options><FilteredUrls>|toolbarqueries.google|toolbar.google.com|safebrowsing-cache.google.com|toolbar.google.co.il|safebrowsing.clients.google.com|safebrowsing.google.com|http://clients?.google.com/*|https://clients?.google.com/*|http://clients?.google.co.il/*|https://clients?.google.co.il/*|https://www.google.com/searchdomaincheck/*|http://www.google.com/tools/toolbar/*|http://www.google.com/complete/search*|https://translate.googleapis.com/translate_a/l/*|https://www.gstatic.com/chrome/config/plugins_win.json|urs.microsoft.com|us.update.toolbar.com|windowsupdate.microsof.com|update.microsoft.com|sqm.microsoft.com|pgq.microsoft.com|toolbar.msn.com|g.msn|www.download.windowsupdate.com|</FilteredUrls><OnlyUrls>|</OnlyUrls></Filter_Url_options></RECORD_OPTIONS><ADDITIONAL_INFORMATION><ProjectComments></ProjectComments><CreatedBy></CreatedBy><Custom1></Custom1><Custom2></Custom2><Custom3></Custom3><Subject></Subject><TestDescription></TestDescription><ResultsDescription></ResultsDescription><VersionBuild></VersionBuild><Title>C:\PerformanceTesting\Projects\201003_RNI-UK\Test Scripts\RNI_CSP scripts\CSP_REDEEM.wlp</Title></ADDITIONAL_INFORMATION><ORACLE_PROJECT_INCLUDE_PATH></ORACLE_PROJECT_INCLUDE_PATH><BreakPointsMap/></Project>

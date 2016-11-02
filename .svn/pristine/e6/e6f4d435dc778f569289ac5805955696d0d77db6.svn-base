@@ -1,0 +1,6 @@
+[WEB_EV_LOGIN_MPU]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\Web and CSP\ePUM_March2012\WEB_EV_LOGIN_MPU_ePUM_Mar2012.wlp
+Weight=100
+[Content]
+ScriptsNumber=1
+Scripts=WEB_EV_LOGIN_MPU;

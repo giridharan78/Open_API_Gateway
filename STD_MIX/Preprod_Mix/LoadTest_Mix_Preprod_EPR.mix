@@ -1,0 +1,9 @@
+[get_Enrolment_Pack_Success]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\Preprod scripts\Preprod_EPR_WEBLOAD\get_Enrolment_Pack_Success.wlp
+Weight=50
+[get_Enrolment_Pack_Failure]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\Preprod scripts\Preprod_EPR_WEBLOAD\get_Enrolment_Pack_Failure.wlp
+Weight=50
+[Content]
+ScriptsNumber=2
+Scripts=get_Enrolment_Pack_Success;get_Enrolment_Pack_Failure;

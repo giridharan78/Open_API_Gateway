@@ -1,0 +1,33 @@
+[WEB_REGWOC]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\TR0 scripts\WEB_REGWOC.wlp
+Weight=11
+[WEB_REWARDSE]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\TR0 scripts\WEB_REWARDSE.wlp
+Weight=23
+[WEB_REDEEMRW]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\TR0 scripts\WEB_REDEEMRW.wlp
+Weight=8
+[WEB_ACCTMNGT]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\TR0 scripts\WEB_ACCTMNGT.wlp
+Weight=8
+[WEB_PNTSUPDT]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\TR0 scripts\WEB_PNTSUPDT.wlp
+Weight=15
+[WEB_MBP]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\TR0 scripts\WEB_MBP.wlp
+Weight=13
+[CSP_TRANSDET]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\TR0 scripts\CSP_TRANSDET.wlp
+Weight=5
+[CSP_REDEEM]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\TR0 scripts\CSP_REDEEM.wlp
+Weight=5
+[CSP_AUDTRAIL]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\TR0 scripts\CSP_AUDTRAIL.wlp
+Weight=6
+[CSP_FINDUPDT]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\TR0 scripts\CSP_FINDUPDT.wlp
+Weight=6
+[Content]
+ScriptsNumber=10
+Scripts=WEB_REGWOC;WEB_REWARDSE;WEB_REDEEMRW;WEB_ACCTMNGT;WEB_PNTSUPDT;WEB_MBP;CSP_TRANSDET;CSP_REDEEM;CSP_AUDTRAIL;CSP_FINDUPDT;

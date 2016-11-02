@@ -1,0 +1,6 @@
+[WEB_REGWOC]
+Path=C:\PerformanceTesting\Projects\STD_UTILITY_SCRIPTS\T0_DATA_SETUP\WEB_REGWOC.wlp
+Weight=100
+[Content]
+ScriptsNumber=1
+Scripts=WEB_REGWOC;

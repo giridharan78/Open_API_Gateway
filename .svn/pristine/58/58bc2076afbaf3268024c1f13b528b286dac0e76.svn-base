@@ -1,0 +1,12 @@
+[WEB_FORGOT_PASSWORD]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\Web_CSP\LC\WEB_FORGOT_PASSWORD.wlp
+Weight=50
+[WEB_LOST_CARD]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\Web_CSP\LC\WEB_LOST_CARD.wlp
+Weight=45
+[WEB_UPDATE_EMAIL]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\Web_CSP\LC\WEB_UPDATE_EMAIL.wlp
+Weight=5
+[Content]
+ScriptsNumber=3
+Scripts=WEB_FORGOT_PASSWORD;WEB_LOST_CARD;WEB_UPDATE_EMAIL;

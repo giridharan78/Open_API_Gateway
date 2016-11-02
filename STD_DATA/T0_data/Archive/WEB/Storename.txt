@@ -1,0 +1,8 @@
+StoreName
+amazon
+sainsburys
+vuecinemas
+blockbuster
+expedia
+eurostar
+orient-express

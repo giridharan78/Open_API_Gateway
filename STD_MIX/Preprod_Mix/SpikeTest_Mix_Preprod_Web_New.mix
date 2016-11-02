@@ -1,0 +1,18 @@
+[WEB_EV_LOGIN_MBP]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\Preprod scripts\WebCSP\WEB_EV_LOGIN_MBP.wlp
+Weight=40
+[WEB_PNTSUPDT]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\Preprod scripts\WebCSP\WEB_PNTSUPDT.wlp
+Weight=20
+[WEB_MBP]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\Preprod scripts\WebCSP\WEB_MBP.wlp
+Weight=20
+[WEB_REGWOC]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\Preprod scripts\WebCSP\WEB_REGWOC.wlp
+Weight=10
+[WEB_ACCTMNGT]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\Preprod scripts\WebCSP\WEB_ACCTMNGT.wlp
+Weight=10
+[Content]
+ScriptsNumber=5
+Scripts=WEB_EV_LOGIN_MBP;WEB_PNTSUPDT;WEB_MBP;WEB_REGWOC;WEB_ACCTMNGT;

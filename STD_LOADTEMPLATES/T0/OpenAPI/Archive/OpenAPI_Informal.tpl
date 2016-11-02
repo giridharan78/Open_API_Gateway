@@ -1,0 +1,664 @@
+[main]
+Version=5.000
+StatManager Version=5.000
+Report Version=5.000
+Schedule Assistent Version=6.000
+TemplateCreatedVersion=Version 9.0.0.118.00  Supports 128 bit SSL 
+TemplateLastSavedVersion=Version 9.0.0.118.00  Supports 128 bit SSL 
+Agendas=OpenAPI;
+[OpenAPI]
+Path=C:\PerformanceTesting\Projects\STD_MIX\OpenAPI\OpenAPI.mix
+ExecutionType=0
+IsMix=1
+AssistentItemAAString_1=8 '11 RunLoadTime '2 60 '13 StartLoadSize '2 12 '12 RumpDownTime '1 1 '16 AssistantCaption '22 Ramp Up Schedule Model '13 ScheduleModel '1 6 '11 RunLoadSize '2 15 '10 RumpUpTime '1 1 '9 TotalTime '2 62 
+Schedule_1=1
+From_1=00000000
+To_1=00000030
+LoadSize_1=12
+Schedule_2=1
+From_2=00000030
+To_2=00000100
+LoadSize_2=13
+Schedule_3=1
+From_3=00000100
+To_3=00010100
+LoadSize_3=15
+Schedule_4=1
+From_4=00010100
+To_4=00010130
+LoadSize_4=13
+Schedule_5=1
+From_5=00010130
+To_5=00010200
+LoadSize_5=12
+LoadMachines=192.168.33.11;192.168.33.12;192.168.33.13;192.168.33.14;
+[Mix::02_Information_Service : Browser Emulation]
+IsMultiThreadVirtualClientPC=0
+IsMultiThreadVirtualClientLG=0
+MultiThreadVirtualClientPCNum=1
+MultiThreadVirtualClientLGNum=4
+BrowserCachePC=0
+BrowserCacheLG=1
+DNSCachePC=0
+DNSCacheLG=1
+SSLCachePC=0
+SSLCacheLG=1
+HTTPVersion=1
+KeepAlivePC=0
+KeepAliveLG=0
+RedirectionEnabled=0
+RedirectionLimit=10
+Browser types list=Microsoft Internet Explorer;Mozilla Firefox;Chrome;Safari;Opera;iPhone;Android Webkit Browser;BlackBerry;Opera Mini;S60 Nokia Browser;Unix/Linux;WAP;Default;
+Microsoft Internet Explorer=0|Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 7.1; Trident/5.0)|Mozilla/5.0 (compatible; MSIE 8.0; Windows NT 6.0; Trident/4.0; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET CLR 1.0.3705; .NET CLR 1.1.4322)|Mozilla/5.0 (Windows; U; MSIE 7.0; Windows NT 6.0; en-US)|
+Mozilla Firefox=0|Mozilla/5.0 (X11; Linux i686; rv:6.0) Gecko/20100101 Firefox/6.0|Mozilla/5.0 (Windows NT 6.1; WOW64; rv:5.0) Gecko/20100101 Firefox/5.0|Mozilla/5.0 (Windows NT 6.1; rv:1.9) Gecko/20100101 Firefox/4.0|
+Chrome=0|Mozilla/5.0 (Windows NT 5.1) AppleWebKit/535.6 (KHTML, like Gecko) Chrome/16.0.897.0 Safari/535.6|
+Safari=0|Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_8; de-at) AppleWebKit/533.21.1 (KHTML, like Gecko) Version/5.0.5 Safari/533.21.1|
+Opera=0|Opera/9.80 (Windows NT 6.1; U; es-ES) Presto/2.9.181 Version/12.00|
+iPhone=0|Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3|
+Android Webkit Browser=0|Mozilla/5.0 (Linux; U; Android 2.3.5; en-us; HTC Vision Build/GRI40) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1|
+BlackBerry=0|Mozilla/5.0 (BlackBerry; U; BlackBerry 9850; en-US) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.0.0.115 Mobile Safari/534.11+|
+Opera Mini=0|Opera/9.80 (J2ME/MIDP; Opera Mini/9.80 (S60; SymbOS; Opera Mobi/23.348; U; en) Presto/2.5.25 Version/10.54|
+S60 Nokia Browser=0|NokiaN97i/SymbianOS/9.1 Series60/3.0|
+Unix/Linux=0|Lynx/2.6 libwww-FM/2.14|Mozilla/4.04[en](X11;I;Linux 2.0.33 i586)|
+WAP=0|Alcatel OneTouch|Generic digital phone|Mitsubishi MobileAccess|Samsung Duette|Motorola i1000plus|
+Default=0|Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.0)|
+Selected Browser Type=Default
+Selected User Agent=Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.0)
+SSL Cypher Suite=None
+SSL Cypher Suite Enabled=0
+Encoding Value=0
+EnforceEncoding=0
+bGZipSupport=0
+[Mix::02_Information_Service : Authentication]
+UserName=
+PassWord=
+NTUserName=
+NTUserPassword=
+KerberosServer=
+AuthType=0
+ProxyUserName=
+ProxyPassWord=
+SSLClientCertificateFile=
+SSLClientCertificatePassword=
+ProxyHost=
+ProxyPort=
+[Mix::02_Information_Service : Options\Connection]
+Speed for LG=
+Speed for PC=
+Is Compression Rate for LG=0
+Is Compression Rate for PC=0
+Is Speed for LG=0
+Is Speed for PC=0
+Compression Rate for LG( in )=0
+Compression Rate for LG( out )=0
+Compression Rate for PC( out )=0
+Compression Rate for PC( in )=0
+[Mix::02_Information_Service : Diagnostic]
+Start Round=1
+End Round=1
+Output Dir=C:\Documents and Settings\All Users\Application Data\RadView\WebLOAD\Log
+Syntax Check=0
+Log Check=0
+Trace Check=0
+Automatic State=0
+SaveCSJS Check=0
+CSJSDiagnosticMessages Check=0
+[Mix::02_Information_Service : FunctionalTesting]
+Transaction Failed=0
+Failed Time=20
+Verification Portion=2
+Severity=2
+Automatic Transaction=0
+Verification=0
+Object Level=0
+HTTP Level=0
+sTextSearch=
+nCompareTitle=0
+nFramesNumber=0
+nTextSearch=0
+nCompareLinks=0
+nCompareForms=0
+nCompareImages=0
+nCompareTables=0
+[Mix::02_Information_Service : ClientType]
+clientType=5
+getImages=1
+UseClientJSFull=1
+UseClientJSOptim=0
+JavaFull=0
+JavaOptimized=0
+[Mix::02_Information_Service : PassFailDefinition]
+definitionType=1
+checkErrors=1
+checkSevere=1
+checkStopTest=0
+checkWarnings=0
+errorNum=1
+ruleCheck=15
+warningNum=15
+[Mix::02_Information_Service : SleepTimeControl]
+sleepControlType=1
+timeBetween=2
+timeAnd=10
+deviationPersent=10
+[Mix::02_Information_Service : BrowserDialogs]
+BrowserDialogsOptions=<IE_OPTIONS Option_version=\"19\">\r\n\t<IE_DIALOG name=\"Alert\">\r\n\t\t<readonly>yes</readonly>\r\n\t\t<Answer>\r\n\t\t\t<value>OK</value>\r\n\t\t\t<default>OK</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"Confirm\">\r\n\t\t<Answer>\r\n\t\t\t<value>OK</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>OK</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"Prompt\">\r\n\t\t<Answer>\r\n\t\t\t<value>OK</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>OK</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"string\" name=\"Input\"></field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"Print\">\r\n\t\t<Answer>\r\n\t\t\t<value>OK</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>OK</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"Cookie_IE6\">\r\n\t\t<Answer>\r\n\t\t\t<value>Allow</value>\r\n\t\t\t<value>Block</value>\r\n\t\t\t<default>Allow</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"checkbox\" name=\"ApplyToAll\">\r\n\t\t\t<default>unchecked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"Cookie\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"checkbox\" name=\"NeverShow\">\r\n\t\t\t<default>unchecked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"FormSubmit\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"checkbox\" name=\"NeverShow\">\r\n\t\t\t<default>unchecked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"FormResubmit\">\r\n\t\t<Answer>\r\n\t\t\t<value>Retry</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>Retry</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"SwitchNonSecure\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"checkbox\" name=\"NeverShow\">\r\n\t\t\t<default>unchecked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"SwitchSecure\">\r\n\t\t<Answer>\r\n\t\t\t<value>OK</value>\r\n\t\t\t<default>OK</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"checkbox\" name=\"NeverShow\">\r\n\t\t\t<default>unchecked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"NonSecureOnSecure\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"ClientAuthentication\">\r\n\t\t<Answer>\r\n\t\t\t<value>OK</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>OK</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"string\" name=\"Username\"></field>\r\n\t\t<field type=\"string\" name=\"Password\"></field>\r\n\t\t<field type=\"string\" name=\"Domain\"></field>\r\n\t\t<field type=\"checkbox\" name=\"Save\">\r\n\t\t\t<default>unchecked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"ConnectToMS_WinXP\">\r\n\t\t<Answer>\r\n\t\t\t<value>OK</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>OK</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"string\" name=\"Email\"></field>\r\n\t\t<field type=\"string\" name=\"Password\"></field>\r\n\t\t<field type=\"checkbox\" name=\"AutoSignIn\">\r\n\t\t\t<default>unchecked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"ClientAuthentication_WinXP\">\r\n\t\t<Answer>\r\n\t\t\t<value>OK</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>OK</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"string\" name=\"Username\"></field>\r\n\t\t<field type=\"string\" name=\"Password\"></field>\r\n\t\t<field type=\"checkbox\" name=\"Save\">\r\n\t\t\t<default>unchecked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"ClientCertificate\">\r\n\t\t<Answer>\r\n\t\t\t<value>OK</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>OK</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"string\" name=\"Certificate\">\r\n\t\t\t<default>0</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"HostCertificate\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"FileDownload\">\r\n\t\t<Answer>\r\n\t\t\t<value>OK</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>OK</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"checkbox\" name=\"AlwaysAsk\">\r\n\t\t\t<default>checked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"FileDownload_IE6\">\r\n\t\t<Answer>\r\n\t\t\t<value>Open</value>\r\n\t\t\t<value>Save</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>Save</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"checkbox\" name=\"AlwaysAsk\">\r\n\t\t\t<default>checked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"FileDownload_IE6_XP\">\r\n\t\t<Answer>\r\n\t\t\t<value>Open</value>\r\n\t\t\t<value>Save</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>Save</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"checkbox\" name=\"AlwaysAsk\">\r\n\t\t\t<default>checked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"SaveFile\">\r\n\t\t<Answer>\r\n\t\t\t<value>Save</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>Save</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"string\" name=\"FileName\"></field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"SaveFileConfirmation\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"ActiveXInstall\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"checkbox\" name=\"AlwaysTrust\">\r\n\t\t\t<default>unchecked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"RunActiveX\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"UnsafeActiveX\">\r\n\t\t<readonly>yes</readonly>\r\n\t\t<Answer>\r\n\t\t\t<value>OK</value>\r\n\t\t\t<default>OK</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"ScriptAccessingActiveX\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"NavigateSubFrames\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"ActiveScripting\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"JavaScripting\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"Redirection\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"checkbox\" name=\"NeverShow\">\r\n\t\t\t<default>unchecked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"AutoComplete\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>No</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"RememberPassword\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>No</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"checkbox\" name=\"DoNotOffer\">\r\n\t\t\t<default>unchecked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"FtpAuthentication\">\r\n\t\t<Answer>\r\n\t\t\t<value>Login</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>Login</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"string\" name=\"Server\"></field>\r\n\t\t<field type=\"string\" name=\"Username\"></field>\r\n\t\t<field type=\"string\" name=\"Password\"></field>\r\n\t\t<field type=\"string\" name=\"Email\"></field>\r\n\t\t<field type=\"checkbox\" name=\"Anonymous\">\r\n\t\t\t<default>unchecked</default>\r\n\t\t</field>\r\n\t\t<field type=\"checkbox\" name=\"Save\">\r\n\t\t\t<default>unchecked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"FtpFolderError\">\r\n\t\t<readonly>yes</readonly>\r\n\t\t<Answer>\r\n\t\t\t<value>OK</value>\r\n\t\t\t<default>OK</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"DocumentModified\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>No</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"JavascriptError\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>No</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"WindowClosing\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"SuspiciousActiveX\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"Reboot\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>No</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"YesNoCancel\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"YesNo\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"OkCancel\">\r\n\t\t<Answer>\r\n\t\t\t<value>OK</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>OK</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"Ok\">\r\n\t\t<readonly>yes</readonly>\r\n\t\t<Answer>\r\n\t\t\t<value>OK</value>\r\n\t\t\t<default>OK</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n</IE_OPTIONS>
+[Mix::02_Information_Service : EmulationPlayback]
+useHistory=0
+historyLimit=1
+csjsRecovery=1
+[Mix::02_Information_Service : Java]
+strSelectedJVM=Default
+[Mix::02_Information_Service : WebServices]
+sBasicPassword=
+sUserName=
+sProxyHost=
+sProxyPassword=
+sProxyUser=
+sProxyPort=
+nWSClientType=1
+[Mix::02_Information_Service : ResetMechanism]
+bResetEnable=0
+nCreateLGRetryTimes=3
+nLGTimeout=150
+nResetTimeout=60
+nStopLGTimeout=3
+[Mix::02_Information_Service : HTTPParameters]
+bHTTPVersion=1
+bMultiIPSupport=0
+bEncodeFormData=1
+bAcceptLanguage=0
+StrAcceptLanguage=
+[Mix::02_Information_Service : BrowserCache]
+bFilterApplets=0
+bFilterImages=0
+bFilterJSFiles=0
+bFilterStyleSheets=0
+bFilterXMLFiles=0
+bFilterDynamic=0
+nCacheType=3
+bFilterAppletsPC=1
+bFilterImagesPC=1
+bFilterJSFilesPC=1
+bFilterStyleSheetsPC=1
+bFilterXMLFilesPC=1
+bFilterDynamicPC=0
+nCacheTypePC=3
+[Mix::03_Redemption_Reversal Service : Browser Emulation]
+IsMultiThreadVirtualClientPC=0
+IsMultiThreadVirtualClientLG=0
+MultiThreadVirtualClientPCNum=1
+MultiThreadVirtualClientLGNum=4
+BrowserCachePC=0
+BrowserCacheLG=1
+DNSCachePC=0
+DNSCacheLG=1
+SSLCachePC=0
+SSLCacheLG=1
+HTTPVersion=1
+KeepAlivePC=0
+KeepAliveLG=0
+RedirectionEnabled=0
+RedirectionLimit=10
+Browser types list=Microsoft Internet Explorer;Mozilla Firefox;Chrome;Safari;Opera;iPhone;Android Webkit Browser;BlackBerry;Opera Mini;S60 Nokia Browser;Unix/Linux;WAP;Default;
+Microsoft Internet Explorer=0|Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 7.1; Trident/5.0)|Mozilla/5.0 (compatible; MSIE 8.0; Windows NT 6.0; Trident/4.0; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET CLR 1.0.3705; .NET CLR 1.1.4322)|Mozilla/5.0 (Windows; U; MSIE 7.0; Windows NT 6.0; en-US)|
+Mozilla Firefox=0|Mozilla/5.0 (X11; Linux i686; rv:6.0) Gecko/20100101 Firefox/6.0|Mozilla/5.0 (Windows NT 6.1; WOW64; rv:5.0) Gecko/20100101 Firefox/5.0|Mozilla/5.0 (Windows NT 6.1; rv:1.9) Gecko/20100101 Firefox/4.0|
+Chrome=0|Mozilla/5.0 (Windows NT 5.1) AppleWebKit/535.6 (KHTML, like Gecko) Chrome/16.0.897.0 Safari/535.6|
+Safari=0|Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_8; de-at) AppleWebKit/533.21.1 (KHTML, like Gecko) Version/5.0.5 Safari/533.21.1|
+Opera=0|Opera/9.80 (Windows NT 6.1; U; es-ES) Presto/2.9.181 Version/12.00|
+iPhone=0|Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3|
+Android Webkit Browser=0|Mozilla/5.0 (Linux; U; Android 2.3.5; en-us; HTC Vision Build/GRI40) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1|
+BlackBerry=0|Mozilla/5.0 (BlackBerry; U; BlackBerry 9850; en-US) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.0.0.115 Mobile Safari/534.11+|
+Opera Mini=0|Opera/9.80 (J2ME/MIDP; Opera Mini/9.80 (S60; SymbOS; Opera Mobi/23.348; U; en) Presto/2.5.25 Version/10.54|
+S60 Nokia Browser=0|NokiaN97i/SymbianOS/9.1 Series60/3.0|
+Unix/Linux=0|Lynx/2.6 libwww-FM/2.14|Mozilla/4.04[en](X11;I;Linux 2.0.33 i586)|
+WAP=0|Alcatel OneTouch|Generic digital phone|Mitsubishi MobileAccess|Samsung Duette|Motorola i1000plus|
+Default=0|Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.0)|
+Selected Browser Type=Default
+Selected User Agent=Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.0)
+SSL Cypher Suite=None
+SSL Cypher Suite Enabled=0
+Encoding Value=0
+EnforceEncoding=0
+bGZipSupport=0
+[Mix::03_Redemption_Reversal Service : Authentication]
+UserName=
+PassWord=
+NTUserName=
+NTUserPassword=
+KerberosServer=
+AuthType=0
+ProxyUserName=
+ProxyPassWord=
+SSLClientCertificateFile=
+SSLClientCertificatePassword=
+ProxyHost=
+ProxyPort=
+[Mix::03_Redemption_Reversal Service : Options\Connection]
+Speed for LG=
+Speed for PC=
+Is Compression Rate for LG=0
+Is Compression Rate for PC=0
+Is Speed for LG=0
+Is Speed for PC=0
+Compression Rate for LG( in )=0
+Compression Rate for LG( out )=0
+Compression Rate for PC( out )=0
+Compression Rate for PC( in )=0
+[Mix::03_Redemption_Reversal Service : Diagnostic]
+Start Round=1
+End Round=1
+Output Dir=C:\Documents and Settings\All Users\Application Data\RadView\WebLOAD\Log
+Syntax Check=0
+Log Check=0
+Trace Check=0
+Automatic State=0
+SaveCSJS Check=0
+CSJSDiagnosticMessages Check=0
+[Mix::03_Redemption_Reversal Service : FunctionalTesting]
+Transaction Failed=0
+Failed Time=20
+Verification Portion=2
+Severity=2
+Automatic Transaction=0
+Verification=0
+Object Level=0
+HTTP Level=0
+sTextSearch=
+nCompareTitle=0
+nFramesNumber=0
+nTextSearch=0
+nCompareLinks=0
+nCompareForms=0
+nCompareImages=0
+nCompareTables=0
+[Mix::03_Redemption_Reversal Service : ClientType]
+clientType=5
+getImages=1
+UseClientJSFull=1
+UseClientJSOptim=0
+JavaFull=0
+JavaOptimized=0
+[Mix::03_Redemption_Reversal Service : PassFailDefinition]
+definitionType=1
+checkErrors=1
+checkSevere=1
+checkStopTest=0
+checkWarnings=0
+errorNum=1
+ruleCheck=15
+warningNum=15
+[Mix::03_Redemption_Reversal Service : SleepTimeControl]
+sleepControlType=1
+timeBetween=2
+timeAnd=10
+deviationPersent=10
+[Mix::03_Redemption_Reversal Service : BrowserDialogs]
+BrowserDialogsOptions=<IE_OPTIONS Option_version=\"19\">\r\n\t<IE_DIALOG name=\"Alert\">\r\n\t\t<readonly>yes</readonly>\r\n\t\t<Answer>\r\n\t\t\t<value>OK</value>\r\n\t\t\t<default>OK</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"Confirm\">\r\n\t\t<Answer>\r\n\t\t\t<value>OK</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>OK</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"Prompt\">\r\n\t\t<Answer>\r\n\t\t\t<value>OK</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>OK</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"string\" name=\"Input\"></field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"Print\">\r\n\t\t<Answer>\r\n\t\t\t<value>OK</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>OK</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"Cookie_IE6\">\r\n\t\t<Answer>\r\n\t\t\t<value>Allow</value>\r\n\t\t\t<value>Block</value>\r\n\t\t\t<default>Allow</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"checkbox\" name=\"ApplyToAll\">\r\n\t\t\t<default>unchecked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"Cookie\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"checkbox\" name=\"NeverShow\">\r\n\t\t\t<default>unchecked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"FormSubmit\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"checkbox\" name=\"NeverShow\">\r\n\t\t\t<default>unchecked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"FormResubmit\">\r\n\t\t<Answer>\r\n\t\t\t<value>Retry</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>Retry</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"SwitchNonSecure\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"checkbox\" name=\"NeverShow\">\r\n\t\t\t<default>unchecked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"SwitchSecure\">\r\n\t\t<Answer>\r\n\t\t\t<value>OK</value>\r\n\t\t\t<default>OK</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"checkbox\" name=\"NeverShow\">\r\n\t\t\t<default>unchecked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"NonSecureOnSecure\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"ClientAuthentication\">\r\n\t\t<Answer>\r\n\t\t\t<value>OK</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>OK</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"string\" name=\"Username\"></field>\r\n\t\t<field type=\"string\" name=\"Password\"></field>\r\n\t\t<field type=\"string\" name=\"Domain\"></field>\r\n\t\t<field type=\"checkbox\" name=\"Save\">\r\n\t\t\t<default>unchecked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"ConnectToMS_WinXP\">\r\n\t\t<Answer>\r\n\t\t\t<value>OK</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>OK</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"string\" name=\"Email\"></field>\r\n\t\t<field type=\"string\" name=\"Password\"></field>\r\n\t\t<field type=\"checkbox\" name=\"AutoSignIn\">\r\n\t\t\t<default>unchecked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"ClientAuthentication_WinXP\">\r\n\t\t<Answer>\r\n\t\t\t<value>OK</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>OK</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"string\" name=\"Username\"></field>\r\n\t\t<field type=\"string\" name=\"Password\"></field>\r\n\t\t<field type=\"checkbox\" name=\"Save\">\r\n\t\t\t<default>unchecked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"ClientCertificate\">\r\n\t\t<Answer>\r\n\t\t\t<value>OK</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>OK</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"string\" name=\"Certificate\">\r\n\t\t\t<default>0</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"HostCertificate\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"FileDownload\">\r\n\t\t<Answer>\r\n\t\t\t<value>OK</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>OK</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"checkbox\" name=\"AlwaysAsk\">\r\n\t\t\t<default>checked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"FileDownload_IE6\">\r\n\t\t<Answer>\r\n\t\t\t<value>Open</value>\r\n\t\t\t<value>Save</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>Save</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"checkbox\" name=\"AlwaysAsk\">\r\n\t\t\t<default>checked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"FileDownload_IE6_XP\">\r\n\t\t<Answer>\r\n\t\t\t<value>Open</value>\r\n\t\t\t<value>Save</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>Save</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"checkbox\" name=\"AlwaysAsk\">\r\n\t\t\t<default>checked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"SaveFile\">\r\n\t\t<Answer>\r\n\t\t\t<value>Save</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>Save</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"string\" name=\"FileName\"></field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"SaveFileConfirmation\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"ActiveXInstall\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"checkbox\" name=\"AlwaysTrust\">\r\n\t\t\t<default>unchecked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"RunActiveX\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"UnsafeActiveX\">\r\n\t\t<readonly>yes</readonly>\r\n\t\t<Answer>\r\n\t\t\t<value>OK</value>\r\n\t\t\t<default>OK</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"ScriptAccessingActiveX\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"NavigateSubFrames\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"ActiveScripting\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"JavaScripting\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"Redirection\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"checkbox\" name=\"NeverShow\">\r\n\t\t\t<default>unchecked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"AutoComplete\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>No</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"RememberPassword\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>No</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"checkbox\" name=\"DoNotOffer\">\r\n\t\t\t<default>unchecked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"FtpAuthentication\">\r\n\t\t<Answer>\r\n\t\t\t<value>Login</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>Login</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"string\" name=\"Server\"></field>\r\n\t\t<field type=\"string\" name=\"Username\"></field>\r\n\t\t<field type=\"string\" name=\"Password\"></field>\r\n\t\t<field type=\"string\" name=\"Email\"></field>\r\n\t\t<field type=\"checkbox\" name=\"Anonymous\">\r\n\t\t\t<default>unchecked</default>\r\n\t\t</field>\r\n\t\t<field type=\"checkbox\" name=\"Save\">\r\n\t\t\t<default>unchecked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"FtpFolderError\">\r\n\t\t<readonly>yes</readonly>\r\n\t\t<Answer>\r\n\t\t\t<value>OK</value>\r\n\t\t\t<default>OK</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"DocumentModified\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>No</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"JavascriptError\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>No</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"WindowClosing\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"SuspiciousActiveX\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"Reboot\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>No</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"YesNoCancel\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"YesNo\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"OkCancel\">\r\n\t\t<Answer>\r\n\t\t\t<value>OK</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>OK</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"Ok\">\r\n\t\t<readonly>yes</readonly>\r\n\t\t<Answer>\r\n\t\t\t<value>OK</value>\r\n\t\t\t<default>OK</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n</IE_OPTIONS>
+[Mix::03_Redemption_Reversal Service : EmulationPlayback]
+useHistory=0
+historyLimit=1
+csjsRecovery=1
+[Mix::03_Redemption_Reversal Service : Java]
+strSelectedJVM=Default
+[Mix::03_Redemption_Reversal Service : WebServices]
+sBasicPassword=
+sUserName=
+sProxyHost=
+sProxyPassword=
+sProxyUser=
+sProxyPort=
+nWSClientType=1
+[Mix::03_Redemption_Reversal Service : ResetMechanism]
+bResetEnable=0
+nCreateLGRetryTimes=3
+nLGTimeout=150
+nResetTimeout=60
+nStopLGTimeout=3
+[Mix::03_Redemption_Reversal Service : HTTPParameters]
+bHTTPVersion=1
+bMultiIPSupport=0
+bEncodeFormData=1
+bAcceptLanguage=0
+StrAcceptLanguage=
+[Mix::03_Redemption_Reversal Service : BrowserCache]
+bFilterApplets=0
+bFilterImages=0
+bFilterJSFiles=0
+bFilterStyleSheets=0
+bFilterXMLFiles=0
+bFilterDynamic=0
+nCacheType=3
+bFilterAppletsPC=1
+bFilterImagesPC=1
+bFilterJSFilesPC=1
+bFilterStyleSheetsPC=1
+bFilterXMLFilesPC=1
+bFilterDynamicPC=0
+nCacheTypePC=3
+[Mix::01_Validation_Service : Browser Emulation]
+IsMultiThreadVirtualClientPC=0
+IsMultiThreadVirtualClientLG=0
+MultiThreadVirtualClientPCNum=1
+MultiThreadVirtualClientLGNum=4
+BrowserCachePC=0
+BrowserCacheLG=1
+DNSCachePC=0
+DNSCacheLG=1
+SSLCachePC=0
+SSLCacheLG=1
+HTTPVersion=1
+KeepAlivePC=0
+KeepAliveLG=0
+RedirectionEnabled=0
+RedirectionLimit=10
+Browser types list=Microsoft Internet Explorer;Mozilla Firefox;Chrome;Safari;Opera;iPhone;Android Webkit Browser;BlackBerry;Opera Mini;S60 Nokia Browser;Unix/Linux;WAP;Default;
+Microsoft Internet Explorer=0|Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 7.1; Trident/5.0)|Mozilla/5.0 (compatible; MSIE 8.0; Windows NT 6.0; Trident/4.0; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET CLR 1.0.3705; .NET CLR 1.1.4322)|Mozilla/5.0 (Windows; U; MSIE 7.0; Windows NT 6.0; en-US)|
+Mozilla Firefox=0|Mozilla/5.0 (X11; Linux i686; rv:6.0) Gecko/20100101 Firefox/6.0|Mozilla/5.0 (Windows NT 6.1; WOW64; rv:5.0) Gecko/20100101 Firefox/5.0|Mozilla/5.0 (Windows NT 6.1; rv:1.9) Gecko/20100101 Firefox/4.0|
+Chrome=0|Mozilla/5.0 (Windows NT 5.1) AppleWebKit/535.6 (KHTML, like Gecko) Chrome/16.0.897.0 Safari/535.6|
+Safari=0|Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_8; de-at) AppleWebKit/533.21.1 (KHTML, like Gecko) Version/5.0.5 Safari/533.21.1|
+Opera=0|Opera/9.80 (Windows NT 6.1; U; es-ES) Presto/2.9.181 Version/12.00|
+iPhone=0|Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3|
+Android Webkit Browser=0|Mozilla/5.0 (Linux; U; Android 2.3.5; en-us; HTC Vision Build/GRI40) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1|
+BlackBerry=0|Mozilla/5.0 (BlackBerry; U; BlackBerry 9850; en-US) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.0.0.115 Mobile Safari/534.11+|
+Opera Mini=0|Opera/9.80 (J2ME/MIDP; Opera Mini/9.80 (S60; SymbOS; Opera Mobi/23.348; U; en) Presto/2.5.25 Version/10.54|
+S60 Nokia Browser=0|NokiaN97i/SymbianOS/9.1 Series60/3.0|
+Unix/Linux=0|Lynx/2.6 libwww-FM/2.14|Mozilla/4.04[en](X11;I;Linux 2.0.33 i586)|
+WAP=0|Alcatel OneTouch|Generic digital phone|Mitsubishi MobileAccess|Samsung Duette|Motorola i1000plus|
+Default=0|Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.0)|
+Selected Browser Type=Default
+Selected User Agent=Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.0)
+SSL Cypher Suite=None
+SSL Cypher Suite Enabled=0
+Encoding Value=0
+EnforceEncoding=0
+bGZipSupport=0
+[Mix::01_Validation_Service : Authentication]
+UserName=
+PassWord=
+NTUserName=
+NTUserPassword=
+KerberosServer=
+AuthType=0
+ProxyUserName=
+ProxyPassWord=
+SSLClientCertificateFile=
+SSLClientCertificatePassword=
+ProxyHost=
+ProxyPort=
+[Mix::01_Validation_Service : Options\Connection]
+Speed for LG=
+Speed for PC=
+Is Compression Rate for LG=0
+Is Compression Rate for PC=0
+Is Speed for LG=0
+Is Speed for PC=0
+Compression Rate for LG( in )=0
+Compression Rate for LG( out )=0
+Compression Rate for PC( out )=0
+Compression Rate for PC( in )=0
+[Mix::01_Validation_Service : Diagnostic]
+Start Round=1
+End Round=1
+Output Dir=C:\Documents and Settings\All Users\Application Data\RadView\WebLOAD\Log
+Syntax Check=0
+Log Check=0
+Trace Check=0
+Automatic State=0
+SaveCSJS Check=0
+CSJSDiagnosticMessages Check=0
+[Mix::01_Validation_Service : FunctionalTesting]
+Transaction Failed=0
+Failed Time=20
+Verification Portion=2
+Severity=2
+Automatic Transaction=0
+Verification=0
+Object Level=0
+HTTP Level=0
+sTextSearch=
+nCompareTitle=0
+nFramesNumber=0
+nTextSearch=0
+nCompareLinks=0
+nCompareForms=0
+nCompareImages=0
+nCompareTables=0
+[Mix::01_Validation_Service : ClientType]
+clientType=5
+getImages=1
+UseClientJSFull=1
+UseClientJSOptim=0
+JavaFull=0
+JavaOptimized=0
+[Mix::01_Validation_Service : PassFailDefinition]
+definitionType=1
+checkErrors=1
+checkSevere=1
+checkStopTest=0
+checkWarnings=0
+errorNum=1
+ruleCheck=15
+warningNum=15
+[Mix::01_Validation_Service : SleepTimeControl]
+sleepControlType=1
+timeBetween=2
+timeAnd=10
+deviationPersent=10
+[Mix::01_Validation_Service : BrowserDialogs]
+BrowserDialogsOptions=<IE_OPTIONS Option_version=\"19\">\r\n\t<IE_DIALOG name=\"Alert\">\r\n\t\t<readonly>yes</readonly>\r\n\t\t<Answer>\r\n\t\t\t<value>OK</value>\r\n\t\t\t<default>OK</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"Confirm\">\r\n\t\t<Answer>\r\n\t\t\t<value>OK</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>OK</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"Prompt\">\r\n\t\t<Answer>\r\n\t\t\t<value>OK</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>OK</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"string\" name=\"Input\"></field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"Print\">\r\n\t\t<Answer>\r\n\t\t\t<value>OK</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>OK</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"Cookie_IE6\">\r\n\t\t<Answer>\r\n\t\t\t<value>Allow</value>\r\n\t\t\t<value>Block</value>\r\n\t\t\t<default>Allow</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"checkbox\" name=\"ApplyToAll\">\r\n\t\t\t<default>unchecked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"Cookie\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"checkbox\" name=\"NeverShow\">\r\n\t\t\t<default>unchecked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"FormSubmit\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"checkbox\" name=\"NeverShow\">\r\n\t\t\t<default>unchecked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"FormResubmit\">\r\n\t\t<Answer>\r\n\t\t\t<value>Retry</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>Retry</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"SwitchNonSecure\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"checkbox\" name=\"NeverShow\">\r\n\t\t\t<default>unchecked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"SwitchSecure\">\r\n\t\t<Answer>\r\n\t\t\t<value>OK</value>\r\n\t\t\t<default>OK</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"checkbox\" name=\"NeverShow\">\r\n\t\t\t<default>unchecked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"NonSecureOnSecure\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"ClientAuthentication\">\r\n\t\t<Answer>\r\n\t\t\t<value>OK</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>OK</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"string\" name=\"Username\"></field>\r\n\t\t<field type=\"string\" name=\"Password\"></field>\r\n\t\t<field type=\"string\" name=\"Domain\"></field>\r\n\t\t<field type=\"checkbox\" name=\"Save\">\r\n\t\t\t<default>unchecked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"ConnectToMS_WinXP\">\r\n\t\t<Answer>\r\n\t\t\t<value>OK</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>OK</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"string\" name=\"Email\"></field>\r\n\t\t<field type=\"string\" name=\"Password\"></field>\r\n\t\t<field type=\"checkbox\" name=\"AutoSignIn\">\r\n\t\t\t<default>unchecked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"ClientAuthentication_WinXP\">\r\n\t\t<Answer>\r\n\t\t\t<value>OK</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>OK</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"string\" name=\"Username\"></field>\r\n\t\t<field type=\"string\" name=\"Password\"></field>\r\n\t\t<field type=\"checkbox\" name=\"Save\">\r\n\t\t\t<default>unchecked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"ClientCertificate\">\r\n\t\t<Answer>\r\n\t\t\t<value>OK</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>OK</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"string\" name=\"Certificate\">\r\n\t\t\t<default>0</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"HostCertificate\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"FileDownload\">\r\n\t\t<Answer>\r\n\t\t\t<value>OK</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>OK</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"checkbox\" name=\"AlwaysAsk\">\r\n\t\t\t<default>checked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"FileDownload_IE6\">\r\n\t\t<Answer>\r\n\t\t\t<value>Open</value>\r\n\t\t\t<value>Save</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>Save</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"checkbox\" name=\"AlwaysAsk\">\r\n\t\t\t<default>checked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"FileDownload_IE6_XP\">\r\n\t\t<Answer>\r\n\t\t\t<value>Open</value>\r\n\t\t\t<value>Save</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>Save</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"checkbox\" name=\"AlwaysAsk\">\r\n\t\t\t<default>checked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"SaveFile\">\r\n\t\t<Answer>\r\n\t\t\t<value>Save</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>Save</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"string\" name=\"FileName\"></field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"SaveFileConfirmation\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"ActiveXInstall\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"checkbox\" name=\"AlwaysTrust\">\r\n\t\t\t<default>unchecked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"RunActiveX\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"UnsafeActiveX\">\r\n\t\t<readonly>yes</readonly>\r\n\t\t<Answer>\r\n\t\t\t<value>OK</value>\r\n\t\t\t<default>OK</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"ScriptAccessingActiveX\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"NavigateSubFrames\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"ActiveScripting\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"JavaScripting\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"Redirection\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"checkbox\" name=\"NeverShow\">\r\n\t\t\t<default>unchecked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"AutoComplete\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>No</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"RememberPassword\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>No</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"checkbox\" name=\"DoNotOffer\">\r\n\t\t\t<default>unchecked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"FtpAuthentication\">\r\n\t\t<Answer>\r\n\t\t\t<value>Login</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>Login</default>\r\n\t\t</Answer>\r\n\t\t<field type=\"string\" name=\"Server\"></field>\r\n\t\t<field type=\"string\" name=\"Username\"></field>\r\n\t\t<field type=\"string\" name=\"Password\"></field>\r\n\t\t<field type=\"string\" name=\"Email\"></field>\r\n\t\t<field type=\"checkbox\" name=\"Anonymous\">\r\n\t\t\t<default>unchecked</default>\r\n\t\t</field>\r\n\t\t<field type=\"checkbox\" name=\"Save\">\r\n\t\t\t<default>unchecked</default>\r\n\t\t</field>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"FtpFolderError\">\r\n\t\t<readonly>yes</readonly>\r\n\t\t<Answer>\r\n\t\t\t<value>OK</value>\r\n\t\t\t<default>OK</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"DocumentModified\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>No</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"JavascriptError\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>No</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"WindowClosing\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"SuspiciousActiveX\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"Reboot\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>No</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"YesNoCancel\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"YesNo\">\r\n\t\t<Answer>\r\n\t\t\t<value>Yes</value>\r\n\t\t\t<value>No</value>\r\n\t\t\t<default>Yes</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"OkCancel\">\r\n\t\t<Answer>\r\n\t\t\t<value>OK</value>\r\n\t\t\t<value>Cancel</value>\r\n\t\t\t<default>OK</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n\t<IE_DIALOG name=\"Ok\">\r\n\t\t<readonly>yes</readonly>\r\n\t\t<Answer>\r\n\t\t\t<value>OK</value>\r\n\t\t\t<default>OK</default>\r\n\t\t</Answer>\r\n\t</IE_DIALOG>\r\n</IE_OPTIONS>
+[Mix::01_Validation_Service : EmulationPlayback]
+useHistory=0
+historyLimit=1
+csjsRecovery=1
+[Mix::01_Validation_Service : Java]
+strSelectedJVM=Default
+[Mix::01_Validation_Service : WebServices]
+sBasicPassword=
+sUserName=
+sProxyHost=
+sProxyPassword=
+sProxyUser=
+sProxyPort=
+nWSClientType=1
+[Mix::01_Validation_Service : ResetMechanism]
+bResetEnable=0
+nCreateLGRetryTimes=3
+nLGTimeout=150
+nResetTimeout=60
+nStopLGTimeout=3
+[Mix::01_Validation_Service : HTTPParameters]
+bHTTPVersion=1
+bMultiIPSupport=0
+bEncodeFormData=1
+bAcceptLanguage=0
+StrAcceptLanguage=
+[Mix::01_Validation_Service : BrowserCache]
+bFilterApplets=0
+bFilterImages=0
+bFilterJSFiles=0
+bFilterStyleSheets=0
+bFilterXMLFiles=0
+bFilterDynamic=0
+nCacheType=3
+bFilterAppletsPC=1
+bFilterImagesPC=1
+bFilterJSFilesPC=1
+bFilterStyleSheetsPC=1
+bFilterXMLFilesPC=1
+bFilterDynamicPC=0
+nCacheTypePC=3
+[OpenAPI@192.168.33.11]
+StationType=PC
+OperatingSystem=NT
+ClientType=2
+Type=Emulation
+AssistentItemAAString_1=8 '11 RunLoadTime '2 60 '13 StartLoadSize '1 3 '12 RumpDownTime '1 1 '16 AssistantCaption '22 Ramp Up Schedule Model '13 ScheduleModel '1 6 '11 RunLoadSize '1 4 '10 RumpUpTime '1 1 '9 TotalTime '2 62 
+Schedule_1=1
+From_1=00000000
+To_1=00000030
+LoadSize_1=3
+Schedule_2=1
+From_2=00000030
+To_2=00000100
+LoadSize_2=4
+Schedule_3=1
+From_3=00000100
+To_3=00010100
+LoadSize_3=4
+Schedule_4=1
+From_4=00010100
+To_4=00010130
+LoadSize_4=4
+Schedule_5=1
+From_5=00010130
+To_5=00010200
+LoadSize_5=3
+[OpenAPI@192.168.33.12]
+StationType=PC
+OperatingSystem=NT
+ClientType=2
+Type=Emulation
+AssistentItemAAString_1=8 '11 RunLoadTime '2 60 '13 StartLoadSize '1 3 '12 RumpDownTime '1 1 '16 AssistantCaption '22 Ramp Up Schedule Model '13 ScheduleModel '1 6 '11 RunLoadSize '1 4 '10 RumpUpTime '1 1 '9 TotalTime '2 62 
+Schedule_1=1
+From_1=00000000
+To_1=00000030
+LoadSize_1=3
+Schedule_2=1
+From_2=00000030
+To_2=00000100
+LoadSize_2=3
+Schedule_3=1
+From_3=00000100
+To_3=00010100
+LoadSize_3=4
+Schedule_4=1
+From_4=00010100
+To_4=00010130
+LoadSize_4=3
+Schedule_5=1
+From_5=00010130
+To_5=00010200
+LoadSize_5=3
+[OpenAPI@192.168.33.13]
+StationType=PC
+OperatingSystem=NT
+ClientType=2
+Type=Emulation
+AssistentItemAAString_1=8 '11 RunLoadTime '2 60 '13 StartLoadSize '1 3 '12 RumpDownTime '1 1 '16 AssistantCaption '22 Ramp Up Schedule Model '13 ScheduleModel '1 6 '11 RunLoadSize '1 4 '10 RumpUpTime '1 1 '9 TotalTime '2 62 
+Schedule_1=1
+From_1=00000000
+To_1=00000030
+LoadSize_1=3
+Schedule_2=1
+From_2=00000030
+To_2=00000100
+LoadSize_2=3
+Schedule_3=1
+From_3=00000100
+To_3=00010100
+LoadSize_3=4
+Schedule_4=1
+From_4=00010100
+To_4=00010130
+LoadSize_4=3
+Schedule_5=1
+From_5=00010130
+To_5=00010200
+LoadSize_5=3
+[OpenAPI@192.168.33.14]
+StationType=PC
+OperatingSystem=NT
+ClientType=2
+Type=Emulation
+AssistentItemAAString_1=8 '11 RunLoadTime '2 60 '13 StartLoadSize '1 3 '12 RumpDownTime '1 1 '16 AssistantCaption '22 Ramp Up Schedule Model '13 ScheduleModel '1 6 '11 RunLoadSize '1 3 '10 RumpUpTime '1 1 '9 TotalTime '2 62 
+Schedule_1=1
+From_1=00000000
+To_1=00000030
+LoadSize_1=3
+Schedule_2=1
+From_2=00000030
+To_2=00000100
+LoadSize_2=3
+Schedule_3=1
+From_3=00000100
+To_3=00010100
+LoadSize_3=3
+Schedule_4=1
+From_4=00010100
+To_4=00010130
+LoadSize_4=3
+Schedule_5=1
+From_5=00010130
+To_5=00010200
+LoadSize_5=3
+[SMVDTree]
+Hosts=
+[Integrated Reports]
+Reports=Default Report;;
+[Default Report Tree]
+Generators=Total;;
+[TotalDefault Report]
+Type=Web
+Measurements=Hits Per Second;;Load Size;;01_Validation_Service Time;;02_Information_Service Time;;03_Redemption_Status Time;;03_Reversal_Status Time;;
+[Hits Per SecondTotalDefault Report]
+Measurement Types=9;;
+[9Hits Per SecondTotalDefault Report]
+maxValue=100.000000
+AutoAdjustedValue=50.000000
+GroupAutoAdjustedValue=50.000000
+AutoAdjust=1
+[Load SizeTotalDefault Report]
+Measurement Types=9;;
+[9Load SizeTotalDefault Report]
+maxValue=100.000000
+AutoAdjustedValue=50.000000
+GroupAutoAdjustedValue=50.000000
+AutoAdjust=1
+[01_Validation_Service TimeTotalDefault Report]
+Measurement Types=10;;
+[1001_Validation_Service TimeTotalDefault Report]
+maxValue=100.000000
+AutoAdjustedValue=0.050000
+GroupAutoAdjustedValue=0.050000
+AutoAdjust=1
+[02_Information_Service TimeTotalDefault Report]
+Measurement Types=10;;
+[1002_Information_Service TimeTotalDefault Report]
+maxValue=100.000000
+AutoAdjustedValue=0.050000
+GroupAutoAdjustedValue=0.050000
+AutoAdjust=1
+[03_Redemption_Status TimeTotalDefault Report]
+Measurement Types=10;;
+[1003_Redemption_Status TimeTotalDefault Report]
+maxValue=100.000000
+AutoAdjustedValue=0.500000
+GroupAutoAdjustedValue=0.500000
+AutoAdjust=1
+[03_Reversal_Status TimeTotalDefault Report]
+Measurement Types=10;;
+[1003_Reversal_Status TimeTotalDefault Report]
+maxValue=100.000000
+AutoAdjustedValue=0.500000
+GroupAutoAdjustedValue=0.500000
+AutoAdjust=1
+[AdditionalInformation]
+TemplateComments=
+SessionComments=
+CreatedBy=
+Custom1=
+Custom2=
+Custom3=
+Subject=
+TestDescription=
+ResultsDescription=
+Title=OpenAPI_Informal
+VersionBuild=
+[NotificationManagerInfo]
+TestDoneActionFromMail=
+TestDoneActionToMail=
+TestDoneActionSubject=
+TestDoneActionMessageBody=
+SendTestDoneMail=0
+NotificationRulesNumber=0

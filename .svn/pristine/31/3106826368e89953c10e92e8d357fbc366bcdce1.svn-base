@@ -1,0 +1,535 @@
+<Project><VisualAgenda><Agenda CallBack="Do_Agenda" ClonedXML="0"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0"/><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript></NodeScript><NodeID Visible="0">1</NodeID><InitAgenda Type="JavaScript" ReadOnly="0">
+//wlGlobals.Proxy = "localhost:8888"
+IncludeFile("AsmLib.js",WLExecuteScript)
+IncludeFile("C:\\PerformanceTesting\\Projects\\ACTIVE_Environment.js")
+IncludeFile("C:\\PerformanceTesting\\Projects\\STD_INCLUDES\\username_password_base64.js")
+ //myFile = new wlOutputFile("C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_data\\OPENAPI\\access_token.txt")
+
+env_details()
+
+   
+OAuth_coll_File= CopyFile(Get_OAuth_Coll_prod_File)
+   
+   //#########################   The below code would over write the existing sleep time and introduce a random sleep time ######################################
+/*wlGlobals.DisableSleep = true //false
+wlGlobals.SleepRandomMax = 60000
+wlGlobals.SleepRandomMin = 30000*/
+//##########################################################################################################################################
+wlGlobals.ParseTables = "No"
+wlGlobals.ParseForms = "No"
+wlGlobals.GetImages   = "No"
+wlGlobals.ParseImages = "No"
+</InitAgenda><InitClient Type="JavaScript" ReadOnly="0">OAuth_coll_DataFileParam = WLDataFileParam ( "OAuth_coll",OAuth_coll_File, 0,",",WLParamRandom,WLParamLocal,WLParamUpdateRound,WLParamCycle);
+OAuth_coll_Col1 = WLDataFileField( OAuth_coll_DataFileParam, 1);
+</InitClient><TerminateAgenda Type="JavaScript" ReadOnly="0"></TerminateAgenda><TerminateClient Type="JavaScript" ReadOnly="0"></TerminateClient><JSNodeCounter Visible="0">32</JSNodeCounter></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="GlobalVariables"><System Type="Array" ReadOnly="0"><Variable Name="ClientNum" Description="Returns the main thread number for each client"/><Variable Name="GeneratorName()" Description="Returns the name of this load generator as a string"/><Variable Name="GMTDate()" Description="Current date in GMT/UTC as a string"/><Variable Name="Hours()" Description="Current Hour (0-23)"/><Variable Name="LocalDate()" Description="Current date in local time as a string"/><Variable Name="Milliseconds()" Description="Current ms value"/><Variable Name="Minutes()" Description="Current minutes (0-59)"/><Variable Name="RandomNumber()" Description="Generate a random number"/><Variable Name="RoundNum" Description="Returns the number of rounds for the specific client"/><Variable Name="Seconds()" Description="Current seconds (0-59)"/><Variable Name="ThisYear()" Description="Current Year (4-digit, e.g. 2001)"/><Variable Name="Time()" Description="Time in ms since 1/1/1970"/><Variable Name="TodaysDate()" Description="Current date (1-31)"/><Variable Name="TodaysDay()" Description="Current Day (0-6, 0==Sunday)"/><Variable Name="TodaysMonth()" Description="Current Month (0-11)"/><Variable Name="VCUniqueID()" Description="Returns a string unique to this VC"/></System><ParameterManagerData CallBack="Do_ParameterManagerData"><Array ArrayName="Parameters" ArrayLen="0" NewParamIndex="4"/></ParameterManagerData><UserDefined Type="Array" ReadOnly="0"/><InputParameters Type="Array" ReadOnly="0"/><OutputParameters Type="Array" ReadOnly="0"/><GlobalInputFilesParams Type="Array" ReadOnly="0"/><FileCounter>0</FileCounter></PropertyPage></Properties><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="0"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">BeginTransaction::01_RequestA_Authorize</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - BeginTransaction::01_RequestA_Authorize - ID:5 *****/
+BeginTransaction("01_RequestA_Authorize")
+
+ // END WLIDE</NodeScript><NodeID Visible="0">5</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="1"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">JavaScript</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - JavaScript - ID:6 *****/
+wlHttp.GetImages = "No"
+wlHttp.SaveSource= true;
+//wlGlobals.MultiIPSupportProtocol ="IPv4Only"
+wlHttp.FilterUrl = "www.nectar.com"
+wlGlobals.MultiIPSupport = true;
+//wlHttp.SetIPAddress("192.168.21.17")
+wlGlobals.ConnectTimeout = 60000
+wlHttp.FormData["state"] = "97424a00dcee0e6657f8e064e263c51657d6c035"
+wlHttp.FormData["response_type"] = "code"
+wlHttp.FormData["ro_id"] = OAuth_coll_Col1.getValue() //"50044042019"
+wlHttp.FormData["client_id"] = "ec9d8d8c-9eed-43fe-b217-893d87c85651"    
+//wlHttp.FormData["redirect_uri"] = "http://192.168.22.221/link/nectar"
+wlHttp.Get("https://api.nectar.com/oauth/authorize")
+
+
+var res = document.wlStatusNumber
+ // END WLIDE</NodeScript><NodeID Visible="0">6</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject>
+			</JavaScriptObject>
+			<JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="2"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">EndTransaction::01_RequestA_Authorize</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - EndTransaction::01_RequestA_Authorize - ID:7 *****/
+if (res==200) {
+EndTransaction("01_RequestA_Authorize",WLSuccess,false)
+}
+else
+{
+EndTransaction("01_RequestA_Authorize",WLError,true, "Didn't receive 200")
+}
+
+ // END WLIDE</NodeScript><NodeID Visible="0">7</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject>
+			<JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="3"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">Sleep</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - Sleep - ID:20 *****/
+
+Sleep(40000)
+
+ // END WLIDE</NodeScript><NodeID Visible="0">20</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject>
+			<JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="4"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">JavaScript</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - JavaScript - ID:8 *****/
+card = GetElementValueByName("sessionID")
+var Auth = encode64()
+ // END WLIDE</NodeScript><NodeID Visible="0">8</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject>
+			<JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="5"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">JavaScript</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - JavaScript - ID:9 *****/
+//InfoMessage(document.wlSource)
+ // END WLIDE</NodeScript><NodeID Visible="0">9</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject>
+			<JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="6"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">BeginTransaction::"02_RequestB_Login</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - BeginTransaction::"02_RequestB_Login - ID:10 *****/
+BeginTransaction("02_RequestB_Login")
+
+ // END WLIDE</NodeScript><NodeID Visible="0">10</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="7"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">JavaScript</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - JavaScript - ID:11 *****/
+wlHttp.SaveSource= true;
+wlHttp.GetImages = "No"
+wlHttp.FilterUrl = "www.nectar.com"
+wlHttp.Header["Origin"] = "https://api.nectar.com"
+wlHttp.Header["Referer"] ="https://api.nectar.com/oauth/authorize?state=97424a00dcee0e6657f8e064e263c51657d6c035&amp;redirect_uri=http%3A%2F%2F192.168.22.221%2Flink%2Fnectar&amp;ro_id=50044042019&amp;response_type=code&amp;client_id=ec9d8d8c-9eed-43fe-b217-893d87c85651"
+wlHttp.FormData["page"] = "1"
+wlHttp.FormData["sessionID"] =card
+wlHttp.FormData["client_id"] = "ec9d8d8c-9eed-43fe-b217-893d87c85651"    
+wlHttp.FormData["state"] = "97424a00dcee0e6657f8e064e263c51657d6c035"
+//wlHttp.FormData["redirect_uri"] = "http://192.168.22.221/link/nectar"
+wlHttp.FormData["ro_id"] = OAuth_coll_Col1.getValue() // "50001283010"
+wlHttp.FormData["response_type"] = "code"
+wlHttp.FormData["CARDNUMBER"] =OAuth_coll_Col1.getValue() // "50001283010"
+wlHttp.FormData["PASSWORD"] = "Pa55word"
+wlHttp.FormData["action"] = "Login"
+wlHttp.Post("https://api.nectar.com/oauth/authorize")
+var resp = document.wlStatusNumber
+ // END WLIDE</NodeScript><NodeID Visible="0">11</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject>
+			</JavaScriptObject>
+			<JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="8"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">EndTransaction::"02_RequestB_Login</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - EndTransaction::"02_RequestB_Login - ID:12 *****/
+if (resp==200) 
+{
+EndTransaction("02_RequestB_Login",WLSuccess,false)
+}
+else
+{
+EndTransaction("02_RequestB_Login",WLError,true,"Didn't receive expected message")
+}
+
+ // END WLIDE</NodeScript><NodeID Visible="0">12</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject>
+			<JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="9"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">Sleep</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - Sleep - ID:21 *****/
+
+Sleep(30000)
+
+ // END WLIDE</NodeScript><NodeID Visible="0">21</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject>
+			<JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="10"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">BeginTransaction::"03_RequestC_code</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - BeginTransaction::"03_RequestC_code - ID:13 *****/
+BeginTransaction("03_RequestC_code")
+
+ // END WLIDE</NodeScript><NodeID Visible="0">13</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="11"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">JavaScript</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - JavaScript - ID:14 *****/
+wlHttp.SaveSource=true;
+wlHttp.Header["Referer"] = "https://api.nectar.com/oauth/authorize"
+wlGlobals.UserAgent = "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.72 Safari/537.36"
+wlHttp.FormdataEncodingType = 1
+wlHttp.FormData["sessionID"] =card
+wlHttp.FormData["action"] = "Confirm"
+wlHttp. RedirectionEnabled = false;
+wlHttp.Get("https://api.nectar.com/oauth/authorize")
+
+codec =  extractValue( "nectar?code=","&amp;state", wlHtml.GetHeaderValue("location"))
+var status = document.wlStatusNumber
+ // END WLIDE</NodeScript><NodeID Visible="0">14</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject>
+			</JavaScriptObject>
+			<JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="12"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">EndTransaction::"03_RequestC_code</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - EndTransaction::"03_RequestC_code - ID:15 *****/
+if (status==302) 
+{
+EndTransaction("03_RequestC_code",WLSuccess,false)
+}
+else
+{
+EndTransaction("03_RequestC_code",WLError,true, "Didn't receive 200")
+}
+
+ // END WLIDE</NodeScript><NodeID Visible="0">15</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject>
+			<JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="13"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">JavaScript</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - JavaScript - ID:16 *****/
+wlGlobals.SSLClientCertificateFile = "C:\\PerformanceTesting\\Projects\\STD_DATA\\T0_DATA\\CERTIFICATES\\webload.pem"
+wlGlobals.SSLClientCertificatePassword = "webload"
+ // END WLIDE</NodeScript><NodeID Visible="0">16</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject>
+			<JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="14"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">BeginTransaction::"04_RequestD_accesstoken</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - BeginTransaction::"04_RequestD_accesstoken - ID:17 *****/
+BeginTransaction("04_RequestD_accesstoken")
+
+ // END WLIDE</NodeScript><NodeID Visible="0">17</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="15"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">JavaScript</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - JavaScript - ID:18 *****/
+wlHttp.SaveSource=true;
+wlGlobals.OverrideAuthorizationHeader = true
+wlHttp.FormData["grant_type"] = "authorization_code"
+wlHttp.FormData["code"]=codec;
+//wlHttp.FormData["redirect_uri"] ="http://192.168.22.221/link/nectar" //"http%3A%2F%2F192.168.22.221%2Flink%2Fnectar"
+wlHttp.Header["Authorization"] ="Basic "+Auth  //OGRlMmQ2NDUtY2VjNS00ZDczLTk0NjktZGJhOGFiMGI1YmJkOnNlY3JldA=="
+wlHttp.Header["Content-Type"] ="application/x-www-form-urlencoded"
+wlHttp.Post("https://certapi.nectar.com/oauth/token")
+/*access_token = extractValue("access_token\":\"","\"",document.wlSource);
+refresh_token = extractValue("refresh_token\":\"","\"", document.wlSource);
+
+myFile.Writeln(access_token+","+refresh_token)*/
+var token_status = document.wlStatusNumber
+ // END WLIDE</NodeScript><NodeID Visible="0">18</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject>
+			</JavaScriptObject>
+			<JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="16"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">EndTransaction::"04_RequestD_accesstoken</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - EndTransaction::"04_RequestD_accesstoken - ID:19 *****/
+if (token_status==200) 
+{
+EndTransaction("04_RequestD_accesstoken",WLSuccess,false)
+}
+else
+{
+EndTransaction("04_RequestD_accesstoken",WLError,true,"Didn't receive 200")
+}
+ // END WLIDE</NodeScript><NodeID Visible="0">19</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject>
+			<JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="17"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">Sleep</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - Sleep - ID:29 *****/
+Sleep(50000)
+
+ // END WLIDE</NodeScript><NodeID Visible="0">29</NodeID><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0"/><JSBlockLength Visible="0"/><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject>
+		</Agenda>
+	</VisualAgenda><PRODUCT_VERSION><ProjectCreatedProductVersion>WebLOADPro Version 9.0.0.118.00  Supports 128 bit SSL </ProjectCreatedProductVersion><LastProjectSavedProductVersion>WebLOADPro Version 9.0.0.118.00  Supports 128 bit SSL </LastProjectSavedProductVersion></PRODUCT_VERSION><PROJECT_TYPE>Protocol</PROJECT_TYPE><AGENDA_OPTIONS><AgendaName xmlns=" Default Project Options"/><Options><DiagnosticOptions><bSyntaxCheck>0</bSyntaxCheck><bTraceCheck>0</bTraceCheck><bAutomaticStateCheck>0</bAutomaticStateCheck><bSaveCSJSCheck>0</bSaveCSJSCheck><bCSJSDiagnosticMessages>0</bCSJSDiagnosticMessages></DiagnosticOptions><FunctionalTestingOptions><bTransFailed>0</bTransFailed><nFailedTime>20</nFailedTime><nSeverity>2</nSeverity><sTextSearch></sTextSearch><bCheckCRC>0</bCheckCRC><bCheckCompareValues>0</bCheckCompareValues><VarificationData><nCompareTitle>2</nCompareTitle><nFramesNumber>0</nFramesNumber><nTextSearch>0</nTextSearch><nVerifyLink>0</nVerifyLink><nCompareLinks>0</nCompareLinks><nCompareForms>0</nCompareForms><nCompareImages>0</nCompareImages><nCompareTables>0</nCompareTables></VarificationData></FunctionalTestingOptions><SleepTimeControlOptions><nSleepControlType>1</nSleepControlType><nBetween>2</nBetween><nAnd>10</nAnd><nDeviationPersent>10</nDeviationPersent></SleepTimeControlOptions><IE_OPTIONS Option_version="19">
+			<IE_DIALOG name="Alert">
+				<readonly>yes</readonly>
+				<Answer>
+					<value>OK</value>
+					<default>OK</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="Confirm">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="Prompt">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+				<field type="string" name="Input"></field>
+			</IE_DIALOG>
+			<IE_DIALOG name="Print">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="Cookie_IE6">
+				<Answer>
+					<value>Allow</value>
+					<value>Block</value>
+					<default>Allow</default>
+				</Answer>
+				<field type="checkbox" name="ApplyToAll">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="Cookie">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+				<field type="checkbox" name="NeverShow">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="FormSubmit">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+				<field type="checkbox" name="NeverShow">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="FormResubmit">
+				<Answer>
+					<value>Retry</value>
+					<value>Cancel</value>
+					<default>Retry</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="SwitchNonSecure">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+				<field type="checkbox" name="NeverShow">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="SwitchSecure">
+				<Answer>
+					<value>OK</value>
+					<default>OK</default>
+				</Answer>
+				<field type="checkbox" name="NeverShow">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="NonSecureOnSecure">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="ClientAuthentication">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+				<field type="string" name="Username"></field>
+				<field type="string" name="Password"></field>
+				<field type="string" name="Domain"></field>
+				<field type="checkbox" name="Save">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="ConnectToMS_WinXP">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+				<field type="string" name="Email"></field>
+				<field type="string" name="Password"></field>
+				<field type="checkbox" name="AutoSignIn">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="ClientAuthentication_WinXP">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+				<field type="string" name="Username"></field>
+				<field type="string" name="Password"></field>
+				<field type="checkbox" name="Save">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="ClientCertificate">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+				<field type="string" name="Certificate">
+					<default>0</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="HostCertificate">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="FileDownload">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+				<field type="checkbox" name="AlwaysAsk">
+					<default>checked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="FileDownload_IE6">
+				<Answer>
+					<value>Open</value>
+					<value>Save</value>
+					<value>Cancel</value>
+					<default>Save</default>
+				</Answer>
+				<field type="checkbox" name="AlwaysAsk">
+					<default>checked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="FileDownload_IE6_XP">
+				<Answer>
+					<value>Open</value>
+					<value>Save</value>
+					<value>Cancel</value>
+					<default>Save</default>
+				</Answer>
+				<field type="checkbox" name="AlwaysAsk">
+					<default>checked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="SaveFile">
+				<Answer>
+					<value>Save</value>
+					<value>Cancel</value>
+					<default>Save</default>
+				</Answer>
+				<field type="string" name="FileName"></field>
+			</IE_DIALOG>
+			<IE_DIALOG name="SaveFileConfirmation">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="ActiveXInstall">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+				<field type="checkbox" name="AlwaysTrust">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="RunActiveX">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="UnsafeActiveX">
+				<readonly>yes</readonly>
+				<Answer>
+					<value>OK</value>
+					<default>OK</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="ScriptAccessingActiveX">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="NavigateSubFrames">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="ActiveScripting">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="JavaScripting">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="Redirection">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+				<field type="checkbox" name="NeverShow">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="AutoComplete">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>No</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="RememberPassword">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>No</default>
+				</Answer>
+				<field type="checkbox" name="DoNotOffer">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="FtpAuthentication">
+				<Answer>
+					<value>Login</value>
+					<value>Cancel</value>
+					<default>Login</default>
+				</Answer>
+				<field type="string" name="Server"></field>
+				<field type="string" name="Username"></field>
+				<field type="string" name="Password"></field>
+				<field type="string" name="Email"></field>
+				<field type="checkbox" name="Anonymous">
+					<default>unchecked</default>
+				</field>
+				<field type="checkbox" name="Save">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="FtpFolderError">
+				<readonly>yes</readonly>
+				<Answer>
+					<value>OK</value>
+					<default>OK</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="DocumentModified">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<value>Cancel</value>
+					<default>No</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="JavascriptError">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>No</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="WindowClosing">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="SuspiciousActiveX">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="Reboot">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>No</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="YesNoCancel">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<value>Cancel</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="YesNo">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="OkCancel">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="Ok">
+				<readonly>yes</readonly>
+				<Answer>
+					<value>OK</value>
+					<default>OK</default>
+				</Answer>
+			</IE_DIALOG>
+		</IE_OPTIONS><PlayBackOptions><nNavigationTimeOut>60</nNavigationTimeOut><nFileDownloadTimeout>0</nFileDownloadTimeout><nStartNavigationTimeOut>3</nStartNavigationTimeOut><bClearCache>0</bClearCache><bClearCookies>0</bClearCookies><nPlaybackMode>1</nPlaybackMode><bUseDOROptimizer>0</bUseDOROptimizer></PlayBackOptions><PassFailDefinition><bCheckErrors>1</bCheckErrors><bCheckSevere>1</bCheckSevere><bCheckWarnings>0</bCheckWarnings><nErrorNum>1</nErrorNum><nRuleCheck>15</nRuleCheck><nWarningNum>15</nWarningNum></PassFailDefinition><ErrorHandling><SubmitButton>1</SubmitButton><NavObject>9</NavObject><Page>4</Page><PageRetryNum>3</PageRetryNum><Object>6</Object></ErrorHandling><EmulationPlaybackOptions><bUseOptimizer>1</bUseOptimizer><bUseHistory>0</bUseHistory><nHistoryLimit>1</nHistoryLimit><bCodeFormatter>0</bCodeFormatter><bCSJSRecovery>1</bCSJSRecovery></EmulationPlaybackOptions><WebServices><sBasicPassword></sBasicPassword><sUserName></sUserName><sProxyHost></sProxyHost><sProxyPassword></sProxyPassword><sProxyUser></sProxyUser><sProxyPort></sProxyPort><nWSClientType>1</nWSClientType></WebServices><BrowserEmulationOptions><bDNSCache>1</bDNSCache><bSSLCache>1</bSSLCache><bKeepAlive>1</bKeepAlive><bRedirectionEnabled>1</bRedirectionEnabled><nRedirectionLimit>10</nRedirectionLimit><strBrowserType>Microsoft Internet Explorer</strBrowserType><strUserAgent>Mozilla/5.0 (compatible; MSIE 8.0; Windows NT 6.0; Trident/4.0; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET CLR 1.0.3705; .NET CLR 1.1.4322)</strUserAgent><strEncodingValue>0</strEncodingValue><bEnforceEncoding>0</bEnforceEncoding></BrowserEmulationOptions><HTTPParametersOptions><bGZipSupport>0</bGZipSupport><bHTTPVersion>1</bHTTPVersion><bMultiIPSupport>0</bMultiIPSupport><bEncodeFormData>1</bEncodeFormData><bAcceptLanguage>0</bAcceptLanguage><strAcceptLanguage></strAcceptLanguage></HTTPParametersOptions><Authentication><sUserName></sUserName><sPassWord></sPassWord><sNTUserName></sNTUserName><sNTUserPassword></sNTUserPassword><sKerberosServer></sKerberosServer><iAuthType>0</iAuthType><sProxyUserName></sProxyUserName><sProxyPassWord></sProxyPassWord><sProxyHost></sProxyHost><sProxyPort></sProxyPort><sSSLClientCertificateFile>C:\Program Files\RadView\WebLOAD\bin\Certificates\server.pem</sSSLClientCertificateFile><sSSLClientCertificatePassword></sSSLClientCertificatePassword></Authentication><BrowserCacheOptions><bFilterApplets>1</bFilterApplets><bFilterImages>1</bFilterImages><bFilterJSFiles>1</bFilterJSFiles><bFilterStyleSheets>1</bFilterStyleSheets><bFilterXMLFiles>1</bFilterXMLFiles><bFilterDynamic>0</bFilterDynamic><nCacheType>3</nCacheType></BrowserCacheOptions><JavaOptions><strSelectedJVM>Default</strSelectedJVM></JavaOptions></Options></AGENDA_OPTIONS><RECORD_OPTIONS><File_Extensions><IgnoredExtensions>|gif|mov|mpg|txt|mpeg|class|cab|jpeg|jpg|</IgnoredExtensions><RecordedExtensions>|asp|htm|html|xml|aspx|jsp|swf|php|cgi|none|</RecordedExtensions><RecordAllExtensions>0</RecordAllExtensions><RecordUnknownExtensions>0</RecordUnknownExtensions></File_Extensions><Content_Types><IgnoredTypes>|image/gif|image/jpeg|</IgnoredTypes><RecordedTypes>|text/html|text/plain|text/xml|application/xml|application/json|application/x-amf|application/x-shockwave-flash|</RecordedTypes><RecordAllTypes>0</RecordAllTypes><RecordUnknownTypes>0</RecordUnknownTypes></Content_Types><Post_Data><Data>|text/xml|application/json; charset=utf-8|application/xml; charset=utf-8|application/json-rpc|text/xml; charset=utf-8|</Data><Datafile>|multipart/form-data|</Datafile><RecordUnknownPostTypesAsFiles>1</RecordUnknownPostTypesAsFiles></Post_Data><Proxy_Options><ProxyPort>9884</ProxyPort><SecondaryProxyName>proxy</SecondaryProxyName><SecondaryProxyExceptions></SecondaryProxyExceptions><SecondaryProxyPort>8081</SecondaryProxyPort><SecondaryProxySslName>proxy</SecondaryProxySslName><SecondaryProxySslPort>8081</SecondaryProxySslPort><UseSecondaryProxy>0</UseSecondaryProxy><CompareSecondaryProxy>1</CompareSecondaryProxy><SecondaryProxyUserName></SecondaryProxyUserName><SecondaryProxyPassword></SecondaryProxyPassword><AuthUserName></AuthUserName><AuthUserPassword></AuthUserPassword><UseTransparentProxy>0</UseTransparentProxy></Proxy_Options><Proxy_Certificates><ServerCertFileName>C:\Program Files\RadView\WebLOAD\bin\Certificates\server.pem</ServerCertFileName><ServerCertPassword>password</ServerCertPassword><ServerCertTrustFileName>C:\Program Files\RadView\WebLOAD\bin\Certificates\root.pem</ServerCertTrustFileName><ClientCertFileName></ClientCertFileName><ClientCertPassword></ClientCertPassword></Proxy_Certificates><Script_Content><CommentRequestHeaders>0</CommentRequestHeaders><CommentResponseHesders>0</CommentResponseHesders><CommentStatus>0</CommentStatus><DecodeQueryString>1</DecodeQueryString><RecordAuthentication>1</RecordAuthentication><RecordHeaders>1</RecordHeaders><RecordProxy>1</RecordProxy><RecordProxyAuthentication>1</RecordProxyAuthentication><RecordRedirectionPath>0</RecordRedirectionPath><RecordRefererHeader>1</RecordRefererHeader><EncodeBinaryData>0</EncodeBinaryData><RecordViewstateData>1</RecordViewstateData><RecordCustomHeaders>1</RecordCustomHeaders><SaveRedirectionHeaders>0</SaveRedirectionHeaders><SaveClientSideCookies>0</SaveClientSideCookies></Script_Content><Default_Encoding_Type><DefaultEncodingType>0</DefaultEncodingType></Default_Encoding_Type><Default_Browser_Selection><BrowserType>0</BrowserType><ListNetscapeAndMicrosoftBrowserws>|Microsoft Internet Explorer|</ListNetscapeAndMicrosoftBrowserws><SelectedBrowser>Microsoft Internet Explorer</SelectedBrowser><OtherBrowser></OtherBrowser><SetAutoProxyDefs>1</SetAutoProxyDefs><ClearCache>1</ClearCache><ClearCookies>0</ClearCookies><CreateNewBrowser>1</CreateNewBrowser><MobileBrowserType></MobileBrowserType><MobileUserAgent></MobileUserAgent><IsSimulateMobile>0</IsSimulateMobile></Default_Browser_Selection><Correlation_options><AutoCorrelation>3</AutoCorrelation><CorrLogLevel>1</CorrLogLevel><CorrAddComments>1</CorrAddComments><CorrRulesFilename>C:\Program Files\RadView\WebLOAD\extensions\Correlation\correlationRules.xml</CorrRulesFilename><CorrLogFilename>C:\Documents and Settings\All Users\Application Data\RadView\WebLOAD\Log\correlation.log</CorrLogFilename><ConvertHiddenFields>0</ConvertHiddenFields><CorrFlex>1</CorrFlex><DSIds>0</DSIds></Correlation_options><Correlation_Auto_options><CorrShowForm>2</CorrShowForm><CorrScoreTreshold>1</CorrScoreTreshold><CorrValueLength>049F5E18</CorrValueLength><CorrValueDelimeters>\#/?+;`': "&lt;&gt;()&amp; =	</CorrValueDelimeters></Correlation_Auto_options><Filter_Url_options><FilteredUrls>|toolbarqueries.google|toolbar.google.com|safebrowsing-cache.google.com|toolbar.google.co.il|http://clients4.google.com/toolbar/*|http://www.google.com/tools/toolbar/*|http://clients5.google.com/complete/search*|http://clients1.google.co.il/complete/search*|https://clients6.google.com/static/proxy.html|urs.microsoft.com|us.update.toolbar.com|windowsupdate.microsof.com|update.microsoft.com|sqm.microsoft.com|pgq.microsoft.com|toolbar.msn.com|g.msn|www.download.windowsupdate.com|</FilteredUrls><OnlyUrls>|</OnlyUrls></Filter_Url_options></RECORD_OPTIONS><ADDITIONAL_INFORMATION><ProjectComments></ProjectComments><CreatedBy></CreatedBy><Custom1></Custom1><Custom2></Custom2><Custom3></Custom3><Subject></Subject><TestDescription></TestDescription><ResultsDescription></ResultsDescription><VersionBuild></VersionBuild><Title>C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\OpenAPI\OAuth_CertApi.wlp</Title></ADDITIONAL_INFORMATION><ORACLE_PROJECT_INCLUDE_PATH></ORACLE_PROJECT_INCLUDE_PATH><BreakPointsMap/></Project>

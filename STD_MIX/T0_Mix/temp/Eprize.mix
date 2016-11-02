@@ -1,0 +1,6 @@
+[eprize_SSO]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\EPrize\eprize_SSO.wlp
+Weight=100
+[Content]
+ScriptsNumber=1
+Scripts=eprize_SSO;

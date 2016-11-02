@@ -1,0 +1,27 @@
+[WEB_ACCTMNGT]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\Web and CSP\WEB_ACCTMNGT.wlp
+Weight=6
+[WEB_BRAND_LOGIN]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\Web and CSP\WEB_BRAND_LOGIN.wlp
+Weight=15
+[WEB_ESTORES]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\Web and CSP\WEB_ESTORES.wlp
+Weight=38
+[WEB_MBP]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\Web and CSP\WEB_MBP.wlp
+Weight=8
+[WEB_PNTSUPDT]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\Web and CSP\WEB_PNTSUPDT.wlp
+Weight=8
+[WEB_REDEEMRW]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\Web and CSP\WEB_REDEEMRW.wlp
+Weight=8
+[WEB_REGWOC]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\Web and CSP\WEB_REGWOC.wlp
+Weight=8
+[WEB_REWARDSE]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\Web and CSP\WEB_REWARDSE.wlp
+Weight=9
+[Content]
+ScriptsNumber=8
+Scripts=WEB_ACCTMNGT;WEB_BRAND_LOGIN;WEB_ESTORES;WEB_MBP;WEB_PNTSUPDT;WEB_REDEEMRW;WEB_REGWOC;WEB_REWARDSE;

@@ -1,0 +1,9 @@
+[get_Collector_Data]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\Preprod scripts\Preprod_RTE_WEBLOAD\get_Collector_Data.wlp
+Weight=50
+[RTE_Get_Points_Balance]
+Path=C:\PerformanceTesting\Projects\STD_TESTSCRIPTS\Preprod scripts\Preprod_RTE_WEBLOAD\RTE_Get_Points_Balance.wlp
+Weight=50
+[Content]
+ScriptsNumber=2
+Scripts=get_Collector_Data;RTE_Get_Points_Balance;

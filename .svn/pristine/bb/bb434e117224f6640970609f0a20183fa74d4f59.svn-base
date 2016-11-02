@@ -1,0 +1,17 @@
+function env_details ()
+{
+
+ //TOOLBAR environment varibales//
+//Nectar_Toolbar_Service_API = "http://192.168.21.38:8080/toolbar-services-impl-nectar/rest";
+//Nectar_Toolbar_Service_API = "http://api.toolbar.nectar.com/rest";
+Nectar_Toolbar_Service_API = "https://10.1.2.51/rest";
+Nectar_Collector_List = "C:\\PerformanceTesting\\Projects\\STD_DATA\\toolbar\\Col_List.txt";
+Search_Terms = "C:\\PerformanceTesting\\Projects\\STD_DATA\\toolbar\\search_terms.txt";
+Toolbar_Deactivate = "C:\\PerformanceTesting\\Projects\\STD_DATA\\toolbar\\Toolbar_Col_Info.txt";
+Toolbar_UID = "C:\\PerformanceTesting\\Projects\\STD_DATA\\toolbar\\Toolbar_UID.txt";
+
+//Toolbar_download_URL = "http://www.softomate.net/ext/Aimia/release/0.4.2";
+//Toolbar_download_URL = "https://download.toolbar.nectar.com/releases/0.4.10";
+Toolbar_download_URL = "https://10.1.2.50/releases/0.4.10";
+ 
+}

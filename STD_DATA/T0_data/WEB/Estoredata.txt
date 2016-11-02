@@ -1,0 +1,9 @@
+sponsors,expedia
+sponsors,hertz
+sponsors,homebase
+sponsors,sainsburys
+sponsors,virgin-trains-east-coast
+sponsors,bp
+brands,easyjet
+brands,argos
+brands,notonthehighstreet

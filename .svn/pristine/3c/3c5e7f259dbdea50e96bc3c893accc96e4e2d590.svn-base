@@ -1,0 +1,532 @@
+<Session><ExecutionTree><Agenda CallBack="Do_Agenda" ClonedXML="0"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0"/><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript></NodeScript><NodeID Visible="0"/><PersistentCorrelation Visible="0"/><InitAgenda Type="JavaScript" ReadOnly="0"/><InitClient Type="JavaScript" ReadOnly="0"/><TerminateAgenda Type="JavaScript" ReadOnly="0"/><TerminateClient Type="JavaScript" ReadOnly="0"/><JSNodeCounter Visible="0">17</JSNodeCounter></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="GlobalVariables"><System Type="Array" ReadOnly="0"><Variable Name="ClientNum" Description="Returns the main thread number for each client"/><Variable Name="GeneratorName()" Description="Returns the name of this load generator as a string"/><Variable Name="GMTDate()" Description="Current date in GMT/UTC as a string"/><Variable Name="Hours()" Description="Current Hour (0-23)"/><Variable Name="LocalDate()" Description="Current date in local time as a string"/><Variable Name="Milliseconds()" Description="Current ms value"/><Variable Name="Minutes()" Description="Current minutes (0-59)"/><Variable Name="RandomNumber()" Description="Generate a random number"/><Variable Name="RoundNum" Description="Returns the number of rounds for the specific client"/><Variable Name="Seconds()" Description="Current seconds (0-59)"/><Variable Name="ThisYear()" Description="Current Year (4-digit, e.g. 2001)"/><Variable Name="Time()" Description="Time in ms since 1/1/1970"/><Variable Name="TodaysDate()" Description="Current date (1-31)"/><Variable Name="TodaysDay()" Description="Current Day (0-6, 0==Sunday)"/><Variable Name="TodaysMonth()" Description="Current Month (0-11)"/><Variable Name="VCUniqueID()" Description="Returns a string unique to this VC"/></System><ParameterManagerData CallBack="Do_ParameterManagerData"><Array ArrayName="Parameters" ArrayLen="0" NewParamIndex="1"/></ParameterManagerData><UserDefined Type="Array" ReadOnly="0"/><InputParameters Type="Array" ReadOnly="0"/><OutputParameters Type="Array" ReadOnly="0"/><GlobalInputFilesParams Type="Array" ReadOnly="0"/><FileCounter>0</FileCounter></PropertyPage></Properties><Round CallBack="Do_Round"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0"/><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript></NodeScript><NodeID Visible="0"/><PersistentCorrelation Visible="0"/></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"><HeaderItem Text="Round 1" Type="Round"/></PropertyPage><PropertyPage Name="Round"><RoundNum>1</RoundNum></PropertyPage></Properties><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="11"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">BeginTransaction::WEB_HOMEPAGE_STEP1</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - BeginTransaction::WEB_HOMEPAGE_STEP1 - ID:2 *****/
+BeginTransaction("WEB_HOMEPAGE_STEP1")
+
+// END WLIDE</NodeScript><NodeID Visible="0">2</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - BeginTransaction::WEB_HOMEPAGE_STEP1 - ID:2 *****/
+BeginTransaction("WEB_HOMEPAGE_STEP1")
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon></BuildingBlockIcon><StartJSBlockLine Visible="0">0</StartJSBlockLine><JSBlockLength Visible="0">5</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage><preview domid="-1"/></Properties><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="12"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">http://hippo-dev:8080/site</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0"/><NodeID Visible="0">3</NodeID><PersistentCorrelation Visible="0"/><JSScriptToInitAgenda Visible="0"/><JSScriptToInitClient Visible="0"/><JSScriptToTerminateAgenda Visible="0"/><JSScriptToTerminateClient Visible="0"/></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"><HeaderItem Text="GET http://hippo-dev:8080/site HTTP/1.1" Type="Request"><HeaderItem Text="Accept: */*" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36" Type="Request"/><HeaderItem Text="Host: hippo-dev:8080" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text="HTTP/1.1 302 Found" Type="Response"><HeaderItem Text="server: Apache-Coyote/1.1" Type="Response"/><HeaderItem Text="location: http://hippo-dev:8080/site/" Type="Response"/><HeaderItem Text="transfer-encoding: chunked" Type="Response"/><HeaderItem Text="date: Wed, 18 Feb 2015 16:18:04 GMT" Type="Response"/></HeaderItem></HeaderItem><HeaderItem Text="GET http://hippo-dev:8080/site/ HTTP/1.1" Type="Request"><HeaderItem Text="Accept: */*" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36" Type="Request"/><HeaderItem Text="Host: hippo-dev:8080" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text="HTTP/1.1 200 OK" Type="Response"><HeaderItem Text="server: Apache-Coyote/1.1" Type="Response"/><HeaderItem Text="content-type: text/html;charset=UTF-8" Type="Response"/><HeaderItem Text="transfer-encoding: chunked" Type="Response"/><HeaderItem Text="date: Wed, 18 Feb 2015 16:18:04 GMT" Type="Response"/></HeaderItem><HeaderItem Text="GET /site/css/styles.css HTTP/1.1" Type="Request"><HeaderItem Text="Accept: */*" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36" Type="Request"/><HeaderItem Text="Host: hippo-dev:8080" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text="Referer: http://hippo-dev:8080/site/" Type="Request"/><HeaderItem Text="HTTP/1.1 200 OK" Type="Response"><HeaderItem Text="server: Apache-Coyote/1.1" Type="Response"/><HeaderItem Text="accept-ranges: bytes" Type="Response"/><HeaderItem Text="etag: W/&quot;149414-1424184464000&quot;" Type="Response"/><HeaderItem Text="last-modified: Tue, 17 Feb 2015 14:47:44 GMT" Type="Response"/><HeaderItem Text="content-type: text/css;charset=UTF-8" Type="Response"/><HeaderItem Text="content-length: 149414" Type="Response"/><HeaderItem Text="date: Wed, 18 Feb 2015 16:18:04 GMT" Type="Response"/></HeaderItem></HeaderItem><HeaderItem Text="GET /ajax/libs/jquery/1.11.1/jquery.min.js HTTP/1.1" Type="Request"><HeaderItem Text="Accept: */*" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36" Type="Request"/><HeaderItem Text="Host: ajax.googleapis.com" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text="Referer: http://hippo-dev:8080/site/" Type="Request"/><HeaderItem Text="HTTP/1.1 200 OK" Type="Response"><HeaderItem Text="vary: Accept-Encoding" Type="Response"/><HeaderItem Text="content-type: text/javascript; charset=UTF-8" Type="Response"/><HeaderItem Text="last-modified: Tue, 13 May 2014 02:26:31 GMT" Type="Response"/><HeaderItem Text="date: Wed, 11 Feb 2015 16:14:39 GMT" Type="Response"/><HeaderItem Text="expires: Thu, 11 Feb 2016 16:14:39 GMT" Type="Response"/><HeaderItem Text="access-control-allow-origin: *" Type="Response"/><HeaderItem Text="timing-allow-origin: *" Type="Response"/><HeaderItem Text="x-content-type-options: nosniff" Type="Response"/><HeaderItem Text="server: sffe" Type="Response"/><HeaderItem Text="x-xss-protection: 1; mode=block" Type="Response"/><HeaderItem Text="cache-control: public, max-age=31536000" Type="Response"/><HeaderItem Text="age: 605005" Type="Response"/><HeaderItem Text="alternate-protocol: 443:quic,p=0.08" Type="Response"/><HeaderItem Text="accept-ranges: none" Type="Response"/><HeaderItem Text="transfer-encoding: chunked" Type="Response"/></HeaderItem></HeaderItem><HeaderItem Text="GET /ajax/jquery.validate/1.13.1/jquery.validate.js HTTP/1.1" Type="Request"><HeaderItem Text="Accept: */*" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36" Type="Request"/><HeaderItem Text="Host: ajax.aspnetcdn.com" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text="Referer: http://hippo-dev:8080/site/" Type="Request"/><HeaderItem Text="HTTP/1.1 200 OK" Type="Response"><HeaderItem Text="cache-control: public, max-age=31536000" Type="Response"/><HeaderItem Text="content-type: application/x-javascript" Type="Response"/><HeaderItem Text="date: Wed, 18 Feb 2015 16:18:04 GMT" Type="Response"/><HeaderItem Text="etag: &quot;09e7deb11e8cf1:0+ident&quot;" Type="Response"/><HeaderItem Text="last-modified: Wed, 15 Oct 2014 00:49:48 GMT" Type="Response"/><HeaderItem Text="p3p: CP=&quot;ALL IND DSP COR ADM CONo CUR CUSo IVAo IVDo PSA PSD TAI TELo OUR SAMo CNT COM INT NAV ONL PHY PRE PUR UNI&quot;" Type="Response"/><HeaderItem Text="server: ECAcc (lcy/1D71)" Type="Response"/><HeaderItem Text="vary: Accept-Encoding" Type="Response"/><HeaderItem Text="vtag: 438161257800000000" Type="Response"/><HeaderItem Text="x-cache: HIT" Type="Response"/><HeaderItem Text="x-ccc: GB" Type="Response"/><HeaderItem Text="x-cid: 2" Type="Response"/><HeaderItem Text="x-powered-by: ASP.NET" Type="Response"/><HeaderItem Text="content-length: 42696" Type="Response"/></HeaderItem></HeaderItem><HeaderItem Text="GET /site/js/bootstrap.min.js HTTP/1.1" Type="Request"><HeaderItem Text="Accept: */*" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36" Type="Request"/><HeaderItem Text="Host: hippo-dev:8080" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text="Referer: http://hippo-dev:8080/site/" Type="Request"/><HeaderItem Text="HTTP/1.1 200 OK" Type="Response"><HeaderItem Text="server: Apache-Coyote/1.1" Type="Response"/><HeaderItem Text="accept-ranges: bytes" Type="Response"/><HeaderItem Text="etag: W/&quot;29558-1423575376000&quot;" Type="Response"/><HeaderItem Text="last-modified: Tue, 10 Feb 2015 13:36:16 GMT" Type="Response"/><HeaderItem Text="content-type: application/javascript;charset=UTF-8" Type="Response"/><HeaderItem Text="content-length: 29558" Type="Response"/><HeaderItem Text="date: Wed, 18 Feb 2015 16:18:04 GMT" Type="Response"/></HeaderItem></HeaderItem><HeaderItem Text="GET /site/js/plugins.js HTTP/1.1" Type="Request"><HeaderItem Text="Accept: */*" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36" Type="Request"/><HeaderItem Text="Host: hippo-dev:8080" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text="Referer: http://hippo-dev:8080/site/" Type="Request"/><HeaderItem Text="HTTP/1.1 200 OK" Type="Response"><HeaderItem Text="server: Apache-Coyote/1.1" Type="Response"/><HeaderItem Text="accept-ranges: bytes" Type="Response"/><HeaderItem Text="etag: W/&quot;0-1423754416000&quot;" Type="Response"/><HeaderItem Text="last-modified: Thu, 12 Feb 2015 15:20:16 GMT" Type="Response"/><HeaderItem Text="content-type: application/javascript;charset=UTF-8" Type="Response"/><HeaderItem Text="content-length: 0" Type="Response"/><HeaderItem Text="date: Wed, 18 Feb 2015 16:18:04 GMT" Type="Response"/></HeaderItem></HeaderItem><HeaderItem Text="GET /site/js/behaviours.js HTTP/1.1" Type="Request"><HeaderItem Text="Accept: */*" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36" Type="Request"/><HeaderItem Text="Host: hippo-dev:8080" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text="Referer: http://hippo-dev:8080/site/" Type="Request"/><HeaderItem Text="HTTP/1.1 200 OK" Type="Response"><HeaderItem Text="server: Apache-Coyote/1.1" Type="Response"/><HeaderItem Text="accept-ranges: bytes" Type="Response"/><HeaderItem Text="etag: W/&quot;1540-1423764316000&quot;" Type="Response"/><HeaderItem Text="last-modified: Thu, 12 Feb 2015 18:05:16 GMT" Type="Response"/><HeaderItem Text="content-type: application/javascript;charset=UTF-8" Type="Response"/><HeaderItem Text="content-length: 1540" Type="Response"/><HeaderItem Text="date: Wed, 18 Feb 2015 16:18:04 GMT" Type="Response"/></HeaderItem></HeaderItem></HeaderItem></PropertyPage><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0">5</StartJSBlockLine><JSBlockLength Visible="0">7</JSBlockLength><GetFrames Visible="0">false</GetFrames><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage><preview domid="1"/></Properties></JavaScriptObject></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="13"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">EndTransaction::WEB_HOMEPAGE_STEP1</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - EndTransaction::WEB_HOMEPAGE_STEP1 - ID:4 *****/
+EndTransaction("WEB_HOMEPAGE_STEP1",WLSuccess,false,"Homepage failed to load")
+
+// END WLIDE</NodeScript><NodeID Visible="0">4</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - EndTransaction::WEB_HOMEPAGE_STEP1 - ID:4 *****/
+EndTransaction("WEB_HOMEPAGE_STEP1",WLSuccess,false,Homepage failed to load)
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon></BuildingBlockIcon><StartJSBlockLine Visible="0">12</StartJSBlockLine><JSBlockLength Visible="0">5</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage><preview domid="-1"/></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="14"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">BeginTransaction::WEB_LOGIN_STEP2</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - BeginTransaction::WEB_LOGIN_STEP2 - ID:5 *****/
+BeginTransaction("WEB_LOGIN_STEP2")
+
+// END WLIDE</NodeScript><NodeID Visible="0">5</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - BeginTransaction::WEB_LOGIN_STEP2 - ID:5 *****/
+BeginTransaction("WEB_LOGIN_STEP2")
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon></BuildingBlockIcon><StartJSBlockLine Visible="0">21</StartJSBlockLine><JSBlockLength Visible="0">5</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage><preview domid="-1"/></Properties><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="15"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">http://hippo-dev:8080/site/login</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0"/><NodeID Visible="0">7</NodeID><PersistentCorrelation Visible="0"/><JSScriptToInitAgenda Visible="0"/><JSScriptToInitClient Visible="0"/><JSScriptToTerminateAgenda Visible="0"/><JSScriptToTerminateClient Visible="0"/></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"><HeaderItem Text="GET http://hippo-dev:8080/site/login HTTP/1.1" Type="Request"><HeaderItem Text="Referer: http://hippo-dev:8080/site/" Type="Request"/><HeaderItem Text="Accept: */*" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36" Type="Request"/><HeaderItem Text="Host: hippo-dev:8080" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text="HTTP/1.1 200 OK" Type="Response"><HeaderItem Text="server: Apache-Coyote/1.1" Type="Response"/><HeaderItem Text="content-type: text/html;charset=UTF-8" Type="Response"/><HeaderItem Text="transfer-encoding: chunked" Type="Response"/><HeaderItem Text="date: Wed, 18 Feb 2015 16:18:04 GMT" Type="Response"/></HeaderItem></HeaderItem></PropertyPage><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0">26</StartJSBlockLine><JSBlockLength Visible="0">6</JSBlockLength><GetFrames Visible="0">false</GetFrames><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage><preview domid="2"/></Properties></JavaScriptObject></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="16"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">EndTransaction::WEB_LOGIN_STEP2</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - EndTransaction::WEB_LOGIN_STEP2 - ID:8 *****/
+EndTransaction("WEB_LOGIN_STEP2",WLSuccess,false,"Login page failed to load")
+
+// END WLIDE</NodeScript><NodeID Visible="0">8</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - EndTransaction::WEB_LOGIN_STEP2 - ID:8 *****/
+EndTransaction("WEB_LOGIN_STEP2",WLSuccess,false,Login page failed to load)
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon></BuildingBlockIcon><StartJSBlockLine Visible="0">32</StartJSBlockLine><JSBlockLength Visible="0">5</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage><preview domid="-1"/></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="17"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">BeginTransaction::WEB_SUBMIT_LOGIN_STEP3</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - BeginTransaction::WEB_SUBMIT_LOGIN_STEP3 - ID:9 *****/
+BeginTransaction("WEB_SUBMIT_LOGIN_STEP3")
+
+// END WLIDE</NodeScript><NodeID Visible="0">9</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - BeginTransaction::WEB_SUBMIT_LOGIN_STEP3 - ID:9 *****/
+BeginTransaction("WEB_SUBMIT_LOGIN_STEP3")
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon></BuildingBlockIcon><StartJSBlockLine Visible="0">41</StartJSBlockLine><JSBlockLength Visible="0">5</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage><preview domid="-1"/></Properties><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="18"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">http://hippo-dev:8080/site/login</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0"/><NodeID Visible="0">11</NodeID><PersistentCorrelation Visible="0"/><JSScriptToInitAgenda Visible="0"/><JSScriptToInitClient Visible="0"/><JSScriptToTerminateAgenda Visible="0"/><JSScriptToTerminateClient Visible="0"/></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"><HeaderItem Text="GET http://hippo-dev:8080/site/login HTTP/1.1" Type="Request"><HeaderItem Text="Referer: http://hippo-dev:8080/site/" Type="Request"/><HeaderItem Text="Accept: */*" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36" Type="Request"/><HeaderItem Text="Host: hippo-dev:8080" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text="HTTP/1.1 200 OK" Type="Response"><HeaderItem Text="server: Apache-Coyote/1.1" Type="Response"/><HeaderItem Text="content-type: text/html;charset=UTF-8" Type="Response"/><HeaderItem Text="transfer-encoding: chunked" Type="Response"/><HeaderItem Text="date: Wed, 18 Feb 2015 16:18:04 GMT" Type="Response"/></HeaderItem></HeaderItem></PropertyPage><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0">46</StartJSBlockLine><JSBlockLength Visible="0">6</JSBlockLength><GetFrames Visible="0">false</GetFrames><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage><preview domid="3"/></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="19"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">http://hippo-dev:8080/site/login/proxy</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0"/><NodeID Visible="0">13</NodeID><PersistentCorrelation Visible="0"/><JSScriptToInitAgenda Visible="0"/><JSScriptToInitClient Visible="0"/><JSScriptToTerminateAgenda Visible="0"/><JSScriptToTerminateClient Visible="0"/></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"><HeaderItem Text="POST http://hippo-dev:8080/site/login/proxy HTTP/1.1" Type="Request"><HeaderItem Text="Origin: http://hippo-dev:8080" Type="Request"/><HeaderItem Text="Referer: http://hippo-dev:8080/site/login" Type="Request"/><HeaderItem Text="Accept: */*" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36" Type="Request"/><HeaderItem Text="Host: hippo-dev:8080" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text="Content-Type: application/x-www-form-urlencoded" Type="Request"/><HeaderItem Text="Content-Length: 51" Type="Request"/><HeaderItem Text="username=50019648014&amp;password=Pa55word&amp;destination=" Type="FormData"/><HeaderItem Text="HTTP/1.1 302 Found" Type="Response"><HeaderItem Text="server: Apache-Coyote/1.1" Type="Response"/><HeaderItem Text="set-cookie: JSESSIONID=4CC2FD7C687C18F41F83601E013AFB22; Path=/site/; HttpOnly" Type="Response"/><HeaderItem Text="location: http://hippo-dev:8080/site/login/resource;jsessionid=4CC2FD7C687C18F41F83601E013AFB22?token=873073e7-beb7-438f-92f2-3c927d2be15b" Type="Response"/><HeaderItem Text="content-length: 0" Type="Response"/><HeaderItem Text="date: Wed, 18 Feb 2015 16:18:04 GMT" Type="Response"/></HeaderItem></HeaderItem><HeaderItem Text="GET http://hippo-dev:8080/site/login/resource;jsessionid=4CC2FD7C687C18F41F83601E013AFB22?token=873073e7-beb7-438f-92f2-3c927d2be15b HTTP/1.1" Type="Request"><HeaderItem Text="Origin: http://hippo-dev:8080" Type="Request"/><HeaderItem Text="Referer: http://hippo-dev:8080/site/login" Type="Request"/><HeaderItem Text="Accept: */*" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36" Type="Request"/><HeaderItem Text="Host: hippo-dev:8080" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text="Cookie: JSESSIONID=4CC2FD7C687C18F41F83601E013AFB22" Type="Request"/><HeaderItem Text="Content-Type: application/x-www-form-urlencoded" Type="Request"/><HeaderItem Text="HTTP/1.1 200 OK" Type="Response"><HeaderItem Text="server: Apache-Coyote/1.1" Type="Response"/><HeaderItem Text="cache-control: private" Type="Response"/><HeaderItem Text="expires: Thu, 01 Jan 1970 01:00:00 GMT" Type="Response"/><HeaderItem Text="set-cookie: JSESSIONID=9537814B485536F198D832ECB960F5AF; Path=/site/; HttpOnly" Type="Response"/><HeaderItem Text="content-type: text/html;charset=UTF-8" Type="Response"/><HeaderItem Text="transfer-encoding: chunked" Type="Response"/><HeaderItem Text="date: Wed, 18 Feb 2015 16:18:04 GMT" Type="Response"/></HeaderItem></HeaderItem></PropertyPage><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0">52</StartJSBlockLine><JSBlockLength Visible="0">15</JSBlockLength><GetFrames Visible="0">false</GetFrames><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage><preview domid="4"/></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="20"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">http://hippo-dev:8080/site/login/j_security_check</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0"/><NodeID Visible="0">14</NodeID><PersistentCorrelation Visible="0"/><JSScriptToInitAgenda Visible="0"/><JSScriptToInitClient Visible="0"/><JSScriptToTerminateAgenda Visible="0"/><JSScriptToTerminateClient Visible="0"/></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"><HeaderItem Text="POST http://hippo-dev:8080/site/login/j_security_check HTTP/1.1" Type="Request"><HeaderItem Text="Origin: http://hippo-dev:8080" Type="Request"/><HeaderItem Text="Referer: http://hippo-dev:8080/site/login/resource;jsessionid=F066C37ABCA12FAEA426F7F93AE6B4C6?token=484b206a-5c6a-4c84-918b-e5fea728deb1" Type="Request"/><HeaderItem Text="Accept: */*" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36" Type="Request"/><HeaderItem Text="Host: hippo-dev:8080" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text="Cookie: JSESSIONID=9537814B485536F198D832ECB960F5AF" Type="Request"/><HeaderItem Text="Content-Type: application/x-www-form-urlencoded" Type="Request"/><HeaderItem Text="Content-Length: 42" Type="Request"/><HeaderItem Text="j_username=50019648014&amp;j_password=Pa55word" Type="FormData"/><HeaderItem Text="HTTP/1.1 302 Found" Type="Response"><HeaderItem Text="server: Apache-Coyote/1.1" Type="Response"/><HeaderItem Text="location: http://hippo-dev:8080/site/login/resource;jsessionid=4CC2FD7C687C18F41F83601E013AFB22?token=873073e7-beb7-438f-92f2-3c927d2be15b" Type="Response"/><HeaderItem Text="content-length: 0" Type="Response"/><HeaderItem Text="date: Wed, 18 Feb 2015 16:18:05 GMT" Type="Response"/></HeaderItem></HeaderItem><HeaderItem Text="GET http://hippo-dev:8080/site/login/resource;jsessionid=4CC2FD7C687C18F41F83601E013AFB22?token=873073e7-beb7-438f-92f2-3c927d2be15b HTTP/1.1" Type="Request"><HeaderItem Text="Origin: http://hippo-dev:8080" Type="Request"/><HeaderItem Text="Referer: http://hippo-dev:8080/site/login/resource;jsessionid=F066C37ABCA12FAEA426F7F93AE6B4C6?token=484b206a-5c6a-4c84-918b-e5fea728deb1" Type="Request"/><HeaderItem Text="Accept: */*" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36" Type="Request"/><HeaderItem Text="Host: hippo-dev:8080" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text="Cookie: JSESSIONID=9537814B485536F198D832ECB960F5AF" Type="Request"/><HeaderItem Text="Content-Type: application/x-www-form-urlencoded" Type="Request"/><HeaderItem Text="HTTP/1.1 302 Found" Type="Response"><HeaderItem Text="server: Apache-Coyote/1.1" Type="Response"/><HeaderItem Text="set-cookie: JSESSIONID=C2B1EC9F78115399EDE21790CB0DB1BA; Path=/site/; HttpOnly" Type="Response"/><HeaderItem Text="cache-control: private" Type="Response"/><HeaderItem Text="expires: Thu, 01 Jan 1970 01:00:00 GMT" Type="Response"/><HeaderItem Text="location: http://hippo-dev:8080/site/" Type="Response"/><HeaderItem Text="content-length: 0" Type="Response"/><HeaderItem Text="date: Wed, 18 Feb 2015 16:18:05 GMT" Type="Response"/></HeaderItem></HeaderItem><HeaderItem Text="GET http://hippo-dev:8080/site/ HTTP/1.1" Type="Request"><HeaderItem Text="Origin: http://hippo-dev:8080" Type="Request"/><HeaderItem Text="Referer: http://hippo-dev:8080/site/login/resource;jsessionid=F066C37ABCA12FAEA426F7F93AE6B4C6?token=484b206a-5c6a-4c84-918b-e5fea728deb1" Type="Request"/><HeaderItem Text="Accept: */*" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36" Type="Request"/><HeaderItem Text="Host: hippo-dev:8080" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text="Cookie: JSESSIONID=C2B1EC9F78115399EDE21790CB0DB1BA" Type="Request"/><HeaderItem Text="Content-Type: application/x-www-form-urlencoded" Type="Request"/><HeaderItem Text="HTTP/1.1 200 OK" Type="Response"><HeaderItem Text="server: Apache-Coyote/1.1" Type="Response"/><HeaderItem Text="content-type: text/html;charset=UTF-8" Type="Response"/><HeaderItem Text="transfer-encoding: chunked" Type="Response"/><HeaderItem Text="date: Wed, 18 Feb 2015 16:18:05 GMT" Type="Response"/></HeaderItem></HeaderItem></PropertyPage><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0">67</StartJSBlockLine><JSBlockLength Visible="0">12</JSBlockLength><GetFrames Visible="0">false</GetFrames><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage><preview domid="5"/></Properties></JavaScriptObject></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="21"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">EndTransaction::WEB_SUBMIT_LOGIN_STEP3</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - EndTransaction::WEB_SUBMIT_LOGIN_STEP3 - ID:15 *****/
+EndTransaction("WEB_SUBMIT_LOGIN_STEP3",WLSuccess,false,"login failed")
+
+// END WLIDE</NodeScript><NodeID Visible="0">15</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - EndTransaction::WEB_SUBMIT_LOGIN_STEP3 - ID:15 *****/
+EndTransaction("WEB_SUBMIT_LOGIN_STEP3",WLSuccess,false,bka)
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon></BuildingBlockIcon><StartJSBlockLine Visible="0">79</StartJSBlockLine><JSBlockLength Visible="0">5</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage><preview domid="-1"/></Properties></JavaScriptObject></Round></Agenda></ExecutionTree><VisualAgenda><Agenda CallBack="Do_Agenda" ClonedXML="0" StartJSBlockLine="0" JSBlockLength="0"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0"/><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript></NodeScript><NodeID Visible="0">1</NodeID><PersistentCorrelation Visible="0"/><InitAgenda Type="JavaScript" ReadOnly="0"></InitAgenda><InitClient Type="JavaScript" ReadOnly="0"></InitClient><TerminateAgenda Type="JavaScript" ReadOnly="0"></TerminateAgenda><TerminateClient Type="JavaScript" ReadOnly="0"></TerminateClient><JSNodeCounter Visible="0">0</JSNodeCounter></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="GlobalVariables"><System Type="Array" ReadOnly="0"><Variable Name="ClientNum" Description="Returns the main thread number for each client"/><Variable Name="GeneratorName()" Description="Returns the name of this load generator as a string"/><Variable Name="GMTDate()" Description="Current date in GMT/UTC as a string"/><Variable Name="Hours()" Description="Current Hour (0-23)"/><Variable Name="LocalDate()" Description="Current date in local time as a string"/><Variable Name="Milliseconds()" Description="Current ms value"/><Variable Name="Minutes()" Description="Current minutes (0-59)"/><Variable Name="RandomNumber()" Description="Generate a random number"/><Variable Name="RoundNum" Description="Returns the number of rounds for the specific client"/><Variable Name="Seconds()" Description="Current seconds (0-59)"/><Variable Name="ThisYear()" Description="Current Year (4-digit, e.g. 2001)"/><Variable Name="Time()" Description="Time in ms since 1/1/1970"/><Variable Name="TodaysDate()" Description="Current date (1-31)"/><Variable Name="TodaysDay()" Description="Current Day (0-6, 0==Sunday)"/><Variable Name="TodaysMonth()" Description="Current Month (0-11)"/><Variable Name="VCUniqueID()" Description="Returns a string unique to this VC"/></System><ParameterManagerData CallBack="Do_ParameterManagerData"><Array ArrayName="Parameters" ArrayLen="0" NewParamIndex="1"/></ParameterManagerData><UserDefined Type="Array" ReadOnly="0"/><InputParameters Type="Array" ReadOnly="0"/><OutputParameters Type="Array" ReadOnly="0"/><GlobalInputFilesParams Type="Array" ReadOnly="0"/><FileCounter>0</FileCounter></PropertyPage></Properties><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="13"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">BeginTransaction::WEB_HOMEPAGE_STEP1</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - BeginTransaction::WEB_HOMEPAGE_STEP1 - ID:2 *****/
+BeginTransaction("WEB_HOMEPAGE_STEP1")
+
+// END WLIDE</NodeScript><NodeID Visible="0">2</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - BeginTransaction::WEB_HOMEPAGE_STEP1 - ID:2 *****/
+BeginTransaction("WEB_HOMEPAGE_STEP1")
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon></BuildingBlockIcon><StartJSBlockLine Visible="0">0</StartJSBlockLine><JSBlockLength Visible="0">5</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage><preview domid="-1"/></Properties><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="14"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">http://hippo-dev:8080/site</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - URL : http://hippo-dev:8080/site - ID:3 *****/
+wlGlobals.GetFrames = false 
+wlGlobals.UserAgent = "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36"
+wlHttp.Get("http://hippo-dev:8080/site")
+
+// END WLIDE</NodeScript><NodeID Visible="0">3</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - URL : http://hippo-dev:8080/site - ID:3 *****/
+wlGlobals.GetFrames = false 
+wlGlobals.UserAgent = "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36"
+wlHttp.Get("http://hippo-dev:8080/site")
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"><HeaderItem Text=" GET http://hippo-dev:8080/site HTTP/1.1" Type="Request"><HeaderItem Text="Host: hippo-dev:8080" Type="Request"/><HeaderItem Text="Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36" Type="Request"/><HeaderItem Text="Accept-Encoding: gzip, deflate, sdch" Type="Request"/><HeaderItem Text="Accept-Language: en-US,en;q=0.8" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text=" HTTP/1.1 302 Found" Type="Response"><HeaderItem Text="Server: Apache-Coyote/1.1" Type="Response"/><HeaderItem Text="Location: http://hippo-dev:8080/site/" Type="Response"/><HeaderItem Text="Transfer-Encoding: chunked" Type="Response"/><HeaderItem Text="Date: Wed, 18 Feb 2015 16:12:23 GMT" Type="Response"/></HeaderItem></HeaderItem><HeaderItem Text=" GET http://hippo-dev:8080/site/ HTTP/1.1" Type="Request"><HeaderItem Text="Host: hippo-dev:8080" Type="Request"/><HeaderItem Text="Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36" Type="Request"/><HeaderItem Text="Accept-Encoding: gzip, deflate, sdch" Type="Request"/><HeaderItem Text="Accept-Language: en-US,en;q=0.8" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text=" HTTP/1.1 200 OK" Type="Response"><HeaderItem Text="Server: Apache-Coyote/1.1" Type="Response"/><HeaderItem Text="Content-Type: text/html;charset=UTF-8" Type="Response"/><HeaderItem Text="Transfer-Encoding: chunked" Type="Response"/><HeaderItem Text="Date: Wed, 18 Feb 2015 16:12:23 GMT" Type="Response"/></HeaderItem></HeaderItem></PropertyPage><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0">5</StartJSBlockLine><JSBlockLength Visible="0">7</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0">true</IsProtocolRecordedNode><TestTalkMessageID Visible="0">1</TestTalkMessageID><RecordingCallback Visible="0">OnGet</RecordingCallback><Encoded Visible="0">true</Encoded><ContentType Visible="0"></ContentType></PropertyPage><preview domid="1"/></Properties></JavaScriptObject></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="15"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">EndTransaction::WEB_HOMEPAGE_STEP1</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - EndTransaction::WEB_HOMEPAGE_STEP1 - ID:4 *****/
+EndTransaction("WEB_HOMEPAGE_STEP1",WLSuccess,false,"Homepage failed to load")
+
+// END WLIDE</NodeScript><NodeID Visible="0">4</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - EndTransaction::WEB_HOMEPAGE_STEP1 - ID:4 *****/
+EndTransaction("WEB_HOMEPAGE_STEP1",WLSuccess,false,Homepage failed to load)
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon></BuildingBlockIcon><StartJSBlockLine Visible="0">12</StartJSBlockLine><JSBlockLength Visible="0">5</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage><preview domid="-1"/></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="16"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">Sleep</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - Sleep - ID:16 *****/
+Sleep(72952)
+// END WLIDE</NodeScript><NodeID Visible="0">16</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - Sleep - ID:16 *****/
+Sleep(72952)
+// END WLIDE</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0">17</StartJSBlockLine><JSBlockLength Visible="0">4</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="17"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">BeginTransaction::WEB_LOGIN_STEP2</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - BeginTransaction::WEB_LOGIN_STEP2 - ID:5 *****/
+BeginTransaction("WEB_LOGIN_STEP2")
+
+// END WLIDE</NodeScript><NodeID Visible="0">5</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - BeginTransaction::WEB_LOGIN_STEP2 - ID:5 *****/
+BeginTransaction("WEB_LOGIN_STEP2")
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon></BuildingBlockIcon><StartJSBlockLine Visible="0">21</StartJSBlockLine><JSBlockLength Visible="0">5</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage><preview domid="-1"/></Properties><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="18"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">http://hippo-dev:8080/site/login</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - URL : http://hippo-dev:8080/site/login - ID:7 *****/ 
+wlHttp.Header["Referer"] = "http://hippo-dev:8080/site/"
+wlHttp.Get("http://hippo-dev:8080/site/login")
+
+// END WLIDE</NodeScript><NodeID Visible="0">7</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - URL : http://hippo-dev:8080/site/login - ID:7 *****/ 
+wlHttp.Header["Referer"] = "http://hippo-dev:8080/site/"
+wlHttp.Get("http://hippo-dev:8080/site/login")
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"><HeaderItem Text=" GET http://hippo-dev:8080/site/login HTTP/1.1" Type="Request"><HeaderItem Text="Host: hippo-dev:8080" Type="Request"/><HeaderItem Text="Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36" Type="Request"/><HeaderItem Text="Referer: http://hippo-dev:8080/site/" Type="Request"/><HeaderItem Text="Accept-Encoding: gzip, deflate, sdch" Type="Request"/><HeaderItem Text="Accept-Language: en-US,en;q=0.8" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text=" HTTP/1.1 200 OK" Type="Response"><HeaderItem Text="Server: Apache-Coyote/1.1" Type="Response"/><HeaderItem Text="Content-Type: text/html;charset=UTF-8" Type="Response"/><HeaderItem Text="Transfer-Encoding: chunked" Type="Response"/><HeaderItem Text="Date: Wed, 18 Feb 2015 16:13:36 GMT" Type="Response"/></HeaderItem></HeaderItem></PropertyPage><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0">26</StartJSBlockLine><JSBlockLength Visible="0">6</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0">true</IsProtocolRecordedNode><TestTalkMessageID Visible="0">2</TestTalkMessageID><RecordingCallback Visible="0">OnGet</RecordingCallback><Encoded Visible="0">true</Encoded><ContentType Visible="0"></ContentType></PropertyPage><preview domid="8"/></Properties></JavaScriptObject></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="19"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">EndTransaction::WEB_LOGIN_STEP2</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - EndTransaction::WEB_LOGIN_STEP2 - ID:8 *****/
+EndTransaction("WEB_LOGIN_STEP2",WLSuccess,false,"Login page failed to load")
+
+// END WLIDE</NodeScript><NodeID Visible="0">8</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - EndTransaction::WEB_LOGIN_STEP2 - ID:8 *****/
+EndTransaction("WEB_LOGIN_STEP2",WLSuccess,false,Login page failed to load)
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon></BuildingBlockIcon><StartJSBlockLine Visible="0">32</StartJSBlockLine><JSBlockLength Visible="0">5</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage><preview domid="-1"/></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="20"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">Sleep</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - Sleep - ID:17 *****/
+Sleep(71628)
+// END WLIDE</NodeScript><NodeID Visible="0">17</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - Sleep - ID:17 *****/
+Sleep(71628)
+// END WLIDE</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0">37</StartJSBlockLine><JSBlockLength Visible="0">4</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="21"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">BeginTransaction::WEB_SUBMIT_LOGIN_STEP3</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - BeginTransaction::WEB_SUBMIT_LOGIN_STEP3 - ID:9 *****/
+BeginTransaction("WEB_SUBMIT_LOGIN_STEP3")
+
+// END WLIDE</NodeScript><NodeID Visible="0">9</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - BeginTransaction::WEB_SUBMIT_LOGIN_STEP3 - ID:9 *****/
+BeginTransaction("WEB_SUBMIT_LOGIN_STEP3")
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon></BuildingBlockIcon><StartJSBlockLine Visible="0">41</StartJSBlockLine><JSBlockLength Visible="0">5</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage><preview domid="-1"/></Properties><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="22"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">http://hippo-dev:8080/site/login</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - URL : http://hippo-dev:8080/site/login - ID:11 *****/ 
+wlHttp.Header["Referer"] = "http://hippo-dev:8080/site/"
+wlHttp.Get("http://hippo-dev:8080/site/login")
+
+// END WLIDE</NodeScript><NodeID Visible="0">11</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - URL : http://hippo-dev:8080/site/login - ID:11 *****/ 
+wlHttp.Header["Referer"] = "http://hippo-dev:8080/site/"
+wlHttp.Get("http://hippo-dev:8080/site/login")
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"><HeaderItem Text=" GET http://hippo-dev:8080/site/login HTTP/1.1" Type="Request"><HeaderItem Text="Host: hippo-dev:8080" Type="Request"/><HeaderItem Text="Cache-Control: max-age=0" Type="Request"/><HeaderItem Text="Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36" Type="Request"/><HeaderItem Text="Referer: http://hippo-dev:8080/site/" Type="Request"/><HeaderItem Text="Accept-Encoding: gzip, deflate, sdch" Type="Request"/><HeaderItem Text="Accept-Language: en-US,en;q=0.8" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text=" HTTP/1.1 200 OK" Type="Response"><HeaderItem Text="Server: Apache-Coyote/1.1" Type="Response"/><HeaderItem Text="Content-Type: text/html;charset=UTF-8" Type="Response"/><HeaderItem Text="Transfer-Encoding: chunked" Type="Response"/><HeaderItem Text="Date: Wed, 18 Feb 2015 16:14:47 GMT" Type="Response"/></HeaderItem></HeaderItem></PropertyPage><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0">46</StartJSBlockLine><JSBlockLength Visible="0">6</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0">true</IsProtocolRecordedNode><TestTalkMessageID Visible="0">3</TestTalkMessageID><RecordingCallback Visible="0">OnGet</RecordingCallback><Encoded Visible="0">true</Encoded><ContentType Visible="0"></ContentType></PropertyPage><preview domid="14"/></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="23"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">http://hippo-dev:8080/site/login/proxy</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - URL : http://hippo-dev:8080/site/login/proxy - ID:13 *****/ 
+wlHttp.Header["Origin"] = "http://hippo-dev:8080"
+wlHttp.Header["Referer"] = "http://hippo-dev:8080/site/login"
+wlHttp.FormdataEncodingType = 1
+wlHttp.ContentType = "application/x-www-form-urlencoded"
+wlHttp.FormData["username"] = "50019648014"
+wlHttp.FormData["password"] = "Pa55word"
+wlHttp.FormData["destination"] = "$WL$EMPTY$STRING$"
+wlHttp.Post("http://hippo-dev:8080/site/login/proxy")
+// WLCORR-INFO	:  Extracting the dynamic value from the response according to Correlation Rule New1 - r0_j_username
+corr_New1_r0_j_username_13 = GetElementValueByName("j_username")
+ValidateCorrelation( /*Original value was*/ "50019648014", /*extracted into*/ corr_New1_r0_j_username_13, "corr_New1_r0_j_username_13");
+
+// END WLIDE</NodeScript><NodeID Visible="0">13</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - URL : http://hippo-dev:8080/site/login/proxy - ID:13 *****/ 
+wlHttp.Header["Origin"] = "http://hippo-dev:8080"
+wlHttp.Header["Referer"] = "http://hippo-dev:8080/site/login"
+wlHttp.FormdataEncodingType = 1
+wlHttp.ContentType = "application/x-www-form-urlencoded"
+wlHttp.FormData["username"] = "50019648014"
+wlHttp.FormData["password"] = "$WL$EMPTY$STRING$"
+wlHttp.FormData["destination"] = "$WL$EMPTY$STRING$"
+wlHttp.Post("http://hippo-dev:8080/site/login/proxy")
+// WLCORR-INFO	:  Extracting the dynamic value from the response according to Correlation Rule New1 - r0_j_username
+corr_New1_r0_j_username_13 = GetElementValueByName("j_username")
+ValidateCorrelation( /*Original value was*/ "50019648014", /*extracted into*/ corr_New1_r0_j_username_13, "corr_New1_r0_j_username_13");
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"><HeaderItem Text=" POST http://hippo-dev:8080/site/login/proxy HTTP/1.1" Type="Request"><HeaderItem Text="Host: hippo-dev:8080" Type="Request"/><HeaderItem Text="Content-Length: 43" Type="Request"/><HeaderItem Text="Cache-Control: max-age=0" Type="Request"/><HeaderItem Text="Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8" Type="Request"/><HeaderItem Text="Origin: http://hippo-dev:8080" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36" Type="Request"/><HeaderItem Text="Content-Type: application/x-www-form-urlencoded" Type="Request"/><HeaderItem Text="Referer: http://hippo-dev:8080/site/login" Type="Request"/><HeaderItem Text="Accept-Encoding: gzip, deflate" Type="Request"/><HeaderItem Text="Accept-Language: en-US,en;q=0.8" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text="username=50019648014&amp;password=&amp;destination=" Type="FormData"/><HeaderItem Text=" HTTP/1.1 302 Found" Type="Response"><HeaderItem Text="Server: Apache-Coyote/1.1" Type="Response"/><HeaderItem Text="Set-Cookie: JSESSIONID=F066C37ABCA12FAEA426F7F93AE6B4C6; Path=/site/; HttpOnly" Type="Response"/><HeaderItem Text="Location: http://hippo-dev:8080/site/login/resource;jsessionid=F066C37ABCA12FAEA426F7F93AE6B4C6?token=484b206a-5c6a-4c84-918b-e5fea728deb1" Type="Response"/><HeaderItem Text="Content-Length: 0" Type="Response"/><HeaderItem Text="Date: Wed, 18 Feb 2015 16:14:52 GMT" Type="Response"/></HeaderItem></HeaderItem><HeaderItem Text=" GET http://hippo-dev:8080/site/login/resource;jsessionid=F066C37ABCA12FAEA426F7F93AE6B4C6?token=484b206a-5c6a-4c84-918b-e5fea728deb1 HTTP/1.1" Type="Request"><HeaderItem Text="Host: hippo-dev:8080" Type="Request"/><HeaderItem Text="Cache-Control: max-age=0" Type="Request"/><HeaderItem Text="Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36" Type="Request"/><HeaderItem Text="Referer: http://hippo-dev:8080/site/login" Type="Request"/><HeaderItem Text="Accept-Encoding: gzip, deflate, sdch" Type="Request"/><HeaderItem Text="Accept-Language: en-US,en;q=0.8" Type="Request"/><HeaderItem Text="Cookie: JSESSIONID=F066C37ABCA12FAEA426F7F93AE6B4C6" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text=" HTTP/1.1 200 OK" Type="Response"><HeaderItem Text="Server: Apache-Coyote/1.1" Type="Response"/><HeaderItem Text="Cache-Control: private" Type="Response"/><HeaderItem Text="Expires: Thu, 01 Jan 1970 01:00:00 GMT" Type="Response"/><HeaderItem Text="Set-Cookie: JSESSIONID=A17A8641C2A7DFA2B3A0635B397C71BB; Path=/site/; HttpOnly" Type="Response"/><HeaderItem Text="Content-Type: text/html;charset=UTF-8" Type="Response"/><HeaderItem Text="Transfer-Encoding: chunked" Type="Response"/><HeaderItem Text="Date: Wed, 18 Feb 2015 16:14:52 GMT" Type="Response"/></HeaderItem></HeaderItem></PropertyPage><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0">52</StartJSBlockLine><JSBlockLength Visible="0">15</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0">true</IsProtocolRecordedNode><TestTalkMessageID Visible="0">4</TestTalkMessageID><RecordingCallback Visible="0">OnPost</RecordingCallback><Encoded Visible="0">true</Encoded><ContentType Visible="0">application/x-www-form-urlencoded</ContentType></PropertyPage><preview domid="15"/></Properties></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="24"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">http://hippo-dev:8080/site/login/j_security_check</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - URL : http://hippo-dev:8080/site/login/j_security_check - ID:14 *****/ 
+wlHttp.Header["Origin"] = "http://hippo-dev:8080"
+wlHttp.Header["Referer"] = "http://hippo-dev:8080/site/login/resource;jsessionid=F066C37ABCA12FAEA426F7F93AE6B4C6?token=484b206a-5c6a-4c84-918b-e5fea728deb1"
+wlHttp.FormdataEncodingType = 1
+wlHttp.ContentType = "application/x-www-form-urlencoded"
+// WLCORR-INFO	:  Replacing "50019648014" with correlation parameter corr_New1_r0_j_username_13
+wlHttp.FormData["j_username"] = corr_New1_r0_j_username_13
+wlHttp.FormData["j_password"] = "Pa55word"
+wlHttp.Post("http://hippo-dev:8080/site/login/j_security_check")
+
+// END WLIDE</NodeScript><NodeID Visible="0">14</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - URL : http://hippo-dev:8080/site/login/j_security_check - ID:14 *****/ 
+wlHttp.Header["Origin"] = "http://hippo-dev:8080"
+wlHttp.Header["Referer"] = "http://hippo-dev:8080/site/login/resource;jsessionid=F066C37ABCA12FAEA426F7F93AE6B4C6?token=484b206a-5c6a-4c84-918b-e5fea728deb1"
+wlHttp.FormdataEncodingType = 1
+wlHttp.ContentType = "application/x-www-form-urlencoded"
+// WLCORR-INFO	:  Replacing "50019648014" with correlation parameter corr_New1_r0_j_username_13
+wlHttp.FormData["j_username"] = corr_New1_r0_j_username_13
+wlHttp.FormData["j_password"] = "$WL$EMPTY$STRING$"
+wlHttp.Post("http://hippo-dev:8080/site/login/j_security_check")
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"><HeaderItem Text=" POST http://hippo-dev:8080/site/login/j_security_check HTTP/1.1" Type="Request"><HeaderItem Text="Host: hippo-dev:8080" Type="Request"/><HeaderItem Text="Content-Length: 34" Type="Request"/><HeaderItem Text="Cache-Control: max-age=0" Type="Request"/><HeaderItem Text="Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8" Type="Request"/><HeaderItem Text="Origin: http://hippo-dev:8080" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36" Type="Request"/><HeaderItem Text="Content-Type: application/x-www-form-urlencoded" Type="Request"/><HeaderItem Text="Referer: http://hippo-dev:8080/site/login/resource;jsessionid=F066C37ABCA12FAEA426F7F93AE6B4C6?token=484b206a-5c6a-4c84-918b-e5fea728deb1" Type="Request"/><HeaderItem Text="Accept-Encoding: gzip, deflate" Type="Request"/><HeaderItem Text="Accept-Language: en-US,en;q=0.8" Type="Request"/><HeaderItem Text="Cookie: JSESSIONID=A17A8641C2A7DFA2B3A0635B397C71BB" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text="j_username=50019648014&amp;j_password=" Type="FormData"/><HeaderItem Text=" HTTP/1.1 302 Found" Type="Response"><HeaderItem Text="Server: Apache-Coyote/1.1" Type="Response"/><HeaderItem Text="Location: http://hippo-dev:8080/site/login" Type="Response"/><HeaderItem Text="Content-Length: 0" Type="Response"/><HeaderItem Text="Date: Wed, 18 Feb 2015 16:14:52 GMT" Type="Response"/></HeaderItem></HeaderItem><HeaderItem Text=" GET http://hippo-dev:8080/site/login HTTP/1.1" Type="Request"><HeaderItem Text="Host: hippo-dev:8080" Type="Request"/><HeaderItem Text="Cache-Control: max-age=0" Type="Request"/><HeaderItem Text="Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8" Type="Request"/><HeaderItem Text="User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36" Type="Request"/><HeaderItem Text="Referer: http://hippo-dev:8080/site/login/resource;jsessionid=F066C37ABCA12FAEA426F7F93AE6B4C6?token=484b206a-5c6a-4c84-918b-e5fea728deb1" Type="Request"/><HeaderItem Text="Accept-Encoding: gzip, deflate, sdch" Type="Request"/><HeaderItem Text="Accept-Language: en-US,en;q=0.8" Type="Request"/><HeaderItem Text="Cookie: JSESSIONID=A17A8641C2A7DFA2B3A0635B397C71BB" Type="Request"/><HeaderItem Text="Connection: Keep-Alive" Type="Request"/><HeaderItem Text=" HTTP/1.1 200 OK" Type="Response"><HeaderItem Text="Server: Apache-Coyote/1.1" Type="Response"/><HeaderItem Text="Content-Type: text/html;charset=UTF-8" Type="Response"/><HeaderItem Text="Transfer-Encoding: chunked" Type="Response"/><HeaderItem Text="Date: Wed, 18 Feb 2015 16:14:52 GMT" Type="Response"/></HeaderItem></HeaderItem></PropertyPage><PropertyPage Name="NodeProperties"><BuildingBlockIcon/><StartJSBlockLine Visible="0">67</StartJSBlockLine><JSBlockLength Visible="0">12</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0">true</IsProtocolRecordedNode><TestTalkMessageID Visible="0">5</TestTalkMessageID><RecordingCallback Visible="0">OnPost</RecordingCallback><Encoded Visible="0">true</Encoded><ContentType Visible="0">application/x-www-form-urlencoded</ContentType></PropertyPage><preview domid="16"/></Properties></JavaScriptObject></JavaScriptObject><JavaScriptObject CallBack="Do_JavaScriptObject" ClonedXML="0" ObjectID="25"><Properties><PropertyPage Name="Attributes"><ItemName ReadOnly="0">EndTransaction::WEB_SUBMIT_LOGIN_STEP3</ItemName><Comments Type="MultiLineString" ReadOnly="0"/></PropertyPage><PropertyPage Name="JavaScript" Visible="0"><NodeScript ReadOnly="0">/***** WLIDE - EndTransaction::WEB_SUBMIT_LOGIN_STEP3 - ID:15 *****/
+EndTransaction("WEB_SUBMIT_LOGIN_STEP3",WLSuccess,false,"login failed")
+
+// END WLIDE</NodeScript><NodeID Visible="0">15</NodeID><PersistentCorrelation Visible="0">/***** WLIDE - EndTransaction::WEB_SUBMIT_LOGIN_STEP3 - ID:15 *****/
+EndTransaction("WEB_SUBMIT_LOGIN_STEP3",WLSuccess,false,bka)
+
+// END WLIDE
+</PersistentCorrelation><JSScriptToInitAgenda Visible="0"></JSScriptToInitAgenda><JSScriptToInitClient Visible="0"></JSScriptToInitClient><JSScriptToTerminateAgenda Visible="0"></JSScriptToTerminateAgenda><JSScriptToTerminateClient Visible="0"></JSScriptToTerminateClient></PropertyPage><PropertyPage Name="HTTPHeaders" Visible="0"/><PropertyPage Name="NodeProperties"><BuildingBlockIcon></BuildingBlockIcon><StartJSBlockLine Visible="0">79</StartJSBlockLine><JSBlockLength Visible="0">5</JSBlockLength><GetFrames Visible="0"/><IsProtocolRecordedNode Visible="0"/><TestTalkMessageID Visible="0"/><RecordingCallback Visible="0"/><Encoded Visible="0"/><ContentType Visible="0"/></PropertyPage><preview domid="-1"/></Properties></JavaScriptObject></Agenda></VisualAgenda><LogWindow><LogMessage Severity="1" Message="*** Agenda Execution Start Time:  Wed Feb 18 16:18:03 2015 ***" EventID="-1" Time="0"/><LogMessage Severity="1" Message="Start round 1 (1 of 1)" EventID="-1" Time="0.125"/><LogMessage Severity="1" Message="Correlation may not have been required, extracted value is the same as original value.  Variable:corr_New1_r0_j_username_13, value: '50019648014'" EventID="-1" Time="2.12299990653992"/><LogMessage Severity="1" Message="End round 1 (1 of 1)" EventID="-1" Time="2.40799999237061"/><LogMessage Severity="1" Message="*** Agenda Execution End Time:  Wed Feb 18 16:18:06 2015 ***" EventID="-1" Time="2.43699979782104"/><LogMessage Severity="1" Message="Test passed" EventID="-1" Time="2.43699979782104"/></LogWindow><PassFailedResult><TestResult>passed</TestResult><Reason>Test passed</Reason></PassFailedResult><PRODUCT_VERSION><ProjectCreatedProductVersion>WebLOADPro Version 10.1.0.133.00  Supports 128 bit SSL </ProjectCreatedProductVersion><LastProjectSavedProductVersion>WebLOADPro Version 10.1.0.133.00  Supports 128 bit SSL </LastProjectSavedProductVersion></PRODUCT_VERSION><PROJECT_TYPE>Protocol</PROJECT_TYPE><AGENDA_OPTIONS><AgendaName xmlns="Default Project Options"/><Options><DiagnosticOptions><bSyntaxCheck>0</bSyntaxCheck><bTraceCheck>0</bTraceCheck><bAutomaticStateCheck>0</bAutomaticStateCheck><bSaveCSJSCheck>0</bSaveCSJSCheck><bCSJSDiagnosticMessages>0</bCSJSDiagnosticMessages></DiagnosticOptions><FunctionalTestingOptions><bTransFailed>0</bTransFailed><nFailedTime>20</nFailedTime><nSeverity>2</nSeverity><sTextSearch></sTextSearch><bCheckCRC>0</bCheckCRC><bCheckCompareValues>0</bCheckCompareValues><VarificationData><nCompareTitle>2</nCompareTitle><nFramesNumber>0</nFramesNumber><nTextSearch>0</nTextSearch><nVerifyLink>0</nVerifyLink><nCompareLinks>0</nCompareLinks><nCompareForms>0</nCompareForms><nCompareImages>0</nCompareImages><nCompareTables>0</nCompareTables></VarificationData></FunctionalTestingOptions><SleepTimeControlOptions><nSleepControlType>2</nSleepControlType><nBetween>2</nBetween><nAnd>10</nAnd><nDeviationPersent>10</nDeviationPersent></SleepTimeControlOptions><IE_OPTIONS Option_version="19">
+			<IE_DIALOG name="Alert">
+				<readonly>yes</readonly>
+				<Answer>
+					<value>OK</value>
+					<default>OK</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="Confirm">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="Prompt">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+				<field type="string" name="Input"></field>
+			</IE_DIALOG>
+			<IE_DIALOG name="Print">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="Cookie_IE6">
+				<Answer>
+					<value>Allow</value>
+					<value>Block</value>
+					<default>Allow</default>
+				</Answer>
+				<field type="checkbox" name="ApplyToAll">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="Cookie">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+				<field type="checkbox" name="NeverShow">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="FormSubmit">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+				<field type="checkbox" name="NeverShow">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="FormResubmit">
+				<Answer>
+					<value>Retry</value>
+					<value>Cancel</value>
+					<default>Retry</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="SwitchNonSecure">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+				<field type="checkbox" name="NeverShow">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="SwitchSecure">
+				<Answer>
+					<value>OK</value>
+					<default>OK</default>
+				</Answer>
+				<field type="checkbox" name="NeverShow">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="NonSecureOnSecure">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="ClientAuthentication">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+				<field type="string" name="Username"></field>
+				<field type="string" name="Password"></field>
+				<field type="string" name="Domain"></field>
+				<field type="checkbox" name="Save">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="ConnectToMS_WinXP">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+				<field type="string" name="Email"></field>
+				<field type="string" name="Password"></field>
+				<field type="checkbox" name="AutoSignIn">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="ClientAuthentication_WinXP">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+				<field type="string" name="Username"></field>
+				<field type="string" name="Password"></field>
+				<field type="checkbox" name="Save">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="ClientCertificate">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+				<field type="string" name="Certificate">
+					<default>0</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="HostCertificate">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="FileDownload">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+				<field type="checkbox" name="AlwaysAsk">
+					<default>checked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="FileDownload_IE6">
+				<Answer>
+					<value>Open</value>
+					<value>Save</value>
+					<value>Cancel</value>
+					<default>Save</default>
+				</Answer>
+				<field type="checkbox" name="AlwaysAsk">
+					<default>checked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="FileDownload_IE6_XP">
+				<Answer>
+					<value>Open</value>
+					<value>Save</value>
+					<value>Cancel</value>
+					<default>Save</default>
+				</Answer>
+				<field type="checkbox" name="AlwaysAsk">
+					<default>checked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="SaveFile">
+				<Answer>
+					<value>Save</value>
+					<value>Cancel</value>
+					<default>Save</default>
+				</Answer>
+				<field type="string" name="FileName"></field>
+			</IE_DIALOG>
+			<IE_DIALOG name="SaveFileConfirmation">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="ActiveXInstall">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+				<field type="checkbox" name="AlwaysTrust">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="RunActiveX">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="UnsafeActiveX">
+				<readonly>yes</readonly>
+				<Answer>
+					<value>OK</value>
+					<default>OK</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="ScriptAccessingActiveX">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="NavigateSubFrames">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="ActiveScripting">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="JavaScripting">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="Redirection">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+				<field type="checkbox" name="NeverShow">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="AutoComplete">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>No</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="RememberPassword">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>No</default>
+				</Answer>
+				<field type="checkbox" name="DoNotOffer">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="FtpAuthentication">
+				<Answer>
+					<value>Login</value>
+					<value>Cancel</value>
+					<default>Login</default>
+				</Answer>
+				<field type="string" name="Server"></field>
+				<field type="string" name="Username"></field>
+				<field type="string" name="Password"></field>
+				<field type="string" name="Email"></field>
+				<field type="checkbox" name="Anonymous">
+					<default>unchecked</default>
+				</field>
+				<field type="checkbox" name="Save">
+					<default>unchecked</default>
+				</field>
+			</IE_DIALOG>
+			<IE_DIALOG name="FtpFolderError">
+				<readonly>yes</readonly>
+				<Answer>
+					<value>OK</value>
+					<default>OK</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="DocumentModified">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<value>Cancel</value>
+					<default>No</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="JavascriptError">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>No</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="WindowClosing">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="SuspiciousActiveX">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="Reboot">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>No</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="YesNoCancel">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<value>Cancel</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="YesNo">
+				<Answer>
+					<value>Yes</value>
+					<value>No</value>
+					<default>Yes</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="OkCancel">
+				<Answer>
+					<value>OK</value>
+					<value>Cancel</value>
+					<default>OK</default>
+				</Answer>
+			</IE_DIALOG>
+			<IE_DIALOG name="Ok">
+				<readonly>yes</readonly>
+				<Answer>
+					<value>OK</value>
+					<default>OK</default>
+				</Answer>
+			</IE_DIALOG>
+		</IE_OPTIONS><PlayBackOptions><nNavigationTimeOut>60</nNavigationTimeOut><nFileDownloadTimeout>0</nFileDownloadTimeout><nStartNavigationTimeOut>3</nStartNavigationTimeOut><bClearCache>0</bClearCache><bClearCookies>0</bClearCookies><nPlaybackMode>1</nPlaybackMode><bUseDOROptimizer>0</bUseDOROptimizer></PlayBackOptions><PassFailDefinition><bCheckErrors>1</bCheckErrors><bCheckSevere>1</bCheckSevere><bCheckWarnings>0</bCheckWarnings><nErrorNum>1</nErrorNum><nRuleCheck>15</nRuleCheck><nWarningNum>15</nWarningNum></PassFailDefinition><ErrorHandling><SubmitButton>1</SubmitButton><NavObject>9</NavObject><Page>4</Page><PageRetryNum>3</PageRetryNum><Object>6</Object></ErrorHandling><EmulationPlaybackOptions><bUseOptimizer>1</bUseOptimizer><bUseHistory>0</bUseHistory><nHistoryLimit>1</nHistoryLimit><bCodeFormatter>0</bCodeFormatter><bCSJSRecovery>1</bCSJSRecovery></EmulationPlaybackOptions><WebServices><sBasicPassword></sBasicPassword><sUserName></sUserName><sProxyHost></sProxyHost><sProxyPassword></sProxyPassword><sProxyUser></sProxyUser><sProxyPort></sProxyPort><nWSClientType>1</nWSClientType></WebServices><BrowserEmulationOptions><bDNSCache>1</bDNSCache><bSSLCache>1</bSSLCache><bKeepAlive>1</bKeepAlive><bRedirectionEnabled>1</bRedirectionEnabled><nRedirectionLimit>10</nRedirectionLimit><strBrowserType>As recorded</strBrowserType><strUserAgent>As Recorded</strUserAgent><strEncodingValue>0</strEncodingValue><bEnforceEncoding>0</bEnforceEncoding></BrowserEmulationOptions><HTTPParametersOptions><bGZipSupport>0</bGZipSupport><bHTTPVersion>1</bHTTPVersion><bMultiIPSupport>0</bMultiIPSupport><bEncodeFormData>1</bEncodeFormData><bAcceptLanguage>0</bAcceptLanguage><strAcceptLanguage></strAcceptLanguage></HTTPParametersOptions><Authentication><sUserName></sUserName><sPassWord></sPassWord><sNTUserName></sNTUserName><sNTUserPassword></sNTUserPassword><sKerberosServer></sKerberosServer><iAuthType>0</iAuthType><sProxyUserName></sProxyUserName><sProxyPassWord></sProxyPassWord><sProxyHost></sProxyHost><sProxyPort></sProxyPort><sSSLClientCertificateFile></sSSLClientCertificateFile><sSSLClientCertificatePassword></sSSLClientCertificatePassword></Authentication><BrowserCacheOptions><bFilterApplets>1</bFilterApplets><bFilterImages>1</bFilterImages><bFilterJSFiles>1</bFilterJSFiles><bFilterStyleSheets>1</bFilterStyleSheets><bFilterXMLFiles>1</bFilterXMLFiles><bFilterDynamic>0</bFilterDynamic><nCacheType>3</nCacheType></BrowserCacheOptions><JavaOptions><strSelectedJVM>Default</strSelectedJVM></JavaOptions></Options></AGENDA_OPTIONS><RECORD_OPTIONS><File_Extensions><IgnoredExtensions>|gif|mov|mpg|txt|mpeg|class|cab|jpeg|jpg|css|csx|png|js|jsx|mp3|mp4|</IgnoredExtensions><RecordedExtensions>|asp|htm|html|xml|aspx|jsp|swf|php|cgi|none|</RecordedExtensions><RecordAllExtensions>0</RecordAllExtensions><RecordUnknownExtensions>0</RecordUnknownExtensions></File_Extensions><Security><EncryptProtocolPasswords>1</EncryptProtocolPasswords><EncryptFormPasswords>0</EncryptFormPasswords><PasswordsFormFields>|password|pass|passwd|</PasswordsFormFields></Security><Content_Types><IgnoredTypes>|image/gif|image/jpeg|</IgnoredTypes><RecordedTypes>|text/html|text/plain|text/xml|application/xml|application/json|application/x-amf|application/x-shockwave-flash|</RecordedTypes><RecordAllTypes>0</RecordAllTypes><RecordUnknownTypes>0</RecordUnknownTypes></Content_Types><Post_Data><Data>|text/xml|application/json; charset=utf-8|application/xml; charset=utf-8|application/json-rpc|text/xml; charset=utf-8|</Data><Datafile>|multipart/form-data|</Datafile><RecordUnknownPostTypesAsFiles>1</RecordUnknownPostTypesAsFiles></Post_Data><Proxy_Options><ProxyPort>9884</ProxyPort><SecondaryProxyName></SecondaryProxyName><SecondaryProxyExceptions></SecondaryProxyExceptions><SecondaryProxyPort>1</SecondaryProxyPort><SecondaryProxySslName></SecondaryProxySslName><SecondaryProxySslPort>1</SecondaryProxySslPort><UseSecondaryProxy>0</UseSecondaryProxy><UseSystemProxy>1</UseSystemProxy><SecondaryProxyUserName></SecondaryProxyUserName><SecondaryProxyPassword></SecondaryProxyPassword><AuthUserName></AuthUserName><AuthUserPassword></AuthUserPassword><UseTransparentProxy>0</UseTransparentProxy></Proxy_Options><Proxy_Certificates><ServerCertFileName>C:\Program Files\RadView\WebLOAD\bin\Certificates\server.pem</ServerCertFileName><ServerCertPassword>password</ServerCertPassword><ServerCertTrustFileName>C:\Program Files\RadView\WebLOAD\bin\Certificates\root.pem</ServerCertTrustFileName><ClientCertFileName></ClientCertFileName><ClientCertPassword></ClientCertPassword></Proxy_Certificates><Script_Content><CommentRequestHeaders>0</CommentRequestHeaders><CommentResponseHesders>0</CommentResponseHesders><CommentStatus>0</CommentStatus><DecodeQueryString>1</DecodeQueryString><RecordAuthentication>1</RecordAuthentication><RecordHeaders>0</RecordHeaders><RecordProxy>1</RecordProxy><RecordProxyAuthentication>1</RecordProxyAuthentication><RecordRedirectionPath>0</RecordRedirectionPath><RecordRefererHeader>1</RecordRefererHeader><EncodeBinaryData>0</EncodeBinaryData><RecordViewstateData>1</RecordViewstateData><RecordCustomHeaders>1</RecordCustomHeaders><SaveRedirectionHeaders>0</SaveRedirectionHeaders><SaveClientSideCookies>0</SaveClientSideCookies></Script_Content><Default_Encoding_Type><DefaultEncodingType>0</DefaultEncodingType></Default_Encoding_Type><Default_Browser_Selection><BrowserType>0</BrowserType><ListNetscapeAndMicrosoftBrowserws>|Chrome|Microsoft Internet Explorer|Mozilla Firefox|</ListNetscapeAndMicrosoftBrowserws><SelectedBrowser>Chrome</SelectedBrowser><OtherBrowser></OtherBrowser><SetAutoProxyDefs>1</SetAutoProxyDefs><ClearCache>1</ClearCache><ClearCookies>0</ClearCookies><CreateNewBrowser>1</CreateNewBrowser><MobileBrowserType>iPhone</MobileBrowserType><MobileUserAgent>Mozilla/5.0 (iPhone; CPU iPhone OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A405 Safari/8536.25</MobileUserAgent><BrowserWidth>0</BrowserWidth><BrowserHeight>0</BrowserHeight><IsSimulateMobile>0</IsSimulateMobile></Default_Browser_Selection><Correlation_options><AutoCorrelation>3</AutoCorrelation><CorrLogLevel>1</CorrLogLevel><CorrAddComments>1</CorrAddComments><CorrPreserveUser>1</CorrPreserveUser><CorrRulesFilename>C:\Program Files\RadView\WebLOAD\extensions\Correlation\correlationRules.xml</CorrRulesFilename><CorrLogFilename>C:\ProgramData\RadView\WebLOAD\Log\correlation.log</CorrLogFilename><ConvertHiddenFields>0</ConvertHiddenFields><CorrFlex>1</CorrFlex><DSIds>0</DSIds></Correlation_options><Correlation_Auto_options><CorrShowForm>2</CorrShowForm><CorrScoreTreshold>1</CorrScoreTreshold><CorrValueLength>0AA0C1F8</CorrValueLength><CorrValueDelimeters>\#/?+;`': "&lt;&gt;()&amp; =	|</CorrValueDelimeters></Correlation_Auto_options><Filter_Url_options><FilteredUrls>|toolbarqueries.google|toolbar.google.com|safebrowsing-cache.google.com|toolbar.google.co.il|safebrowsing.clients.google.com|safebrowsing.google.com|http://clients?.google.com/*|https://clients?.google.com/*|http://clients?.google.co.il/*|https://clients?.google.co.il/*|https://www.google.com/searchdomaincheck/*|http://www.google.com/tools/toolbar/*|http://www.google.com/complete/search*|https://translate.googleapis.com/translate_a/l/*|https://www.gstatic.com/chrome/config/plugins_win.json|urs.microsoft.com|us.update.toolbar.com|windowsupdate.microsof.com|update.microsoft.com|sqm.microsoft.com|pgq.microsoft.com|toolbar.msn.com|g.msn|http://api.bing.com/qsml.aspx*|http://ieonline.microsoft.com/s/iess/instrumentation.cer|https://ieonline.microsoft.com/ieflipahead/ie10/rules.xml*|https://iecvlist.microsoft.com/IE11/*/iecompatviewlist.xml|http://go.microsoft.com/browserconfig.xml|https://go.microsoft.com/fwlink/*|https://t.urs.microsoft.com/urstelemetry.asmx*|www.download.windowsupdate.com|</FilteredUrls><OnlyUrls>|</OnlyUrls></Filter_Url_options></RECORD_OPTIONS><ADDITIONAL_INFORMATION><ProjectComments></ProjectComments><CreatedBy></CreatedBy><Custom1></Custom1><Custom2></Custom2><Custom3></Custom3><Subject></Subject><TestDescription></TestDescription><ResultsDescription></ResultsDescription><VersionBuild></VersionBuild><Title></Title></ADDITIONAL_INFORMATION><ORACLE_PROJECT_INCLUDE_PATH></ORACLE_PROJECT_INCLUDE_PATH><BreakPointsMap/></Session>

@@ -1,0 +1,3 @@
+Coll_enrl_SpnID,Coll_enrl_var
+EBAY,05
+EBAY,05
